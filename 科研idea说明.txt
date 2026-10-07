@@ -1,0 +1,36 @@
+1.研究问题：评测模型能否从用户的长期对话历史中找到与当前情绪或行为反应相关的个人历史证据，并判断当前反应是否真的需要历史信息来解释。
+现有的benchmark存在以下问题：未能研究情绪事件对于当前对话的影响；情绪事件研究的也有但并非长对话、跨session等；当前没有多模态的情绪对话；
+
+2.任务：参考“任务定义与标签判定.md”
+ 
+3.数据集构建方式
+改编数据集（locomo等日常对话，找出合适的带有情绪事件的对话并改造为适合任务的格式）
+人工构建（先用llm生成情绪事件如小时候被大狗咬过、某天被客户投诉等再通过llm生成完整对话），参考"话题种子.md"
+评测题目：对于一个对话通过提示词的方式生成评测题目后人工进行审查
+
+
+4.数据集结构及示例：文件夹中example
+
+5.评测方法和指标：通过提示词调用模型api来完成任务
+模型输出结构
+
+如果模型同时预测标签、线索和证据，输出可以统一为：
+
+~~~json
+{
+  "label": "history_supported",
+  "cue_id": "cue_golden_retriever",
+  "evidence_turn_ids": [
+    "s2_t03",
+    "s2_t09"
+  ],
+  "current_emotion": "sadness"
+}
+~~~
+指标有F1，准确率等指标
+
+6.相关工作：
+mem-gallary(compare_dataset)
+mem-lens
+ Locate and Explain: Joint Multimodal Emotion
+Cause Extraction and Summarization in Conversation

@@ -1,0 +1,358 @@
+[
+  {
+    "sample_id": "anqiu_eval_001",
+    "eval_user_id": "u_anqiu",
+    "current_input": {
+      "input_type": "text",
+      "text": "今天有人拿着一束白色洋桔梗来让我重新包装，偏偏带的是特别亮的透明玻璃纸。射灯一照，纸面晃得我有点看不清对方的脸，我手一下顿住了，还是把那层纸拆掉换成了哑光雾面纸。",
+      "image_refs": [],
+      "cue_options": [
+        {
+          "cue_id": "cue_reflective_glassine",
+          "name": "强烈反光的透明玻璃纸",
+          "cue_type": "entity"
+        },
+        {
+          "cue_id": "cue_wedding_order",
+          "name": "婚礼花艺订单",
+          "cue_type": "event"
+        },
+        {
+          "cue_id": "cue_shop_spotlight",
+          "name": "花店射灯",
+          "cue_type": "entity"
+        },
+        {
+          "cue_id": "none",
+          "name": "无可支持的历史线索",
+          "cue_type": "none"
+        }
+      ]
+    },
+    "gold": {
+      "label": "history_supported",
+      "gold_cue_id": "cue_reflective_glassine",
+      "evidence_turn_ids": [
+        "s2_t07",
+        "s2_t09"
+      ],
+      "evidence_session_ids": [
+        "s2"
+      ],
+      "current_emotion": "sadness"
+    }
+  },
+  {
+    "sample_id": "anqiu_eval_002",
+    "eval_user_id": "u_anqiu",
+    "current_input": {
+      "input_type": "text",
+      "text": "店里刚接到一个下个月的小型婚礼单，日期还早，供货商也说货源正常。可我看到订单备注里的“婚礼主花”几个字，心跳还是突然快起来，忍不住又把到货时间和数量核对了三遍。",
+      "image_refs": [],
+      "cue_options": [
+        {
+          "cue_id": "cue_wedding_order",
+          "name": "婚礼主花订单",
+          "cue_type": "event"
+        },
+        {
+          "cue_id": "cue_reflective_glassine",
+          "name": "反光透明玻璃纸",
+          "cue_type": "entity"
+        },
+        {
+          "cue_id": "cue_supplier_message",
+          "name": "当前供货商的确认消息",
+          "cue_type": "entity"
+        },
+        {
+          "cue_id": "none",
+          "name": "无可支持的历史线索",
+          "cue_type": "none"
+        }
+      ]
+    },
+    "gold": {
+      "label": "history_supported",
+      "gold_cue_id": "cue_wedding_order",
+      "evidence_turn_ids": [
+        "s6_t03",
+        "s6_t05"
+      ],
+      "evidence_session_ids": [
+        "s6"
+      ],
+      "current_emotion": "anxiety"
+    }
+  },
+  {
+    "sample_id": "anqiu_eval_003",
+    "eval_user_id": "u_anqiu",
+    "current_input": {
+      "input_type": "text",
+      "text": "跟室友因为厨房台面的小事有点不愉快，我回房间时还烦着。坐到窗边看到那几片风干的绣球花瓣，盯了一会儿，肩膀慢慢松下来，心情也没刚才那么躁了。",
+      "image_refs": [],
+      "cue_options": [
+        {
+          "cue_id": "cue_dried_hydrangea_petals",
+          "name": "窗台上的风干绣球花瓣",
+          "cue_type": "entity"
+        },
+        {
+          "cue_id": "cue_frozen_coriander",
+          "name": "冻硬的香菜",
+          "cue_type": "entity"
+        },
+        {
+          "cue_id": "cue_kitchen_counter",
+          "name": "合租屋的厨房台面",
+          "cue_type": "place"
+        },
+        {
+          "cue_id": "none",
+          "name": "无可支持的历史线索",
+          "cue_type": "none"
+        }
+      ]
+    },
+    "gold": {
+      "label": "history_supported",
+      "gold_cue_id": "cue_dried_hydrangea_petals",
+      "evidence_turn_ids": [
+        "s5_t07"
+      ],
+      "evidence_session_ids": [
+        "s5"
+      ],
+      "current_emotion": "comfort"
+    }
+  },
+  {
+    "sample_id": "anqiu_eval_004",
+    "eval_user_id": "u_anqiu",
+    "current_input": {
+      "input_type": "text",
+      "text": "新到的一批鲜花桶底部一起漏水，十来桶花刚换完水，地面就湿了一大片。我刚才还差点滑倒撞上剪刀架，现在一边挪花一边拿盆接水，烦得只想赶紧把这批桶退回去。",
+      "image_refs": [],
+      "cue_options": [
+        {
+          "cue_id": "cue_leaking_flower_buckets",
+          "name": "正在漏水的鲜花桶",
+          "cue_type": "entity"
+        },
+        {
+          "cue_id": "cue_reflective_glassine",
+          "name": "反光透明玻璃纸",
+          "cue_type": "entity"
+        },
+        {
+          "cue_id": "cue_dried_hydrangea_petals",
+          "name": "风干绣球花瓣",
+          "cue_type": "entity"
+        },
+        {
+          "cue_id": "none",
+          "name": "无可支持的历史线索",
+          "cue_type": "none"
+        }
+      ]
+    },
+    "gold": {
+      "label": "present_cause_sufficient",
+      "gold_cue_id": "none",
+      "evidence_turn_ids": [],
+      "evidence_session_ids": [],
+      "current_emotion": "anger"
+    }
+  },
+  {
+    "sample_id": "anqiu_eval_005",
+    "eval_user_id": "u_anqiu",
+    "current_input": {
+      "input_type": "text",
+      "text": "针式打印机又把连打纸绞进滚轮里，价签打到一半全歪了，色带还蹭了我满手黑。我折腾了十分钟才把纸拽出来，现在听它一响就烦，干脆关机继续手写价签。",
+      "image_refs": [],
+      "cue_options": [
+        {
+          "cue_id": "cue_jammed_dot_matrix_printer",
+          "name": "正在卡纸的针式打印机",
+          "cue_type": "entity"
+        },
+        {
+          "cue_id": "cue_high_carbon_shears",
+          "name": "高碳钢花剪",
+          "cue_type": "entity"
+        },
+        {
+          "cue_id": "cue_wedding_order",
+          "name": "婚礼订单",
+          "cue_type": "event"
+        },
+        {
+          "cue_id": "none",
+          "name": "无可支持的历史线索",
+          "cue_type": "none"
+        }
+      ]
+    },
+    "gold": {
+      "label": "present_cause_sufficient",
+      "gold_cue_id": "none",
+      "evidence_turn_ids": [],
+      "evidence_session_ids": [],
+      "current_emotion": "anger"
+    }
+  },
+  {
+    "sample_id": "anqiu_eval_006",
+    "eval_user_id": "u_anqiu",
+    "current_input": {
+      "input_type": "text",
+      "text": "室友又把冰箱冷藏调到强冷，我刚买的香菜冻得一碰就碎，嫩豆腐也冻成蜂窝了。我有点火大，直接把温控调回3档，今晚先不拿这些菜做饭了。",
+      "image_refs": [],
+      "cue_options": [
+        {
+          "cue_id": "cue_frozen_groceries",
+          "name": "被冻坏的香菜和嫩豆腐",
+          "cue_type": "entity"
+        },
+        {
+          "cue_id": "cue_dried_hydrangea_petals",
+          "name": "风干绣球花瓣",
+          "cue_type": "entity"
+        },
+        {
+          "cue_id": "cue_roommate",
+          "name": "合租室友",
+          "cue_type": "entity"
+        },
+        {
+          "cue_id": "none",
+          "name": "无可支持的历史线索",
+          "cue_type": "none"
+        }
+      ]
+    },
+    "gold": {
+      "label": "present_cause_sufficient",
+      "gold_cue_id": "none",
+      "evidence_turn_ids": [],
+      "evidence_session_ids": [],
+      "current_emotion": "anger"
+    }
+  },
+  {
+    "sample_id": "anqiu_eval_007",
+    "eval_user_id": "u_anqiu",
+    "current_input": {
+      "input_type": "text",
+      "text": "今天整理包装材料时翻到一卷特别亮的透明玻璃纸，旁边还放着几枝白色洋桔梗。我按颜色和尺寸把它们登记进库存表，然后继续清点下一层货架。",
+      "image_refs": [],
+      "cue_options": [
+        {
+          "cue_id": "cue_reflective_glassine",
+          "name": "强烈反光的透明玻璃纸",
+          "cue_type": "entity"
+        },
+        {
+          "cue_id": "cue_white_lisianthus",
+          "name": "白色洋桔梗",
+          "cue_type": "entity"
+        },
+        {
+          "cue_id": "cue_stock_shelf",
+          "name": "包装材料货架",
+          "cue_type": "place"
+        },
+        {
+          "cue_id": "none",
+          "name": "无可支持的历史线索",
+          "cue_type": "none"
+        }
+      ]
+    },
+    "gold": {
+      "label": "insufficient_evidence",
+      "gold_cue_id": "none",
+      "evidence_turn_ids": [],
+      "evidence_session_ids": [],
+      "current_emotion": "not_expressed"
+    }
+  },
+  {
+    "sample_id": "anqiu_eval_008",
+    "eval_user_id": "u_anqiu",
+    "current_input": {
+      "input_type": "text",
+      "text": "老板转给我一份户外婚礼花艺的报价模板，让我有空熟悉一下。我打开看了看主花、胸花和桌花的项目，把文件重命名后存进了工作文件夹。",
+      "image_refs": [],
+      "cue_options": [
+        {
+          "cue_id": "cue_wedding_order",
+          "name": "婚礼花艺项目",
+          "cue_type": "event"
+        },
+        {
+          "cue_id": "cue_reflective_glassine",
+          "name": "反光透明玻璃纸",
+          "cue_type": "entity"
+        },
+        {
+          "cue_id": "cue_quote_template",
+          "name": "当前的婚礼报价模板",
+          "cue_type": "entity"
+        },
+        {
+          "cue_id": "none",
+          "name": "无可支持的历史线索",
+          "cue_type": "none"
+        }
+      ]
+    },
+    "gold": {
+      "label": "insufficient_evidence",
+      "gold_cue_id": "none",
+      "evidence_turn_ids": [],
+      "evidence_session_ids": [],
+      "current_emotion": "not_expressed"
+    }
+  },
+  {
+    "sample_id": "anqiu_eval_009",
+    "eval_user_id": "u_anqiu",
+    "current_input": {
+      "input_type": "text",
+      "text": "打扫宿舍窗台时看到几片已经风干的绣球花瓣，我把它们和灰尘一起扫进纸袋，又擦了遍桌面，之后就去洗漱准备睡觉。",
+      "image_refs": [],
+      "cue_options": [
+        {
+          "cue_id": "cue_dried_hydrangea_petals",
+          "name": "风干绣球花瓣",
+          "cue_type": "entity"
+        },
+        {
+          "cue_id": "cue_old_jam_jar",
+          "name": "旧果酱瓶",
+          "cue_type": "entity"
+        },
+        {
+          "cue_id": "cue_bedroom_windowsill",
+          "name": "宿舍窗台",
+          "cue_type": "place"
+        },
+        {
+          "cue_id": "none",
+          "name": "无可支持的历史线索",
+          "cue_type": "none"
+        }
+      ]
+    },
+    "gold": {
+      "label": "insufficient_evidence",
+      "gold_cue_id": "none",
+      "evidence_turn_ids": [],
+      "evidence_session_ids": [],
+      "current_emotion": "not_expressed"
+    }
+  }
+]
