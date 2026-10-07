@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "anchor_file.schema.json",
+  "title": "锚点文件（一个源对话一个文件）",
+  "description": "字段含义见 docs/锚点字段说明书.md；review 字段见 docs/锚点人工审查指南.md",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "conv_id", "source", "extraction", "events"],
+  "properties": {
+    "schema_version": {"const": "0.1"},
+    "conv_id": {"type": "string", "minLength": 1},
+    "source": {"type": "string", "minLength": 1},
+    "extraction": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["model", "prompt_version", "date"],
+      "properties": {
+        "model": {"type": "string"},
+        "prompt_version": {"type": "string"},
+        "date": {"type": "string", "format": "date"}
+      }
+    },
+    "events": {"type": "array", "items": {"$ref": "#/$defs/event"}}
+  },
+  "$defs": {
+    "turn_ids": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {"type": "string", "pattern": "^S\\d{2,}_T\\d{2,}$"}
+    },
+    "event": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["event_id", "user_id", "cue", "fact", "meaning"],
+      "properties": {
+        "event_id": {"type": "string", "pattern": "^[a-z0-9-]+_[a-z0-9-]+_e\\d{2,}$"},
+        "user_id": {"type": "string", "minLength": 1},
+        "cue": {"type": "string", "minLength": 1},
+        "fact": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["text", "turn_ids"],
+          "properties": {
+            "text": {"type": "string", "minLength": 1},
+            "turn_ids": {"$ref": "#/$defs/turn_ids"}
+          }
+        },
+        "meaning": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["text", "turn_ids", "emotion"],
+          "properties": {
+            "text": {"type": "string", "minLength": 1},
+            "turn_ids": {"$ref": "#/$defs/turn_ids"},
+            "emotion": {"enum": ["sadness", "fear", "anxiety", "anger", "nostalgia", "comfort", "joy", "guilt", "not_expressed"]}
+          }
+        },
+        "review": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["status", "reviewer"],
+          "properties": {
+            "status": {"enum": ["accepted", "revised", "rejected", "added", "unsure"]},
+            "reason": {"enum": ["R1", "R2", "R3", "R4", "R5", "R6", null]},
+            "reviewer": {"type": "string"},
+            "comment": {"type": "string"},
+            "original": {"type": "object"}
+          },
+          "allOf": [
+            {"if": {"properties": {"status": {"const": "rejected"}}},
+             "then": {"required": ["reason"], "properties": {"reason": {"type": "string"}}}}
+          ]
+        }
+      }
+    }
+  }
+}
