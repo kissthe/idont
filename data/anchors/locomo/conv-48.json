@@ -1,0 +1,1014 @@
+{
+  "schema_version": "0.1",
+  "conv_id": "conv-48",
+  "source": "locomo",
+  "extraction": {
+    "model": "deepseek-flash",
+    "prompt_version": "anchor_extract_v2_full_dialogue",
+    "date": "2026-10-07"
+  },
+  "events": [
+    {
+      "event_id": "conv-48_deborah_e01",
+      "user_id": "Deborah",
+      "cue": "the bench by the window in Deborah's late mother's old house",
+      "fact": {
+        "text": "Deborah's mother, who passed away a few years ago, used to sit on the bench by the window of her old house every morning and night with a book.",
+        "turn_ids": [
+          "S01_T03",
+          "S01_T05",
+          "S01_T07",
+          "S02_T13",
+          "S02_T17",
+          "S23_T04",
+          "S29_T05"
+        ]
+      },
+      "meaning": {
+        "text": "Sitting there helps Deborah stay connected to her mother, gives her peace, and makes her feel her mother's comforting presence (reaffirmed in S29).",
+        "turn_ids": [
+          "S01_T07",
+          "S02_T13",
+          "S02_T15",
+          "S23_T04",
+          "S23_T06",
+          "S29_T05"
+        ],
+        "emotion": "comfort"
+      }
+    },
+    {
+      "event_id": "conv-48_deborah_e02",
+      "user_id": "Deborah",
+      "cue": "the pendant/amulet from Deborah's late mother",
+      "fact": {
+        "text": "Deborah has a pendant/amulet that reminds her of her mother, and she brings it when she visits the spot by the water near her mother's old house.",
+        "turn_ids": [
+          "S01_T09",
+          "S04_T36"
+        ]
+      },
+      "meaning": {
+        "text": "It makes her feel her mother's love and stay close to her; holding it brings her comfort and reminds her of love and strength.",
+        "turn_ids": [
+          "S04_T36",
+          "S04_T38"
+        ],
+        "emotion": "comfort"
+      }
+    },
+    {
+      "event_id": "conv-48_deborah_e03",
+      "user_id": "Deborah",
+      "cue": "the family album with her parents' 1993 wedding photo",
+      "fact": {
+        "text": "After her father's sudden death, Deborah looked at the family album, including her parents' wedding photo from 1993.",
+        "turn_ids": [
+          "S02_T01",
+          "S02_T03"
+        ]
+      },
+      "meaning": {
+        "text": "Looking back on great memories is comforting, and photos give her peace during difficult times.",
+        "turn_ids": [
+          "S02_T01",
+          "S02_T03"
+        ],
+        "emotion": "comfort"
+      }
+    },
+    {
+      "event_id": "conv-48_deborah_e04",
+      "user_id": "Deborah",
+      "cue": "the thank-you letter from her yoga group members",
+      "fact": {
+        "text": "Deborah received a letter from her yoga group members thanking her for the positive influence she had on them.",
+        "turn_ids": [
+          "S02_T07",
+          "S02_T09"
+        ]
+      },
+      "meaning": {
+        "text": "Those moments remind her why she is so passionate about yoga.",
+        "turn_ids": [
+          "S02_T09"
+        ],
+        "emotion": "joy"
+      }
+    },
+    {
+      "event_id": "conv-48_deborah_e05",
+      "user_id": "Deborah",
+      "cue": "the bouquet her friend gave her when she was struggling",
+      "fact": {
+        "text": "Deborah's friend gave her the bouquet when she was struggling.",
+        "turn_ids": [
+          "S04_T28"
+        ]
+      },
+      "meaning": {
+        "text": "It gives her hope and courage, and looking at it fills her with warmth and appreciation.",
+        "turn_ids": [
+          "S04_T28"
+        ],
+        "emotion": "comfort"
+      }
+    },
+    {
+      "event_id": "conv-48_deborah_e06",
+      "user_id": "Deborah",
+      "cue": "the spot by the water near her late mother's old house",
+      "fact": {
+        "text": "Deborah likes to come to a spot by the water near her mother's old house.",
+        "turn_ids": [
+          "S04_T34"
+        ]
+      },
+      "meaning": {
+        "text": "It is where she reflects on her mother's life and finds peace; being surrounded by nature helps.",
+        "turn_ids": [
+          "S04_T34"
+        ],
+        "emotion": "comfort"
+      }
+    },
+    {
+      "event_id": "conv-48_deborah_e07",
+      "user_id": "Deborah",
+      "cue": "the roses and dahlias in the garden",
+      "fact": {
+        "text": "After losing a friend last week, Deborah has been spending time in the garden among roses and dahlias.",
+        "turn_ids": [
+          "S06_T04"
+        ]
+      },
+      "meaning": {
+        "text": "The roses and dahlias bring her peace and comfort while she grieves; the garden is calming and nostalgic.",
+        "turn_ids": [
+          "S06_T02",
+          "S06_T04"
+        ],
+        "emotion": "comfort"
+      }
+    },
+    {
+      "event_id": "conv-48_deborah_e08",
+      "user_id": "Deborah",
+      "cue": "the last photo with her friend Karlie from their hike",
+      "fact": {
+        "text": "Deborah's last photo with her friend Karlie was taken last summer when they hiked together.",
+        "turn_ids": [
+          "S06_T08"
+        ]
+      },
+      "meaning": {
+        "text": "Every time she sees it, she cannot help but smile.",
+        "turn_ids": [
+          "S06_T08"
+        ],
+        "emotion": "joy"
+      }
+    },
+    {
+      "event_id": "conv-48_deborah_e09",
+      "user_id": "Deborah",
+      "cue": "the island of Bali, where she practiced yoga",
+      "fact": {
+        "text": "Deborah traveled to Bali last year and found it a gorgeous island great for yoga.",
+        "turn_ids": [
+          "S06_T10"
+        ]
+      },
+      "meaning": {
+        "text": "It gave her peace; the sound of the waves and fresh air are wonderful.",
+        "turn_ids": [
+          "S06_T10",
+          "S06_T12"
+        ],
+        "emotion": "comfort"
+      }
+    },
+    {
+      "event_id": "conv-48_deborah_e10",
+      "user_id": "Deborah",
+      "cue": "the yoga class she started in her neighborhood",
+      "fact": {
+        "text": "Deborah started a yoga class in her neighborhood and hosted a class for her neighbors on Friday.",
+        "turn_ids": [
+          "S09_T03",
+          "S09_T05"
+        ]
+      },
+      "meaning": {
+        "text": "Teaching it is calming and sharing it brings her happiness; she has made friends and built community connections.",
+        "turn_ids": [
+          "S09_T03",
+          "S09_T07",
+          "S09_T09"
+        ],
+        "emotion": "joy"
+      }
+    },
+    {
+      "event_id": "conv-48_deborah_e11",
+      "user_id": "Deborah",
+      "cue": "art shows, which remind her of her late mother",
+      "fact": {
+        "text": "Deborah went to an art show with a friend, and her mother was interested in art and believed art could connect people emotionally.",
+        "turn_ids": [
+          "S12_T01",
+          "S12_T03"
+        ]
+      },
+      "meaning": {
+        "text": "Going to an art show feels like experiencing it together with her mother even though she is gone; it is hard but comforting.",
+        "turn_ids": [
+          "S12_T03",
+          "S12_T05"
+        ],
+        "emotion": "comfort"
+      }
+    },
+    {
+      "event_id": "conv-48_deborah_e12",
+      "user_id": "Deborah",
+      "cue": "the special bench in the park near her house where she and her mom chatted",
+      "fact": {
+        "text": "Deborah goes to a special bench in the park near her house where she and her mom would chat about dreams and life.",
+        "turn_ids": [
+          "S19_T17",
+          "S19_T19",
+          "S20_T02"
+        ]
+      },
+      "meaning": {
+        "text": "It holds special memories; visiting brings a mix of nostalgia and longing, but also peace and gratitude for the time with her mom.",
+        "turn_ids": [
+          "S19_T21",
+          "S20_T02",
+          "S20_T04"
+        ],
+        "emotion": "nostalgia"
+      }
+    },
+    {
+      "event_id": "conv-48_deborah_e13",
+      "user_id": "Deborah",
+      "cue": "flowers, which her late mother loved",
+      "fact": {
+        "text": "Deborah's mother really loved flowers and they made her happy; Deborah brought flowers to the bench.",
+        "turn_ids": [
+          "S20_T04",
+          "S20_T06"
+        ]
+      },
+      "meaning": {
+        "text": "Bringing flowers connects her to her mother, who appreciated the simple things, and she feels nostalgia and gratitude.",
+        "turn_ids": [
+          "S20_T04",
+          "S20_T06",
+          "S20_T08"
+        ],
+        "emotion": "nostalgia"
+      }
+    },
+    {
+      "event_id": "conv-48_deborah_e14",
+      "user_id": "Deborah",
+      "cue": "the yoga retreat near her mother's place",
+      "fact": {
+        "text": "Deborah went to a yoga retreat near her mother's place last week.",
+        "turn_ids": [
+          "S21_T01"
+        ]
+      },
+      "meaning": {
+        "text": "It was life-changing; she connected with nature, got to know herself, and found life more meaningful.",
+        "turn_ids": [
+          "S21_T01",
+          "S21_T03"
+        ],
+        "emotion": "joy"
+      }
+    },
+    {
+      "event_id": "conv-48_deborah_e15",
+      "user_id": "Deborah",
+      "cue": "her cats Max and Luna",
+      "fact": {
+        "text": "Deborah has cats Luna, adopted from a shelter, and Max, her late mother's cat whom she took in after her mother passed away.",
+        "turn_ids": [
+          "S15_T25",
+          "S22_T19",
+          "S22_T21",
+          "S22_T23",
+          "S22_T25",
+          "S22_T27",
+          "S22_T29"
+        ]
+      },
+      "meaning": {
+        "text": "They bring lots of joy and peace to her home.",
+        "turn_ids": [
+          "S22_T21"
+        ],
+        "emotion": "joy"
+      }
+    },
+    {
+      "event_id": "conv-48_deborah_e16",
+      "user_id": "Deborah",
+      "cue": "the note from her late friend with the quote 'Let go of what no longer serves you'",
+      "fact": {
+        "text": "Deborah has a note from a friend who will never be able to support her; it says 'Let go of what no longer serves you.'",
+        "turn_ids": [
+          "S23_T22"
+        ]
+      },
+      "meaning": {
+        "text": "She misses him, and the quote reminds her to let go of what no longer serves her.",
+        "turn_ids": [
+          "S23_T22"
+        ],
+        "emotion": "sadness"
+      }
+    },
+    {
+      "event_id": "conv-48_deborah_e17",
+      "user_id": "Deborah",
+      "cue": "the old photo of Deborah from when she first started doing yoga",
+      "fact": {
+        "text": "Deborah has an old photo from when she first started doing yoga; her mother was her biggest fan and often came to her classes.",
+        "turn_ids": [
+          "S24_T05"
+        ]
+      },
+      "meaning": {
+        "text": "Her mother was her biggest source of motivation.",
+        "turn_ids": [
+          "S24_T05"
+        ],
+        "emotion": "nostalgia"
+      }
+    },
+    {
+      "event_id": "conv-48_deborah_e18",
+      "user_id": "Deborah",
+      "cue": "her late mother's old friends",
+      "fact": {
+        "text": "Deborah reconnected with her mother's old friends, reminisced, and looked through her mother's photos.",
+        "turn_ids": [
+          "S28_T01",
+          "S28_T07"
+        ]
+      },
+      "meaning": {
+        "text": "Hearing stories was emotional and a mix of happy and sad, but overall comforting; she appreciates her mother more.",
+        "turn_ids": [
+          "S28_T01",
+          "S28_T03",
+          "S28_T05"
+        ],
+        "emotion": "comfort"
+      }
+    },
+    {
+      "event_id": "conv-48_deborah_e19",
+      "user_id": "Deborah",
+      "cue": "the beach where she got married and discovered surfing",
+      "fact": {
+        "text": "Deborah got married at a beach and discovered her love for surfing there.",
+        "turn_ids": [
+          "S28_T11"
+        ]
+      },
+      "meaning": {
+        "text": "That beach is super special to her and is always filled with joy and peace.",
+        "turn_ids": [
+          "S28_T11"
+        ],
+        "emotion": "joy"
+      }
+    },
+    {
+      "event_id": "conv-48_deborah_e20",
+      "user_id": "Deborah",
+      "cue": "the smell of her late mother's special dish",
+      "fact": {
+        "text": "Deborah's mother loved cooking and made amazing meals; Deborah can still remember the smell of her mother's special dish filling the house.",
+        "turn_ids": [
+          "S29_T07"
+        ]
+      },
+      "meaning": {
+        "text": "The smell brought the family together and reminds her of her mother's love and warmth.",
+        "turn_ids": [
+          "S29_T07"
+        ],
+        "emotion": "nostalgia"
+      }
+    },
+    {
+      "event_id": "conv-48_deborah_e21",
+      "user_id": "Deborah",
+      "cue": "the pineapple birthday cakes her mother baked for her",
+      "fact": {
+        "text": "Deborah's mother baked pineapple birthday cakes for her when she was a kid.",
+        "turn_ids": [
+          "S29_T09"
+        ]
+      },
+      "meaning": {
+        "text": "It always made her feel special.",
+        "turn_ids": [
+          "S29_T09"
+        ],
+        "emotion": "joy"
+      }
+    },
+    {
+      "event_id": "conv-48_deborah_e22",
+      "user_id": "Deborah",
+      "cue": "her late mother's lullabies and soothing voice",
+      "fact": {
+        "text": "Deborah's mother used to sing lullabies to her in a soothing voice.",
+        "turn_ids": [
+          "S30_T01"
+        ]
+      },
+      "meaning": {
+        "text": "Music reminds her of her mother and those memories; she feels lucky to have them.",
+        "turn_ids": [
+          "S30_T01"
+        ],
+        "emotion": "nostalgia"
+      }
+    },
+    {
+      "event_id": "conv-48_deborah_e23",
+      "user_id": "Deborah",
+      "cue": "the blossom tree near her home",
+      "fact": {
+        "text": "There is a blossom tree near Deborah's home that bloomed magically every spring.",
+        "turn_ids": [
+          "S30_T11"
+        ]
+      },
+      "meaning": {
+        "text": "Watching it bloom filled her with awe and made her appreciate the beauty of life and hope for growth.",
+        "turn_ids": [
+          "S30_T11",
+          "S30_T13"
+        ],
+        "emotion": "joy"
+      }
+    },
+    {
+      "event_id": "conv-48_jolene_e01",
+      "user_id": "Jolene",
+      "cue": "the room in her late mother's house",
+      "fact": {
+        "text": "Jolene's mother passed away last year, and Jolene has a room in her mother's house with many memories.",
+        "turn_ids": [
+          "S01_T06"
+        ]
+      },
+      "meaning": {
+        "text": "She has many memories there.",
+        "turn_ids": [
+          "S01_T06"
+        ],
+        "emotion": "not_expressed"
+      }
+    },
+    {
+      "event_id": "conv-48_jolene_e02",
+      "user_id": "Jolene",
+      "cue": "the pendant her mother gave her in Paris in 2010",
+      "fact": {
+        "text": "Jolene's mother gave her a pendant in Paris in 2010.",
+        "turn_ids": [
+          "S01_T08"
+        ]
+      },
+      "meaning": {
+        "text": "It reminds her of her mother; its symbol represents freedom and reminds her to go for her goals and not be held back.",
+        "turn_ids": [
+          "S01_T08",
+          "S01_T10"
+        ],
+        "emotion": "comfort"
+      }
+    },
+    {
+      "event_id": "conv-48_jolene_e03",
+      "user_id": "Jolene",
+      "cue": "her pet snake Susie",
+      "fact": {
+        "text": "Jolene adopted Susie two years ago when she was feeling lonely and wanted company.",
+        "turn_ids": [
+          "S02_T20",
+          "S16_T06",
+          "S28_T26"
+        ]
+      },
+      "meaning": {
+        "text": "Susie helps when times get tough, is great company, and shows her she can stay strong and find joy in small things.",
+        "turn_ids": [
+          "S02_T20",
+          "S16_T04",
+          "S16_T08",
+          "S22_T18",
+          "S28_T28"
+        ],
+        "emotion": "comfort"
+      }
+    },
+    {
+      "event_id": "conv-48_jolene_e04",
+      "user_id": "Jolene",
+      "cue": "her pet snake Seraphim",
+      "fact": {
+        "text": "Jolene got a second snake, Seraphim, about a year ago, took her to the park, and bought her a new aquarium.",
+        "turn_ids": [
+          "S02_T22",
+          "S02_T24",
+          "S08_T08",
+          "S14_T04",
+          "S14_T06"
+        ]
+      },
+      "meaning": {
+        "text": "Seraphim always cheers her up and brings a sense of peace; spending time with her is comforting.",
+        "turn_ids": [
+          "S02_T20",
+          "S14_T06"
+        ],
+        "emotion": "comfort"
+      }
+    },
+    {
+      "event_id": "conv-48_jolene_e05",
+      "user_id": "Jolene",
+      "cue": "co-op video games with her partner, such as 'It Takes Two' and 'Overcooked 2'",
+      "fact": {
+        "text": "Jolene plays co-op video games with her partner, including 'It Takes Two' and 'Overcooked 2'; they play for bets and she once won three large pizzas.",
+        "turn_ids": [
+          "S02_T26",
+          "S12_T06",
+          "S15_T10",
+          "S19_T10"
+        ]
+      },
+      "meaning": {
+        "text": "Gaming together gives them a shared experience, helps them bond and get closer, and is a way to relax after a long day.",
+        "turn_ids": [
+          "S02_T26",
+          "S12_T06",
+          "S15_T08",
+          "S15_T10"
+        ],
+        "emotion": "joy"
+      }
+    },
+    {
+      "event_id": "conv-48_jolene_e06",
+      "user_id": "Jolene",
+      "cue": "the robotics project for her engineering class",
+      "fact": {
+        "text": "Jolene's engineering professor gave the class a huge robotics project.",
+        "turn_ids": [
+          "S03_T01"
+        ]
+      },
+      "meaning": {
+        "text": "It was tough but fun, made her creative and problem-solving, and seeing the robot come together was awesome.",
+        "turn_ids": [
+          "S03_T01",
+          "S03_T03"
+        ],
+        "emotion": "joy"
+      }
+    },
+    {
+      "event_id": "conv-48_jolene_e07",
+      "user_id": "Jolene",
+      "cue": "the sustainable water purifier she built for a rural community",
+      "fact": {
+        "text": "Jolene designed and built a sustainable water purifier for a rural community in need.",
+        "turn_ids": [
+          "S04_T03",
+          "S04_T05"
+        ]
+      },
+      "meaning": {
+        "text": "Seeing it working was surreal and satisfying; it made her feel she had a purpose and had done something good.",
+        "turn_ids": [
+          "S04_T03",
+          "S04_T07"
+        ],
+        "emotion": "joy"
+      }
+    },
+    {
+      "event_id": "conv-48_jolene_e08",
+      "user_id": "Jolene",
+      "cue": "the sunset over the water in Bogota",
+      "fact": {
+        "text": "Jolene took a vacation last summer in Bogota and watched the sunset over the water.",
+        "turn_ids": [
+          "S04_T33"
+        ]
+      },
+      "meaning": {
+        "text": "It was beautiful and calming, and made her appreciate nature's calming power.",
+        "turn_ids": [
+          "S04_T33"
+        ],
+        "emotion": "comfort"
+      }
+    },
+    {
+      "event_id": "conv-48_jolene_e09",
+      "user_id": "Jolene",
+      "cue": "her mini retreat to assess where she was in life",
+      "fact": {
+        "text": "Jolene did a mini retreat last Wednesday to assess where she was in life.",
+        "turn_ids": [
+          "S05_T01"
+        ]
+      },
+      "meaning": {
+        "text": "It gave her a new outlook, a confidence boost, and she achieved more than she imagined.",
+        "turn_ids": [
+          "S05_T01",
+          "S05_T03"
+        ],
+        "emotion": "joy"
+      }
+    },
+    {
+      "event_id": "conv-48_jolene_e10",
+      "user_id": "Jolene",
+      "cue": "her partner, whom she met in an engineering class",
+      "fact": {
+        "text": "Jolene met her partner in an engineering class in college; they have been together for three years and take it slow.",
+        "turn_ids": [
+          "S07_T07",
+          "S07_T09"
+        ]
+      },
+      "meaning": {
+        "text": "She loves the ride, and teaming up on engineering projects feels great and has brought them closer.",
+        "turn_ids": [
+          "S07_T05",
+          "S07_T07",
+          "S07_T11"
+        ],
+        "emotion": "joy"
+      }
+    },
+    {
+      "event_id": "conv-48_jolene_e11",
+      "user_id": "Jolene",
+      "cue": "the solar-powered vehicle engineering project",
+      "fact": {
+        "text": "Jolene wrapped up a tough engineering project last month, producing a solar-powered vehicle.",
+        "turn_ids": [
+          "S13_T01"
+        ]
+      },
+      "meaning": {
+        "text": "She is proud of sticking it out despite problems and finishing it; it is a big milestone.",
+        "turn_ids": [
+          "S13_T03"
+        ],
+        "emotion": "joy"
+      }
+    },
+    {
+      "event_id": "conv-48_jolene_e12",
+      "user_id": "Jolene",
+      "cue": "her engineering internship at a well-known firm",
+      "fact": {
+        "text": "Jolene is interning at a well-known engineering firm.",
+        "turn_ids": [
+          "S13_T05"
+        ]
+      },
+      "meaning": {
+        "text": "It has positively impacted her life, stoked her love of engineering, and encouraged her to keep striving for her dreams.",
+        "turn_ids": [
+          "S13_T09",
+          "S13_T11"
+        ],
+        "emotion": "joy"
+      }
+    },
+    {
+      "event_id": "conv-48_jolene_e13",
+      "user_id": "Jolene",
+      "cue": "her pet snake that escaped and was found under the bed",
+      "fact": {
+        "text": "Jolene's pet snake got out, and she spent hours searching before finding her snuggling under the bed.",
+        "turn_ids": [
+          "S15_T20"
+        ]
+      },
+      "meaning": {
+        "text": "She felt relieved when she found her; it showed how much she loves her and made her feel love and gratitude.",
+        "turn_ids": [
+          "S15_T20",
+          "S15_T22"
+        ],
+        "emotion": "joy"
+      }
+    },
+    {
+      "event_id": "conv-48_jolene_e14",
+      "user_id": "Jolene",
+      "cue": "the project setback when she lost her work files",
+      "fact": {
+        "text": "Jolene had a huge setback with her project when she lost her work files and everything crashed.",
+        "turn_ids": [
+          "S16_T02",
+          "S17_T02"
+        ]
+      },
+      "meaning": {
+        "text": "She felt frustrated and depressed, but meditation helped her stay calm and get clarity back.",
+        "turn_ids": [
+          "S16_T02",
+          "S17_T02"
+        ],
+        "emotion": "comfort"
+      }
+    },
+    {
+      "event_id": "conv-48_jolene_e15",
+      "user_id": "Jolene",
+      "cue": "the notebooks she designed with galaxies and circuitry",
+      "fact": {
+        "text": "Jolene designed notebooks with elements like galaxies and circuitry, inspired by her love for space and engines.",
+        "turn_ids": [
+          "S17_T06"
+        ]
+      },
+      "meaning": {
+        "text": "She thinks they turned out really cool, and seeing art and design in things gives her a unique perspective on problems.",
+        "turn_ids": [
+          "S17_T06",
+          "S17_T08"
+        ],
+        "emotion": "joy"
+      }
+    },
+    {
+      "event_id": "conv-48_jolene_e16",
+      "user_id": "Jolene",
+      "cue": "the quote in her bullet journal",
+      "fact": {
+        "text": "Jolene started using a bullet journal and has a favorite quote in it.",
+        "turn_ids": [
+          "S18_T03",
+          "S18_T05",
+          "S23_T23"
+        ]
+      },
+      "meaning": {
+        "text": "It helps her stay organized, is satisfying when she crosses tasks off, and reminds her to stick to her goals and never give up.",
+        "turn_ids": [
+          "S18_T05",
+          "S18_T07",
+          "S23_T23"
+        ],
+        "emotion": "joy"
+      }
+    },
+    {
+      "event_id": "conv-48_jolene_e17",
+      "user_id": "Jolene",
+      "cue": "her virtual conference presentation",
+      "fact": {
+        "text": "Jolene presented at a virtual conference and received positive feedback.",
+        "turn_ids": [
+          "S21_T06"
+        ]
+      },
+      "meaning": {
+        "text": "It was rewarding to know her efforts were appreciated and confirmed she is on the right track.",
+        "turn_ids": [
+          "S21_T06",
+          "S21_T08"
+        ],
+        "emotion": "joy"
+      }
+    },
+    {
+      "event_id": "conv-48_jolene_e18",
+      "user_id": "Jolene",
+      "cue": "the yoga classes during her trip to Rio de Janeiro",
+      "fact": {
+        "text": "Jolene and her partner took a trip to Rio de Janeiro and checked out yoga classes there.",
+        "turn_ids": [
+          "S23_T01",
+          "S23_T03"
+        ]
+      },
+      "meaning": {
+        "text": "It showed her different kinds of yoga and their backgrounds, making her appreciate yoga even more.",
+        "turn_ids": [
+          "S23_T03"
+        ],
+        "emotion": "joy"
+      }
+    },
+    {
+      "event_id": "conv-48_jolene_e19",
+      "user_id": "Jolene",
+      "cue": "the tranquil spot by the pond where she meditates",
+      "fact": {
+        "text": "Jolene goes to a nearby tranquil spot by a pond to meditate.",
+        "turn_ids": [
+          "S23_T09"
+        ]
+      },
+      "meaning": {
+        "text": "It helps her make sense of everything, relieves stress, and feels like a restart.",
+        "turn_ids": [
+          "S23_T11"
+        ],
+        "emotion": "comfort"
+      }
+    },
+    {
+      "event_id": "conv-48_jolene_e20",
+      "user_id": "Jolene",
+      "cue": "the new plant she got as a reminder to nurture herself",
+      "fact": {
+        "text": "Jolene got a new plant.",
+        "turn_ids": [
+          "S23_T27",
+          "S23_T29"
+        ]
+      },
+      "meaning": {
+        "text": "It is a reminder to nurture herself and embrace fresh starts.",
+        "turn_ids": [
+          "S23_T29"
+        ],
+        "emotion": "not_expressed"
+      }
+    },
+    {
+      "event_id": "conv-48_jolene_e21",
+      "user_id": "Jolene",
+      "cue": "the video game console her parents got her when she was 10",
+      "fact": {
+        "text": "When Jolene was 10, her parents got her a video game console, and her mom would play games with her while her dad was supportive.",
+        "turn_ids": [
+          "S24_T06",
+          "S24_T08"
+        ]
+      },
+      "meaning": {
+        "text": "It was the start of her passion for video games.",
+        "turn_ids": [
+          "S24_T06"
+        ],
+        "emotion": "joy"
+      }
+    },
+    {
+      "event_id": "conv-48_jolene_e22",
+      "user_id": "Jolene",
+      "cue": "the video game 'Monster Hunter: World', which she played with her mom",
+      "fact": {
+        "text": "Jolene's favorite game to play with her mom was 'Monster Hunter: World'.",
+        "turn_ids": [
+          "S24_T10"
+        ]
+      },
+      "meaning": {
+        "text": "She finds the immersive story and open-world gaming amazing; it is her way to de-stress and take a break from life.",
+        "turn_ids": [
+          "S24_T10",
+          "S24_T12"
+        ],
+        "emotion": "joy"
+      }
+    },
+    {
+      "event_id": "conv-48_jolene_e23",
+      "user_id": "Jolene",
+      "cue": "her beach walks and last beach getaway",
+      "fact": {
+        "text": "Jolene takes beach walks and remembers her last beach getaway.",
+        "turn_ids": [
+          "S25_T13",
+          "S25_T15"
+        ]
+      },
+      "meaning": {
+        "text": "Taking beach walks relaxes her; the memory was chill and nice.",
+        "turn_ids": [
+          "S25_T13",
+          "S25_T15"
+        ],
+        "emotion": "comfort"
+      }
+    },
+    {
+      "event_id": "conv-48_jolene_e24",
+      "user_id": "Jolene",
+      "cue": "the meditation retreat in Phuket",
+      "fact": {
+        "text": "Jolene and her partner traveled to a meditation retreat in Phuket for a few weeks.",
+        "turn_ids": [
+          "S27_T01"
+        ]
+      },
+      "meaning": {
+        "text": "It was amazing and helped her find inner peace; reflecting there made her prioritize relaxation, self-care, and balance.",
+        "turn_ids": [
+          "S27_T01",
+          "S27_T03",
+          "S27_T05"
+        ],
+        "emotion": "comfort"
+      }
+    },
+    {
+      "event_id": "conv-48_jolene_e25",
+      "user_id": "Jolene",
+      "cue": "the scuba diving lesson and dive spot",
+      "fact": {
+        "text": "Jolene tried a scuba diving lesson last Friday and found a cool dive spot.",
+        "turn_ids": [
+          "S29_T04"
+        ]
+      },
+      "meaning": {
+        "text": "They had an awesome time; trying new things opens up a world of adventure.",
+        "turn_ids": [
+          "S29_T04"
+        ],
+        "emotion": "joy"
+      }
+    },
+    {
+      "event_id": "conv-48_jolene_e26",
+      "user_id": "Jolene",
+      "cue": "the self-discovery book she read in her bathroom",
+      "fact": {
+        "text": "Jolene read a self-discovery book in her bathroom.",
+        "turn_ids": [
+          "S29_T22"
+        ]
+      },
+      "meaning": {
+        "text": "It really resonated with her.",
+        "turn_ids": [
+          "S29_T22"
+        ],
+        "emotion": "not_expressed"
+      }
+    },
+    {
+      "event_id": "conv-48_jolene_e27",
+      "user_id": "Jolene",
+      "cue": "the waterfall oasis she and her partner found on a hike",
+      "fact": {
+        "text": "Jolene and her partner hiked and came across a waterfall oasis.",
+        "turn_ids": [
+          "S30_T08"
+        ]
+      },
+      "meaning": {
+        "text": "Everything felt peaceful and her worries disappeared; it was refreshing.",
+        "turn_ids": [
+          "S30_T08"
+        ],
+        "emotion": "comfort"
+      }
+    },
+    {
+      "event_id": "conv-48_jolene_e28",
+      "user_id": "Jolene",
+      "cue": "the photo of a plant growing out of a building corner",
+      "fact": {
+        "text": "Jolene took a photo of a plant growing out of a corner of a building.",
+        "turn_ids": [
+          "S30_T14"
+        ]
+      },
+      "meaning": {
+        "text": "It reminds her that she can keep growing through any obstacles.",
+        "turn_ids": [
+          "S30_T14"
+        ],
+        "emotion": "not_expressed"
+      }
+    }
+  ]
+}

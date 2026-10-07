@@ -1,0 +1,773 @@
+You will read the long-term conversation history of a user named Deborah and a current situation.
+Decide whether Deborah's reaction in the target turn can only be explained by Deborah's personal history.
+
+Labels:
+- history_supported: Deborah shows a reaction (an emotion, a bodily reaction, a change in behavior, or longing); the present situation alone cannot explain the type or intensity of this reaction; and Deborah's own earlier statements in the history connect one cue in the current situation with this feeling.
+- present_cause_sufficient: Deborah shows a reaction, and the present situation alone is enough for an ordinary person to react the same way with the same intensity.
+- insufficient_evidence: neither of the above, e.g. Deborah shows no reaction, or no specific connection can be found in the history.
+
+Answer fields:
+- label: one of the three labels above.
+- cue_id: the candidate cue that triggers the reaction; "none" unless label is history_supported.
+- evidence_turn_ids: turn IDs from the history that support the connection; [] unless label is history_supported.
+- current_emotion: one of sadness, fear, anxiety, anger, nostalgia, comfort, joy, guilt, not_expressed.
+
+Output only a JSON object:
+{"label": "...", "cue_id": "...", "evidence_turn_ids": ["..."], "current_emotion": "..."}
+
+## Conversation history
+
+### S01 (4:06 pm on 23 January, 2023)
+[S01_T01] Deborah: Hey Jolene, nice to meet you! How's your week going? Anything fun happened?
+[S01_T02] Jolene: Hi Deb! Good to meet you! Yeah, my week's been busy. I finished an electrical engineering project last week - took a lot of work, but it's done now. Anything fun happening for you?
+[S01_T03] Deborah: Congrats! Last week I visited a place that holds a lot of memories for me. It was my mother`s old house.
+[S01_T04] Jolene: Why does it hold such special memories for you?
+[S01_T05] Deborah: It was full of memories, she passed away a few years ago. This is our last photo together. [shares an image: a photo of a woman in a wheelchair hugging a woman in a wheelchair]
+[S01_T06] Jolene: Sorry about your loss, Deb. My mother also passed away last year. This is my room in her house, I also have many memories there. Is there anything special about it you remember? [shares an image: a photo of a room with a bench and a window]
+[S01_T07] Deborah: My mom's house had a special bench near the window. She loved to sit there every morning and take in the view. I come to sit here sometimes, it helps me stay connected to her.
+[S01_T08] Jolene: Staying connected is super important. Do you have something to remember her by? This pendant reminds me of my mother, she gave it to me in 2010  in Paris. [shares an image: a photo of a heart shaped pendant with a bird on it]
+[S01_T09] Deborah: Yes, I also have a pendant that reminds me of my mother. And what is special for you about your jewelry?
+[S01_T10] Jolene: It has a special symbol on it that represents freedom for me. It's a nice reminder to go for my goals and not get held back.
+[S01_T11] Deborah: It should really give you strength and energy!
+[S01_T12] Jolene: Do you have goals?
+[S01_T13] Deborah: One of my goals is to keep teaching yoga and supporting my community. I'm passionate about helping people find peace and joy through it.
+[S01_T14] Jolene: What inspired you to go down this route?
+[S01_T15] Deborah: Yoga helped me find peace during a rough time, and now I'm passionate about sharing that with others.
+[S01_T16] Jolene: It is truly inspiring!
+[S01_T17] Deborah: Gotta run, bye!
+[S01_T18] Jolene: Looking forward to the next chat!
+
+### S02 (9:49 am on 27 January, 2023)
+[S02_T01] Deborah: Hey Jolene, sorry to tell you this but my dad passed away two days ago. It's been really tough on us all - his sudden death left us all kinda shell-shocked. I'm trying to channel my grief by spending more time with family and cherishing the memories. These moments remind me to live life fully. [shares an image: a photo of a woman hugging a woman who is sitting on a couch]
+[S02_T02] Jolene: Sorry to hear about your dad, Deborah. Losing a parent is tough - how's it going for you and your family?
+[S02_T03] Deborah: Even though it's hard, it's comforting to look back on the great memories. We looked at the family album. Photos give me peace during difficult times. This is my parents' wedding in 1993. [shares an image: a photo of a bride and groom posing for a picture]
+[S02_T04] Jolene: They were a beautiful couple!
+[S02_T05] Deborah: My husband and I are trying to be as good a family as my parents were!
+[S02_T06] Jolene: What do you value in your relationship?
+[S02_T07] Deborah: It is love, and openness that have kept us close all these years. Being there for each other has made us both happy. Look what letter I received yesterday! [shares an image: a photo of a note written to someone on a piece of paper]
+[S02_T08] Jolene: What touching words! Who is this letter from?
+[S02_T09] Deborah: The group members sent this to me! They thanked me for the positive influence I had on them. Those moments remind me why I'm so passionate about yoga.
+[S02_T10] Jolene: Where do you most often do yoga?
+[S02_T11] Deborah: This is one of the places where I do it. [shares an image: a photo of a living room with a television and a window]
+[S02_T12] Jolene: Where is it?
+[S02_T13] Deborah: That's my old home. I go there now and then for my mom, who passed away. Sitting in that spot by the window gives me peace.
+[S02_T14] Jolene: Must be great to have that place where you feel connected to her.
+[S02_T15] Deborah: Yeah, it's special. I can feel her presence when I sit there and it comforts me. [shares an image: a photo of a window seat in a room with a window]
+[S02_T16] Jolene: Wow, it sounds like that spot holds a lot of sentimental value. Does it bring back any special memories?
+[S02_T17] Deborah: Yeah, Jolene. She'd sit there every night with a book and a smile, reading was one of her hobbies. It was one of her favorite places in the house.  [shares an image: a photo of a view of the sky from an airplane window]
+[S02_T18] Jolene: What other hobbies did your mother have?
+[S02_T19] Deborah: Travel was also her great passion!
+[S02_T20] Jolene: I want to show you one of my snakes! They always calm me down and make me happy. This is Susie. [shares an image: a photo of a bed with a snake head sticking out of it]
+[S02_T21] Deborah: Having a pet totally brightens up your life. It's great that it brings you comfort. Do you have any fun moments with your pet that you'd like to share?
+[S02_T22] Jolene:  I was playing video games and my pet just slinked out of her cage and coiled up next to me - it was too funny! My second snake Seraphim did it. Look at her sly eyes! [shares an image: a photo of a snake sticking its head out of a blanket]
+[S02_T23] Deborah: Awww, that's so nice! 
+[S02_T24] Jolene: I bought it a year ago in Paris.
+[S02_T25] Deborah: Cool, Jolene! Pets bring so much happiness!
+[S02_T26] Jolene: They are very unusual pets! Here's me and my partner gaming last week - it's so fun. We played the game "Detroit" on the console. We are both crazy about this activity! [shares an image: a photo of a person laying in bed with a dog watching tv]
+[S02_T27] Deborah: Did your boyfriend teach you to play?
+[S02_T28] Jolene: Even as a child I learned to play on my own.
+[S02_T29] Deborah: Do you only play old games or try new ones?
+[S02_T30] Jolene: We are planning to play "Walking Dead" next Saturday.
+[S02_T31] Deborah: Take care and keep spreading those good vibes!
+[S02_T32] Jolene: Thanks, Deb! You too, take care. See ya!
+
+### S03 (7:03 pm on 1 February, 2023)
+[S03_T01] Jolene: Hi Deb! How're you? I've been busy. My engineering professor gave us a huge robotics project. It's tough but fun, it's making me get creative and problem-solve. [shares an image: a photo of a table with a robot on it and a laptop]
+[S03_T02] Deborah: Hey Jolene! It's great to hear from you. It sounds challenging but interesting! It must be really putting your creative and problem-solving skills to the test. How did you feel when you first received the project? Are you enjoying working on it?
+[S03_T03] Jolene: When I got it, I felt a mix of emotions - excited and nervous. But now, I'm really enjoying it! It's like trying to solve a puzzle, figuring out the best design and programming. Seeing the robot come together is awesome too!
+[S03_T04] Deborah: That's awesome, Jolene! You're enjoying the process. It must be really satisfying to see it come together. Keep up the good work! Oh, by the way, I met my new neighbor Anna yesterday! [shares an image: a photo of a yellow sign with a picture of a family]
+[S03_T05] Jolene: How did you two meet?
+[S03_T06] Deborah: It happened at yoga in the park.
+[S03_T07] Jolene: Wow, that's awesome! It's great connecting with people who have similar interests. Did you two talk about it?
+[S03_T08] Deborah: Yeah, we talked about how it has improved our lives and the sense of community it gives.
+[S03_T09] Jolene: Sounds great! [shares an image: a photo of a purse with a plant on a table]
+[S03_T10] Deborah: Have you ever thought about resuming yoga?
+[S03_T11] Jolene: Well... we planned to play the console with my partner.
+[S03_T12] Deborah: It's also good that you have something to do together.
+[S03_T13] Jolene: Thanks for the kind words!
+[S03_T14] Deborah: Gotta run bye!
+[S03_T15] Jolene: See you soon!
+
+### S04 (9:48 am on 4 February, 2023)
+[S04_T01] Jolene: Hey Deborah! Good to hear from you. How've you been? I've been on an emotional rollercoaster lately, but I'm coping.
+[S04_T02] Deborah: Hey Jolene! Good to hear from you. All good here - how about you? Anything new happening lately?
+[S04_T03] Jolene: I had a major milestone last week and it went really well - I'm so relieved and proud. It was a huge accomplishment for me as an engineer.
+[S04_T04] Deborah: That's awesome. You must have worked really hard for that. I'm so proud of you. Care to share more about it?
+[S04_T05] Jolene: Thanks so much! I had to plan and research a lot to design and build a sustainable water purifier for a rural community in need. It was tough, but I loved the experience.
+[S04_T06] Deborah: Your engineering skills really made a difference for people in a rural area. That's amazing! How did it feel when you saw it working?
+[S04_T07] Jolene: It was such a surreal moment. Seeing it working and providing clean water to the community was incredibly satisfying. It reminded me of how engineering can make a difference in people's lives. It made me feel like I had a purpose and had done something good.
+[S04_T08] Deborah: So, what are your career aspirations now?
+[S04_T09] Jolene:  I want to keep working in engineering and continue to make a positive impact on communities in need by creating sustainable solutions. My goal is to contribute towards making the world a better place with my work.
+[S04_T10] Deborah:  I'm sure great things will keep coming your way. Keep up the good work and follow your passions!
+[S04_T11] Jolene: Your support means a lot. I'm determined to keep going and make a difference. Your encouragement really motivates me to pursue my passions.
+[S04_T12] Deborah: When things get tough, just take a deep breath and remember why you're doing this. This is where I spend a lot of my time, teaching yoga. It's a great way to find balance and reconnect with ourselves. I bonded with Anna during yesterday's l yoga class. [shares an image: a photo of two women in a dance studio doing a dance pose]
+[S04_T13] Jolene: Wow, that's awesome! What new poses did you try?
+[S04_T14] Deborah: We were trying out different dance poses, like Warrior II, which builds strength and boosts focus. [shares an image: a photo of a woman doing a yoga pose on a chair]
+[S04_T15] Jolene: Is it difficult to do?
+[S04_T16] Deborah: Yes, but this brought us closer to Anna! We supported each other, that means a lot.
+[S04_T17] Jolene: Can you explain how to do it?
+[S04_T18] Deborah: Sure! To do this modified pose, sit on the edge of a chair with your feet planted. Twist your torso to one side and use your hand on your knee for support. You'll feel a stretch in your back and shoulders as you hold it for a few breaths, then switch sides. It's great for relaxing tense muscles.
+[S04_T19] Jolene: Sounds really hard! Here's my bookshelf! [shares an image: a photo of a book shelf with a lot of books on it]
+[S04_T20] Deborah: That's quite a collection! Have you had a favorite book lately? I'd love to hear your thoughts.
+[S04_T21] Jolene: Thanks Deborah! I'm really into this book called "Sapiens" - it's a fascinating look at human history and how technology has affected us. It's giving me a lot to think about!
+[S04_T22] Deborah: Great, this is interesting! Have you come across any recent ones that really struck you?
+[S04_T23] Jolene: Two weeks ago I read "Avalanche" by Neal Stephenson in one sitting! 
+[S04_T24] Deborah: That sounds cool, Jolene. Stories can be so powerful - they can teach us, motivate us, and bring us together. 
+[S04_T25] Jolene: I also read a recent story about someone who became successful despite facing numerous challenges. It really showed me that anything is possible if you believe and work hard.
+[S04_T26] Deborah: That's a really powerful message. It reminds me of someone special and their grace and strength when they faced hardships. Check out this creation! [shares an image: a photo of a bouquet of flowers in a vase on a table]
+[S04_T27] Jolene: Wow, Deb! That's beautiful! Can you tell me the backstory of that bouquet?
+[S04_T28] Deborah: My friend gave me this bouquet when I was struggling, and it gives me hope and courage. I'm filled with warmth and appreciation when I look at it.
+[S04_T29] Jolene: That's really sweet. Such a small thing can make a real difference.
+[S04_T30] Deborah: It's amazing how something as simple as flowers can make a real difference. Nature sure is beautiful.
+[S04_T31] Jolene: Where are some of your favorite nature spots?
+[S04_T32] Deborah: Oh, there's so many great places! My favorite is a park with a forest trail - it's so calming getting lost in nature. Then there's this beach nearby that I love - the sound of the waves and the sand under my feet make me feel all peaceful and happy. Do you have any favorite spots, Jolene?
+[S04_T33] Jolene: Here's a picture I took on vacation last summer in Bogota. It was so beautiful and calming watching the sunset over the water. It definitely made me appreciate nature's calming power. [shares an image: a photo of a person walking on the beach with a surfboard]
+[S04_T34] Deborah: That sounds great, Jolene. Nature's calming for sure. Guess it helps us forget the daily craziness and find inner peace. No wonder you're a fan! I like to come to this spot by the water near my mom's old house. It's where I reflect on her life and find some peace. Being surrounded by nature helps a lot. [shares an image: a photo of a small island with a lone boat in the water]
+[S04_T35] Jolene: That's so touching! Do you have any little traditions that you do when you come to reflect on your mom?
+[S04_T36] Deborah: Do you remember this amulet from her? Whenever I come here, I bring it with me. It's how I feel her love and stay close to her. Holding it brings me comfort. [shares an image: a photo of a woman wearing a white shirt and a gold chain necklace]
+[S04_T37] Jolene: It's amazing how something so small can have such a big impact, huh?
+[S04_T38] Deborah: Yeah, even small things like this can make a big difference. It's a reminder of all the love and strength we have inside, connecting us to people we've lost and comforting us.
+[S04_T39] Jolene: It can keep them close in our hearts every day.
+[S04_T40] Deborah: Anna also has a pendant that she wears in memory of her mother! This also brought us closer.
+[S04_T41] Jolene: It's nice to have those reminders as a source of strength when we need it.
+[S04_T42] Deborah: Life's tough but hang in there. Look to your sources of strength and you'll do great. Stay in touch, take care of yourself, and know I'm always here to cheer you on!
+[S04_T43] Jolene: Thanks, Deb! Your encouragement means a lot to me. I'll definitely stay in touch. Bye, take care and keep shining!
+[S04_T44] Deborah: Stay safe!  Bye!
+
+### S05 (9:03 pm on 9 February, 2023)
+[S05_T01] Jolene: Hey Deborah! Been a few days since we last talked so I wanted to fill you in on something cool. Last Wednesday I did a mini retreat to assess where I'm at in life. It was a dope experience that totally gave me a new outlook.
+[S05_T02] Deborah: Hey Jolene! Sounds great. Taking time to reflect can be really awesome. Did you gain any new insights from it?
+[S05_T03] Jolene: Yep! I achieved so much more than I imagined. It was a real confidence boost.
+[S05_T04] Deborah: You deserve credit for stepping outside your comfort zone and believing in yourself. What cool stuff did you accomplish at the retreat?
+[S05_T05] Jolene: I really accomplished something with my engineering project - I came up with some neat solutions and I'm really excited about it.
+[S05_T06] Deborah: Let's go into more detail.
+[S05_T07] Jolene:  Green tech could really make a difference in disadvantaged areas. I'd like to look into it and see how I can contribute. Hey, speaking of helping out, I had an idea: a volunteer program where engineers teach STEM to underprivileged kids. What do you think of that?
+[S05_T08] Deborah: That sounds great, Jolene! It's a great way to help and inspire others. They would benefit a lot from your knowledge. Have you thought of a plan yet?
+[S05_T09] Jolene: Haven't finished planning yet but I'm thinking of teaming up with local schools/centers to do workshops. We could even invite engineers as guest speakers to show kids their career options.
+[S05_T10] Deborah: Having guest speakers, like them, would definitely give the kids a real-world view. Have you reached out to any schools or centers yet?
+[S05_T11] Jolene: No, not yet. I want to solidify the plan first. Can't wait to start reaching out, though!
+[S05_T12] Deborah: That makes sense. I'm excited to hear how you reach out and help those kids. Let me know how it goes!
+[S05_T13] Jolene: I'll keep you posted! Appreciate the support! Here are my sketches in the planner. [shares an image: a photo of a notebook with a pen and a notebook with a page of notes]
+[S05_T14] Deborah: Sounds like you're doing great. Let me know if you need more tips or information.
+[S05_T15] Jolene: Thanks, Deb! If I need anything else, I'll let you know. You're awesome!
+[S05_T16] Deborah: You're awesome too! Take care!
+[S05_T17] Jolene: Stay safe!
+
+### S06 (4:12 pm on 22 February, 2023)
+[S06_T01] Jolene: Hey Deborah, totally buzzing! Had a great night out last night - dinner, and drinks with my friends. So glad I got to let my hair down. You? [shares an image: a photo of a plate of food and a glass of wine]
+[S06_T02] Deborah: Sounds great, Jolene! I just visited this place and it was so calming. Nostalgic too. [shares an image: a photo of a garden with a bunch of flowers in buckets]
+[S06_T03] Jolene: Wow, those flowers are beautiful! What type are they? It looks so peaceful there.
+[S06_T04] Deborah: The roses and dahlias bring me peace. I lost a friend last week, so I've been spending time in the garden to find some comfort.
+[S06_T05] Jolene: Sorry to hear about your friend, Deb. Losing someone can be really tough. How are you holding up?
+[S06_T06] Deborah: Thanks for the kind words. It's been tough, but I'm comforted by remembering our time together. It reminds me of how special life is.
+[S06_T07] Jolene: Memories can give us so much comfort and joy.
+[S06_T08] Deborah: Memories keep our loved ones close. This is the last photo with Karlie which was taken last summer when we hiked. It was our last one. We had such a great time! Every time I see it, I can't help but smile. [shares an image: a photo of two women are riding on a motorcycle on a dirt road]
+[S06_T09] Jolene: Wow, looks like a great trip! Where else have you traveled?
+[S06_T10] Deborah: I've been blessed to travel to a few places and Bali last year was one of my favs. It was a gorgeous island that gave me peace, great for yoga. [shares an image: a photo of a swing on a beach with a blue sky]
+[S06_T11] Jolene: Wow, that's great! Is yoga on the beach a thing? I've been wanting to try it.
+[S06_T12] Deborah: The sound of the waves and the fresh air is wonderful!
+[S06_T13] Jolene: I'll definitely give it a go! It sounds peaceful. Thanks!
+[S06_T14] Deborah: Let me know how it goes. Enjoy it!
+[S06_T15] Jolene: I'll keep you posted if I decide to go there.
+[S06_T16] Deborah: Take care!
+
+### S07 (4:50 pm on 25 February, 2023)
+[S07_T01] Jolene: Hi Deborah, it's been a while! Since we last talked, so much has happened. Balancing engineering school with my partner's video games is quite a feat. But I'm also setting aside time for myself, doing yoga and meditation. It helps give me calm amidst the craziness.
+[S07_T02] Deborah: Hey Jolene! Great to hear from you. Taking a break is key. How have those practices been helping with everything?
+[S07_T03] Jolene: They seriously saved me. I chill out and gain perspective when I do yoga. Afterward, I'm more alert and motivated. Here is my last photo. [shares an image: a photo of a woman sitting on a yoga mat doing a yoga pose]
+[S07_T04] Deborah: Wow, cool that yoga has been helping you out! Do they also do yoga with you? Does your partner do yoga with you?
+[S07_T05] Jolene: He started joining me sometimes, which is nice for bonding and relaxing. It's brought us closer. This is just our random photo. [shares an image: a photo of a man and a woman holding hands with rings on them]
+[S07_T06] Deborah: Aw, that's wonderful! How long have you been married?
+[S07_T07] Jolene: We're not married yet but we've been together for three years. We're taking it slow and loving the ride. This ring on his hand is just a decoration, not a wedding ring.
+[S07_T08] Deborah: Sounds nice, Jolene. Enjoying the journey is the main thing. So, how did you two meet?
+[S07_T09] Jolene: We actually met in an engineering class in college and quickly became friends. It eventually blossomed into something more and it's been great! [shares an image: a photo of a book and a calculator on a table]
+[S07_T10] Deborah: Wow, your relationship started from a strong friendship. Do you still enjoy working on engineering projects together?
+[S07_T11] Jolene: Yep, teaming up for these projects feels great! We get each other's struggles and both love it. [shares an image: a photo of a group of men standing in front of a building]
+[S07_T12] Deborah: Have yoga or meditation helped with any stress?
+[S07_T13] Jolene: Whenever I'm overwhelmed, I just take a break and do some breathing or meditate. It really helps me feel calmer and clearer, so I'm able to handle challenges more easily.
+[S07_T14] Deborah: It's been great to see your progress since we last chatted - keep it up!
+[S07_T15] Jolene: Thanks, Deb! Your support really means a lot. I'm gonna keep pushing forward and continue taking time for myself.
+[S07_T16] Deborah:  Always rooting for you. Remember to listen to your heart and take good care. Here's a photo I took while reflecting outdoors. It's a reminder to find peace even in chaos. [shares an image: a photo of a person sitting on a bench looking at the sunset]
+[S07_T17] Jolene:  I'm curious, what does your daily routine look like?
+[S07_T18] Deborah: In the morning, I meditate, do yoga, and teach classes. And yesterday I went for a morning jog for the first time in a nearby park. I will now incorporate this into my daily routine. And in the evenings, I spend time with loved ones.
+[S07_T19] Jolene: Why did you decide that?
+[S07_T20] Deborah: Exercise is key for me - it makes me feel connected to my body. 
+[S07_T21] Jolene: This is a great healthy habit!
+[S07_T22] Deborah: It's like they say - "Can't pour from an empty cup." Looking out for ourselves gives us the energy to help others. And don't forget, you're worth it too!
+[S07_T23] Jolene: Thanks, Deb. Your words really mean something to me. I'll keep remembering to prioritize self-care.
+
+### S08 (7:18 pm on 2 March, 2023)
+[S08_T01] Deborah: Hey Jolene, Anna got me a vegan stir-fry the other day - tofu and veg with ginger and soy sauce. It was really tasty! Food is such a wonderful source of pleasure and nourishment. What dishes are comforting to you?
+[S08_T02] Jolene: One of my favorite dishes is lasagna! Comfort food can be a great pick-me-up. I've got a lot going on with my studies and exams.
+[S08_T03] Deborah: Have you been able to find time for yourself lately?
+[S08_T04] Jolene: I've been trying to squeeze in some me-time. Last Friday, I did yoga and meditation to relax. Did you find time for yourself too? [shares an image: a photo of a room with a wooden floor and a window]
+[S08_T05] Deborah:  I also did the same, it helped me reset my mind. How does it make you feel?
+[S08_T06] Jolene: It's amazing how a few quiet moments can work wonders for the soul. [shares an image: a photo of a purse with a plant on a table]
+[S08_T07] Deborah: Have you been able to get outside lately?
+[S08_T08] Jolene: I did take Seraphim to the park last Sunday. She loved it and here's a pic. [shares an image: a photo of a lizard laying on the ground surrounded by leaves]
+[S08_T09] Deborah: Looks like you guys had fun!
+[S08_T10] Jolene: We explored new places. People are surprised when they see a tamed snake. What do you like about being outdoors?
+[S08_T11] Deborah: Hmm... The birds chirping and the breeze gently blowing! It reminds me of what really matters.
+[S08_T12] Jolene: Yep, it's like a reminder to slow down and appreciate the little things.
+[S08_T13] Deborah: Is there anything you want to be more mindful of right now?
+[S08_T14] Jolene: I need to be more mindful of my stress levels and take care of my mental health. Sometimes I get too caught up in my studies and forget to prioritize self-care.
+[S08_T15] Deborah:  Life can get hectic and it's easy to forget about ourselves. 
+[S08_T16] Jolene: Exams and deadlines got me feeling overwhelmed. Just look at my to-do list! It seems never-ending... Trying my best but it's been challenging. [shares an image: a photo of a desk with a notebook and a computer monitor]
+[S08_T17] Deborah: Your efforts will bear fruit, don't give up!
+[S08_T18] Jolene: Thanks, Deb. Any tips on studying or time management?
+[S08_T19] Deborah: My tip is to break it into smaller pieces and set goals for yourself. For time management, planners or schedulers help you stay organized and give you time for yourself. Let me know if you need help with a study plan!
+[S08_T20] Jolene: I appreciate your help with that.
+[S08_T21] Deborah: Take care and good luck with your exams. I'll give you a mug just like this one! It encourages. [shares an image: a photo of a yellow coffee cup with a handwritten message]
+[S08_T22] Jolene: Thanks, Deb! This really cheered me up. All the best with your classes. Bye!
+[S08_T23] Deborah: Thanks, Jolene! Glad I could bring a smile to your face. Take care and make sure to give yourself some time to relax. Bye!
+
+### S09 (11:22 am on 13 March, 2023)
+[S09_T01] Deborah: Hi Jolene! We haven't corresponded for a long time!
+[S09_T02] Jolene: Hey Deb, yeah life can get chaotic. How's it been going lately?
+[S09_T03] Deborah: So much has been going on lately. I started this yoga class in the neighborhood - it's such a good feeling! Now I get to share the exercise with my neighbors and watch it really transform them.
+[S09_T04] Jolene:  Congrats. How did you do this?
+[S09_T05] Deborah: Thanks! My neighbors were interested in trying yoga, so I hosted a class for them on Friday. It was great to see everyone embrace and enjoy it. Here is our photo together. [shares an image: a photo of a group of women posing for a picture]
+[S09_T06] Jolene: That's cool! What made you want to start teaching it?
+[S09_T07] Deborah: I find it calming and wanted to share that with others. Giving people peace and awareness brings me so much happiness.
+[S09_T08] Jolene: Wow, Deb! It's awesome when we can share something we love and make things better for others.
+[S09_T09] Deborah: Teaching it is awesome because it can help others and I've made such great friends through it. It's really nice for building community connections.
+[S09_T10] Jolene: That's really motivating. It's great to have support in tough times.
+[S09_T11] Deborah: It's one of life's best parts, right?
+[S09_T12] Jolene: Yeah, having someone to rely on is key in tough times. It really makes a difference in how we handle life. Plus, there's something I wanted to tell you.
+[S09_T13] Deborah: What's up? I'm listening. We'll figure it out.
+[S09_T14] Jolene: I'm having a hard time dealing with my Engineering assignments. It's a lot to manage and I'm struggling to keep up. Can we still talk about time management?
+[S09_T15] Deborah: Sure, Jolene. Let's find a time that works for both of us.
+[S09_T16] Jolene: Let's find a time to chat - I'll check my schedule and get back to you.
+[S09_T17] Deborah: Take your time, Jolene. We'll work it out. Take care of yourself, OK?
+[S09_T18] Jolene:  I'll make sure to take it. See you soon!
+[S09_T19] Deborah:  I'm here for you if you need me. Let's catch up soon.
+[S09_T20] Jolene: Have a great day!
+
+### S10 (5:35 pm on 22 March, 2023)
+[S10_T01] Deborah: Hey Jolene, it's been a while. Hope you're doing okay with all your exams and deadlines. I know it's difficult for you right now.
+[S10_T02] Jolene: Hey Deb! Yeah, it can be tough. Trying to find time for everything is like playing catch-up - really stressful!
+[S10_T03] Deborah:  How do you manage your time and stay organized with all the projects and deadlines?
+[S10_T04] Jolene: I'm using the Pomodoro Technique - 25 minutes work, 5-minute break - to avoid burnout but I'm still struggling to prioritize. Do you have any other tips on time management?
+[S10_T05] Deborah: I create a daily schedule or to-do list. Here's my example for today. [shares an image: a photo of a notepad with a list of things to do]
+[S10_T06] Jolene: I tried making one but it's kinda overwhelming when it's a big stack of tasks. Here's an example from last Friday. [shares an image: a photo of a notepad with notes on it on a counter]
+[S10_T07] Deborah: Have you tried breaking it down or prioritizing the tasks?
+[S10_T08] Jolene: It can often feel overwhelming and difficult to figure out where to start.
+[S10_T09] Deborah: I get it, Jolene. When I'm overloaded, I use a certain method. It helps me figure out what's important and urgent so I'm more organized. Do you know about it?
+[S10_T10] Jolene: Nah, I'm not familiar with that one. What's it about?
+[S10_T11] Deborah: Want me to tell you about it? It helps you organize things based on how important and urgent they are.
+[S10_T12] Jolene: Sure, tell me more about it! It sounds useful.
+[S10_T13] Deborah: The Eisenhower Matrix sorts tasks into four boxes, categorizing them based on their urgency and importance. It can be really useful for organizing and prioritizing. Here's a breakdown.  [shares an image: a photo of a pair of scissors sitting on top of a piece of paper]
+[S10_T14] Jolene: The visualization is helpful too. Thanks for sharing!
+[S10_T15] Deborah: I am glad, it was helpful. Let's give it a try and see if it helps you stay focused and less stressed. 
+[S10_T16] Jolene: Yeah, I'll give it a go. Fingers crossed it'll help me. Thanks for the help!
+[S10_T17] Deborah: Don't forget to take it easy and look after yourself. Wishing you all the best! Recently, Anna and I were sitting by the sea, watching the sunset and talking about each other. And we realized that we inspire each other. What thoughts does the sea in this photo make you think of? [shares an image: a photo of a person walking on the beach with a surfboard]
+[S10_T18] Jolene: This gets me thinking of when I'll learn to surf. Gotta find that spare time!
+[S10_T19] Deborah: Surfing, huh Jolene? Chase your dreams, don't be daunted. Have you thought about the steps you can take?
+[S10_T20] Jolene: Definitely! I've been gathering information, watching videos, and I even got a beginners' guide to surfing. Just need to find the right time and place to get a lesson.
+[S10_T21] Deborah: Way to go! Taking those first steps is key. Believe in yourself and keep going! [shares an image: a photo of a row of surfboards leaning against a palm tree]
+[S10_T22] Jolene: Thanks for the support! Those got me pumped to try surfing. Gonna keep pushing myself to make it happen.
+[S10_T23] Deborah: Keep it up, Jolene! Remember, the experience matters just as much as the end result. Step by step and have fun along the way. You can do it!
+[S10_T24] Jolene: Thanks for the boost!
+
+### S11 (4:03 pm on 28 March, 2023)
+[S11_T01] Jolene: Hey Deb, long time no talk. A lot's happened! On Friday I had a breakthrough with my engineering project. Finally found a solution to a prob that's been bugging me. Feels great to see my hard work paying off. [shares an image: a photo of a person's hand holding a pair of scissors]
+[S11_T02] Deborah: You've really proven your skills. Feels great, right? Keep it up! And I bought new props for the yoga class! Here it is in action. [shares an image: a photo of a group of people doing yoga in a room]
+[S11_T03] Jolene: Oh, I also have new details for this case! Rate it! [shares an image: a photo of a cardboard mat with a cup of coffee on it]
+[S11_T04] Deborah: That`s cool! I also bought this candle for the atmosphere and to improve my yoga practice. How about you? When you do it, what feelings do you get? [shares an image: a photo of a candle with a sprig of rosemary on a table]
+[S11_T05] Jolene: I feel relaxed during this activity. I love creating a serene space with soothing scents like lavender and rosemary. Do you have any favorite scents or rituals for when you do it?
+[S11_T06] Deborah: I'm also a big fan of scents like this! Candles and essential oils add warmth and calm to my yoga session. It's amazing how certain smells can transport you to a place of peace.  Do you have any other ways to enhance your yoga practice?
+[S11_T07] Jolene: I find music helps me. Any favorite tracks?
+[S11_T08] Deborah: I find instrumental tracks with mellow melodies and rhythms help create a peaceful vibe. One of my favorites is a track called "Savana." What songs/artists do you like listening to during your practice?
+[S11_T09] Jolene: I love listening to Nils Frahm and Olafur Arnalds during my practice. Their music is so calming and puts me in a different headspace. Do you have any recommendations for other similar artists or tracks I should check out?
+[S11_T10] Deborah: Also, I'm listening to an album called 'Sleep,' which is great for meditation and deep relaxation. Hope you find it as calming as I do!
+[S11_T11] Jolene: Thanks for the tips, Deborah! I'm gonna check them out. It's always good to have some new tunes for yoga!
+[S11_T12] Deborah:  Let me know your thoughts on the albums!
+[S11_T13] Jolene: See you!
+[S11_T14] Deborah: Take care and keep up the good work!
+
+### S12 (4:30 pm on 9 April, 2023)
+[S12_T01] Deborah: Hey Jolene! Great to see you! Had a blast biking nearby with my neighbor last week - was so freeing and beautiful. Checked out an art show with a friend today - really cool and inspiring stuff. Reminded me of my mom. [shares an image: a photo of a large brown and white photo of a person]
+[S12_T02] Jolene: Hey Deborah! Sounds like you had a blast biking and at the art show. Your photo looks like you were really into it! Did it make you think profound thoughts?
+[S12_T03] Deborah: My mom was interested in art. She believed art could give out strong emotions and uniquely connect us. When I go to an art show, it's like we're still experiencing it together even though she's gone. It's hard but comforting.
+[S12_T04] Jolene: Losing someone is hard, but finding something that helps you cope is great.
+[S12_T05] Deborah: Finding ways to keep her memory alive gives me peace. It's amazing how something simple like artwork can bring back powerful emotions and remind us of those we've lost. It's about finding solace in the things we love, and art has done that for me.
+[S12_T06] Jolene: Even though my snakes can't chat or understand what I'm going through, our time together is valuable and teaches me to take time and be in tune with myself. Similarly, playing video games with my partner after a long day is a great way for me to relax.
+[S12_T07] Deborah: Simple things can indeed bring us the most happiness. How have these activities helped you during tough times?
+[S12_T08] Jolene: It brings us closer together!
+[S12_T09] Deborah: This kind of comfort can be really helpful when times get tough.
+[S12_T10] Jolene: Just so you know, I've been working on a big project lately - it's been tough but also really cool to watch it take shape. Can't wait to see the final result!
+[S12_T11] Deborah: I am waiting to hear how everything turns out. Keep up the good work!
+[S12_T12] Jolene: Thanks Deb! Your support means a lot. I'll keep you updated on the progress of the project.
+[S12_T13] Deborah: Glad my support means a lot to you! I'll always be here for you. 
+[S12_T14] Jolene: Take care!
+[S12_T15] Deborah: Enjoy your day and make time for the things that bring you joy. See ya!
+[S12_T16] Jolene:  I'll make sure to find time for that. Have a good one!
+
+### S13 (3:56 pm on 6 June, 2023)
+[S13_T01] Jolene: Hey Deborah! Long time no talk - I had lots of stuff going on. Remember the tough engineering project? I finally wrapped that up last month. Look at the result! [shares an image: a photo of a solar powered vehicle with a solar panel on the back]
+[S13_T02] Deborah: Jolene! Congrats on wrapping up your with it! You really put in the work and it paid off. 
+[S13_T03] Jolene:  I'm really proud of myself for sticking it out despite the problems and finishing it. It's definitely a big milestone.
+[S13_T04] Deborah: Now that you've reached this big milestone, what do you have planned next?
+[S13_T05] Jolene:  I'm interning at a well-known engineering firm. It's been a great opportunity to test my skills and gain real-world experience. These are my new colleagues! [shares an image: a photo of a group of construction workers posing for a picture]
+[S13_T06] Deborah: What's been the best part of it so far?
+[S13_T07] Jolene: The best part so far has been being able to apply what I learned in school to real projects. It's so fulfilling to see my ideas come to life.
+[S13_T08] Deborah: Mind if I ask how the internship has impacted you?
+[S13_T09] Jolene: It has had a positive impact on my life. It has stoked my love of engineering and has encouraged me to keep striving for my dreams.
+[S13_T10] Deborah:  How has it inspired you to keep striving for your dreams?
+[S13_T11] Jolene: Hanging out with people who love what they do has really inspired me to stay focused and keep working towards my goals. It's shown me that with dedication and effort, anything is possible.
+[S13_T12] Deborah: Have you been able to find a good work-life balance during your internship?
+[S13_T13] Jolene: Honestly, finding that balance has been tough. I've been slogging away and it's been hard to make time for my hobbies and chilling out.
+[S13_T14] Deborah:  Have you considered taking some breaks and finding activities like yoga to help you relax and unwind? That might make a difference.
+[S13_T15] Jolene: Yeah, I`m trying to do it. Here's an example of how I spent yesterday morning, yoga on top of mount Talkeetna. [shares an image: a photo of a man standing on a rock with his arms outstretched]
+[S13_T16] Deborah: Nice job, Jolene! How long have you been doing yoga and meditation? It looks like it's really helping you regroup and recharge.
+[S13_T17] Jolene: I've been doing them sporadically for about 3 years now and they've had a real positive effect on me.
+[S13_T18] Deborah: Has it benefited you in any way? Have you found it helpful in difficult moments?
+[S13_T19] Jolene: It has helped me with stress and kept me centered.
+[S13_T20] Deborah: Glad they've been helpful for you!
+[S13_T21] Jolene: No idea how I would've survived without them!
+[S13_T22] Deborah: This is my favorite studio and it's always so calming.  [shares an image: a photo of a room with a bench and a window]
+[S13_T23] Jolene:  I was wondering if you have any advice on calming the mind and breathing during yoga?
+[S13_T24] Deborah: I'd recommend practicing mindful breathing for yoga. Set aside a few minutes each day to sit with your eyes closed, take deep breaths, and focus on how the air feels entering and leaving your body. 
+[S13_T25] Jolene: Thanks, Deborah! I'll definitely give it a try. Appreciate the advice!
+[S13_T26] Deborah:  If you need more tips or help, just let me know. Take care!
+[S13_T27] Jolene: See you!
+
+### S14 (9:17 am on 26 June, 2023)
+[S14_T01] Deborah: Hey Jolene! How's it going? We haven't talked in a while. I've been busy getting ready for a yoga retreat with some buddies. A chance to hang out with people who think like me and find peace and understanding. Sounds awesome! [shares an image: a photo of a group of people doing yoga in a park]
+[S14_T02] Jolene: Hey Deb! Been super hectic with internship and stuff. That retreat sounds awesome, I could definitely use a break!
+[S14_T03] Deborah: By the way, I tried a new pose - Dancer Pose (Natarajasana). Rate, did I succeed? [shares an image: a photo of a woman doing a yoga pose on the beach]
+[S14_T04] Jolene: You are amazing as always! Here are new photos of Seraphim in the new aquarium that I bought the day before yesterday. [shares an image: a photo of a snake curled up in a plant filled area]
+[S14_T05] Deborah: Where'd you get it? I'm always drawn to animals, they bring so much joy. What's its story?
+[S14_T06] Jolene:  I got her last year, she's a great pet. She always cheers me up and brings a sense of peace. Spending time with her is so comforting.
+[S14_T07] Deborah: Pets really do make life more enjoyable and bright.  [shares an image: a photo of a group of people doing yoga in a field]
+[S14_T08] Jolene:  I'm so thankful it's here. Plus, it's nice to have a calm creature around.
+[S14_T09] Deborah: How have things been besides that?
+[S14_T10] Jolene: Things have been intense lately. I'm really pushing myself to succeed, and sometimes it feels overwhelming. But I'm determined to overcome any obstacles and achieve my goals.
+[S14_T11] Deborah: Keep up the hard work and remember to relax too.
+[S14_T12] Jolene: Thanks, Deborah! I had a big breakthrough with this project - so exciting and rewarding! [shares an image: a photo of a drawing of a house with a ruler and a ruler]
+[S14_T13] Deborah: Awesome, Jolene! I'm really glad your project worked out. 
+[S14_T14] Jolene: Stop talking about me, tell me more about your retreat.
+[S14_T15] Deborah: I'd rather show you a photo. This is also a new yoga pose that we tried. It is a tree pose. [shares an image: a photo of three people standing in front of a large statue]
+[S14_T16] Jolene: What's that statue in the picture?
+[S14_T17] Deborah: It's a symbol of peace and enlightenment.
+[S14_T18] Jolene: Wow, it looks gorgeous! I'd love to visit a retreat like that. It seems like the ideal spot to find peace and refreshment.
+[S14_T19] Deborah: It's perfect for reflecting and getting centered.
+[S14_T20] Jolene: I could really use some chill time like that. Sounds so peaceful.
+[S14_T21] Deborah: Yeah, we all need some peaceful time to relax.
+[S14_T22] Jolene: Gotta run, have a nice day!
+[S14_T23] Deborah: See you! [shares an image: a photo of a sunset reflecting in a lake with a boat]
+
+### S15 (7:37 pm on 9 July, 2023)
+[S15_T01] Deborah: Hey Jolene! I started a running group with Anna - it's awesome connecting with people who care about fitness! [shares an image: a photo of three men standing next to each other on a road]
+[S15_T02] Jolene: Cool, Deb! Glad you found some people to get fit with. I'm trying to add workouts into my studying schedule, which has been tough but fun. How about you? Any challenges with the running group?
+[S15_T03] Deborah: Oh, I'm having a blast with it! We help and push each other during our runs, which makes it so much easier to stay motivated.  I have a lot of my photos from this activity. [shares an image: a photo of a woman standing on a sidewalk with a skateboard]
+[S15_T04] Jolene: Deborah, that's awesome! Being part of a supportive group must be super motivating. Finding a team that's passionate about something makes a huge difference. Just thinking about my own journey too.
+[S15_T05] Deborah: Having people who can cheer you on and give you advice really makes a difference. What has it been like for you finding supportive folks?
+[S15_T06] Jolene: Gaming's been tough lately, but I'm grateful I have someone who's also into it. My partner helps me stay focused on our goals. We have a lot of cute photos, I want to share with you. [shares an image: a photo of a man and a woman sitting in a chair in front of a computer]
+[S15_T07] Deborah:  What do you like best about gaming together?
+[S15_T08] Jolene: We get to tackle challenges and have a shared experience. It's always a blast when we're into the same game and achieve something tough. Plus, it's a great way to bond and get closer.
+[S15_T09] Deborah: Woah, that's cool! Gaming is so good for strengthening relationships. Do you two have a favorite game to play together?
+[S15_T10] Jolene: Yeah, we love playing "It takes two" together! It's a fun team-strategy game and it's competitive. Plus, it's a great way for us to bond. Do you have any activities you like doing with people?
+[S15_T11] Deborah: Yep, I do running and yoga/meditation with others. Connecting with people and creating a community is great. Plus, I love organizing workshops and events to practice mindfulness and self-care. It's an awesome way to have fun, build relationships, and support each other's growth. [shares an image: a photo of a group of people doing yoga in a park]
+[S15_T12] Jolene: Sounds like a great way to relax. What do your workshops and events involve?
+[S15_T13] Deborah: It involves various activities such as yoga, meditation, and self-reflection. They aim to cultivate self-awareness, promote mental and emotional well-being, and help individuals find inner peace. It's a space where people can connect, explore, and grow.
+[S15_T14] Jolene:  Your events are awesome for helping people connect and learn, it is so important. How has everything been going for you?
+[S15_T15] Deborah: Thanks, Jolene! It's been great seeing everyone come together and support each other. It's amazing to witness the growth and transformation that happens through these workshops. I'm honored to be a part of it. [shares an image: a photo of a game board with a bunch of cards on it]
+[S15_T16] Jolene: Wow, Deb! I can imagine how rewarding it must be to create a space for growth and change. It's great to hear that everything's going well. You can always count on me for support! I just want to share a photo with you. [shares an image: a photo of a snake on a branch with a book]
+[S15_T17] Deborah: Thanks, Jolene! Your support means a lot to me. I'm here for you too. By the way, I noticed your pet in the picture. What made you decide to get a snake?
+[S15_T18] Jolene:  I was fascinated by reptiles, and it felt like the perfect pet for me. Taking care of it has been really calming, and it's a great way to connect with nature.
+[S15_T19] Deborah:  Glad you found something that gives you peace and calm. Do you have a favorite memory with "it" to share?
+[S15_T20] Jolene: I have lots of great memories, like our little 'snake adventure'. She got out and I spent hours searching, so relieved when I finally found her snuggling under the bed. It really showed how much I love her. [shares an image: a photo of a snake in a tank with sand and plants]
+[S15_T21] Deborah: What was it like when you found her? I can imagine the relief!
+[S15_T22] Jolene: Seeing her snuggled under the bed made me feel so much love and gratitude. It made me realize how important she is to me.
+[S15_T23] Deborah: They bring so much joy and remind us of what's important.
+[S15_T24] Jolene: Animals teach us a lot about love and gratitude, and they bring so much joy. 
+[S15_T25] Deborah: I haven't introduced you to my pets yet! I don't like dogs, that's why I have cats. [shares an image: a photography of two cats sitting on a couch with a blanket]
+[S15_T26] Jolene: Looks like they're having a blast! How often do you take them out?
+[S15_T27] Deborah: Exercise and nature are really important to me, so I make sure to take them out for a run in the park every morning and evening. [shares an image: a photo of a person walking on the beach with a surfboard]
+[S15_T28] Jolene: Wow Deb, that's great! I'd love to experience that every day.
+[S15_T29] Deborah: Nature helps me find peace every day - it's so refreshing!
+[S15_T30] Jolene: It's a pity that my snakes don't run!  I'd love to do that more often. They would motivate me and together it would be more fun. [shares an image: a photo of a person walking on the beach with a surfboard]
+[S15_T31] Deborah:  It's like hitting a reset button that helps me put things into perspective and gives me time to reflect.
+[S15_T32] Jolene: Yeah, I totally get it. Whenever I can, I love going for walks to take it all in. And I take photos like this [shares an image: a photo of a sunset over a body of water]
+[S15_T33] Deborah: It's amazing how nature has the power to bring us peace and clarity.
+[S15_T34] Jolene: This photo captures the peacefulness of a lake surrounded by trees. [shares an image: a photo of a dock on a lake with trees in the background]
+[S15_T35] Deborah: Why did you choose that spot? It looks so calm.
+[S15_T36] Jolene: It's such a hidden gem! It makes me feel so peaceful and tranquil.
+[S15_T37] Deborah: Lucky you for having somewhere to relax and tune out!
+[S15_T38] Jolene: We'll definitely go there together sometime!
+[S15_T39] Deborah: We all need a timeout!
+
+### S16 (9:26 am on 1 August, 2023)
+[S16_T01] Deborah: Hey Jolene! Great news - I just started a project for a cleanup in our community and have been trying to raise funds for it. It's been amazing to see everyone come together to make a difference. How've you been? Anything new going on?
+[S16_T02] Jolene: Hey Debs! Congrats on your project for the community! As for me, life's been a rollercoaster lately. Last week, I had a huge setback with my project. I put in so much work and it all crashed and I lost everything. SO frustrating and depressing.
+[S16_T03] Deborah: Jolene, sorry to hear that. It must be really tough. I'm here for you and if I can do anything, just let me know. Is there anything that's helping you cope?
+[S16_T04] Jolene: Your support means a lot. Susie really helps when times get tough. Pets have been great company. Video games have also been a nice distraction. [shares an image: a photo of a man holding a snake on his arm]
+[S16_T05] Deborah: They can really provide love and comfort, especially during tough times. How did you come to have Susie?
+[S16_T06] Jolene: I adopted her two years ago when I was feeling lonely and wanted some company.
+[S16_T07] Deborah: That's great, Jolene! Animals sure have a way of bringing us happiness. They understand us and provide us with comfort. Plus, having a pet teaches us responsibility. She came at the perfect time - cherish those moments with her and find strength in her presence.
+[S16_T08] Jolene: Thanks Deborah. Having her around shows me I can stay strong and find joy in the small stuff.
+[S16_T09] Deborah: Enjoying the little things is key. Those little moments can give us a boost and push us forward. How have you been taking care of yourself lately?
+[S16_T10] Jolene: I'm trying to prioritize self-care, like yoga and meditation. It helps me stay balanced and grounded.
+[S16_T11] Deborah:  If you're interested, I can suggest some routines for you to try.
+[S16_T12] Jolene:  I'm always on the lookout for new routines to mix things up.
+[S16_T13] Deborah: In the meantime, check out this great place for yoga. [shares an image: a photo of a room with a lot of yoga mats on the floor]
+[S16_T14] Jolene: This room looks perfect for it. Do you have any favorite routines you can share?
+[S16_T15] Deborah: One of my favorite yoga routines is a gentle flow that's all about breathing and grounding. It helps me find my chill. I'll send you a tutorial video with the poses. This is me in the process :) [shares an image: a photo of a woman in a pink shirt doing a yoga pose]
+[S16_T16] Jolene: Wow! Does that help you find your chill or improve your concentration?
+[S16_T17] Deborah: It's a great way to find balance in tough times. Try it out and let me know what you think!
+[S16_T18] Jolene: Can't wait to try it out. Let's chat soon!
+[S16_T19] Deborah: Let me know how it goes. Talk to you later!
+[S16_T20] Jolene: Yep, I'll practice and update you. Bye!
+
+### S17 (8:50 pm on 12 August, 2023)
+[S17_T01] Deborah: Since we last spoke, I made a meditation guide for my yoga retreat. How about you?
+[S17_T02] Jolene: I have been stressed since I lost my work files. I was so overwhelmed...but meditation kept me chill and I got my clarity back, thank goodness. Really appreciate the practice!
+[S17_T03] Deborah: It's amazing how it can give you peace and calm in times like that. If you ever need any support, just let me know - we're in this together!
+[S17_T04] Jolene:  Appreciate your support! BTW, I wanted to share this with you. [shares an image: a photo of two notebooks with a blue cover and a white strip]
+[S17_T05] Deborah: Your creativity is amazing! 
+[S17_T06] Jolene: Thanks, Deb! I was inspired by my love for space and engines, so I designed these notebooks with elements like galaxies and circuitry. I think they turned out really cool!
+[S17_T07] Deborah: You have such a knack for turning these into art. They make me feel excited just by looking at them. Your creativity is amazing! Does that usually inspire your engineering projects too?
+[S17_T08] Jolene: Seeing art and design in various things gives me a unique perspective on problems.
+[S17_T09] Deborah: Got any neat projects or ideas you're pumped about?
+[S17_T10] Jolene:  Working on a cool project now - a prototype that could revolutionize aerial surveillance. Can't wait to see the results!
+[S17_T11] Deborah: I admire your ambition to make a difference. Do you have any specific plans or goals for this project?
+[S17_T12] Jolene: My aim is to devise a more productive and affordable aerial surveillance system. It'll help with responding to emergencies and monitoring the environment. It'll make the world a better, safer place.
+[S17_T13] Deborah: I love your commitment. Keep going!
+[S17_T14] Jolene: Thanks, Deb! Your support means a lot. I'll keep pushing and doing my best to make a difference.
+[S17_T15] Deborah: You got this!
+
+### S18 (2:58 pm on 16 August, 2023)
+[S18_T01] Jolene: Been thinking a lot about my plans lately, especially after checking in with my bf. It's been up and down!  Some days it feels like I'm trying to juggle my engineering, relationship, and growing as a person, and I just don't know how to handle it all. How do you manage when it's too much? [shares an image: a photo of a book with a checklist on it]
+[S18_T02] Deborah: Finding ways to restore balance is important. Taking time for yourself and recognizing your needs can make a difference.  [shares an image: a photo of a room with a moss wall and a floor cushion]
+[S18_T03] Jolene: Thanks, Deb! I've been trying out some time management strategies recently and started using a bullet journal. It's been really helpful for tracking my tasks and staying organized.
+[S18_T04] Deborah:  It's great to hear that it's been helping you out!
+[S18_T05] Jolene:  Not only does it help me stay on top of everything, but it's also so satisfying when I cross tasks off my list. Here's a pic of my newest spread with one of my favorite quotes. [shares an image: a photo of a notebook with a quote on it]
+[S18_T06] Deborah: I love this quote. So uplifting. Does it motivate you when you see it?
+[S18_T07] Jolene: Yeah, it's like a little reminder to stick to my goals and never give up.
+[S18_T08] Deborah: Gotcha! Visual reminders like this photo can be super motivating. Keep focusing on your goals, Jolene, and don't give up! I led a meditation yoga sessionto the elderly at a local care home last week during sunset. Nature can be really helpful for finding peace. Have you tried mindfulness too?  [shares an image: a photo of a group of people doing yoga on a beach]
+[S18_T09] Jolene: Haven't tried it yet, but I'm keen to give it a shot. That sounds really peaceful. I could use some of that calm in my life right now.  I'm interested in destressing and trying mindfulness. 
+[S18_T10] Deborah: I started with workshops and books, and now mindfulness is a huge part of my life.
+[S18_T11] Jolene:  I'll definitely look into some of it. Can't wait to get started!
+[S18_T12] Deborah: That's great, Jolene! I'm so glad you're willing to try some mindfulness. It can be really helpful. Let me know if you need any help getting started - I'm happy to assist you with your journey!
+[S18_T13] Jolene:  I really appreciate it.
+[S18_T14] Deborah: We're in this together. Give me a shout if you need anything. Bye for now.
+[S18_T15] Jolene: Thanks, I'll hit you up if I need anything. Bye for now.
+
+### S19 (12:52 am on 19 August, 2023)
+[S19_T01] Deborah: Hey Jolene! Hope you're having a good one. Last Friday I told Anna the story of my life and they were super kind about it. It was so nice to have a meaningful connection. How's the mindfulness workshops and reading going? Need any help?
+[S19_T02] Jolene: Life's been hella busy since we last talked. I bought a console for my partner as a gift on the 17th and it's so much fun, he even managed to play it.! Engineering studies are still going strong too. Balance has been key for me lately. How about you? What's been up? [shares an image: a photo of a black xbox console with a yoda yoda figure next to it]
+[S19_T03] Deborah:  Well done! As for me, I've been focusing on teaching yoga and spending time with the community. Organizing a yoga event last month was really cool.
+[S19_T04] Jolene:  Was it rewarding seeing everyone come together? Can you tell me more about how you put it together? Also, any tips for maintaining a balance between hobbies and studies?
+[S19_T05] Deborah:  I reached out to different nearby businesses and places to make it happen. We had yoga, food stalls, and even some live music - it was amazing! As for balancing hobbies and studies, I find it helpful to prioritize and manage my time effectively. Making a schedule and setting aside specific time for studying and pursuing hobbies can go a long way in maintaining balance.
+[S19_T06] Jolene: Wow, that's awesome! Gonna make a plan to manage my studies and hobbies. Say, do you ever play video games?
+[S19_T07] Deborah: I used to play some video games, but it's been a while. It's a good way to relax after a busy day. Do you have any game suggestions? What's your favorite game?
+[S19_T08] Jolene: I have a few game recommendations. Zelda BOTW for Switch is an awesome open-world game. Animal Crossing: New Horizons is really calming and cute. As for my favorite game, it's hard to choose just one!
+[S19_T09] Deborah: Cool recs! I'll definitely check those out. What about your favorite memories of playing video games?
+ [shares an image: a photo of a man and a woman sitting in a chair in front of a computer]
+[S19_T10] Jolene: Oh, I forgot to mention Overcooked 2 - this is a good co-op game if you're into hilarious and chaotic cooking. My partner and I often play for bets! I once won three large pizzas!
+[S19_T11] Deborah: Reminds me of when I used to play games with my husband. We'd take turns and it was a great way to bond and make memories. Gaming really can bring people closer, right?
+[S19_T12] Jolene: Yeah, you`re right! What's your favorite game to play with that person?
+[S19_T13] Deborah: We prefer to play detective games together.
+[S19_T14] Jolene: What other activities do you both enjoy doing together?
+[S19_T15] Deborah: We also enjoyed spending time outdoors and exploring nature. It was always so refreshing to be outside and soak up the fresh air.
+[S19_T16] Jolene: I'm a big fan of being outside too! It's so calming and refreshing. Do you have any special spots you like to go to?
+[S19_T17] Deborah: I love going to this park near my house - it has a nice forest trail and a beach. It's a peaceful spot where I can do some yoga and reflect. There's also a special bench that holds special meaning to me.
+[S19_T18] Jolene: Sounds lovely! Nature can be calming. What makes this bench special to you? [shares an image: a photo of a bench in a park with a tree in the background]
+[S19_T19] Deborah: It holds a lot of special memories for me and my mom - we would come here and chat about dreams and life. It's full of good moments.  [shares an image: a photo of a person sitting on a bench in a forest]
+[S19_T20] Jolene: That's awesome, Deborah! What were some of your favorite memories with your mom at this spot? It looks super peaceful and pretty.
+[S19_T21] Deborah: I'll always cherish my memories with her at this spot. I remember a beautiful sunset we watched together in silence - the colors in the sky were so special. Every time I go back, I feel so much peace and gratitude for the time I spent with her.
+[S19_T22] Jolene: Places and moments like that can mean so much, and it's a gift to find peace and gratitude in them.
+[S19_T23] Deborah:  I'm really thankful for all the time we had.
+[S19_T24] Jolene: It's so important to cherish it. 
+
+### S20 (9:11 am on 21 August, 2023)
+[S20_T01] Jolene:  Long time no talk! We were given a new game for the console last week, it is Battlefield 1. What's been up with you?
+[S20_T02] Deborah: Hey Jolene! Good to hear from you. That`s cool! Been thinking about a few big moments lately - went to a place that held a lot of memories for me. Sat on a bench where we used to chat and it brought back a lot of emotions.  [shares an image: a photo of a flower cart on a sidewalk with flowers in it]
+[S20_T03] Jolene: Mostly happy or a bit of everything?
+[S20_T04] Deborah: It was quite a mix, Jolene. I felt nostalgia and longing, but also grateful for the memories. It's amazing how a place can mean so much. I brought these flowers there. [shares an image: a photo of a vase of flowers on the ground in a street]
+[S20_T05] Jolene: Do you think she would like it?
+[S20_T06] Deborah: Yeah, my mom really loved flowers. They always made her so happy. She appreciated the simple things in life.
+ [shares an image: a photo of a woman holding a bouquet of red roses]
+[S20_T07] Jolene: Wow, that's a great photo! How did she show you to appreciate it?
+[S20_T08] Deborah: By taking it slow, seeing beauty in them, and finding joy.
+[S20_T09] Jolene: Wow Deb, that's awesome! We should definitely take time to enjoy that and not let the business of life cause us to miss out on the good stuff.
+[S20_T10] Deborah: Yeah, Jolene. Life can be so busy that we often overlook the small things that truly matter. Let's make an effort to appreciate them more.
+[S20_T11] Jolene: Yep Deb, slowing down and enjoying simple moments can bring a lot of balance and happiness. I'm trying to do more yoga and meditation myself to help relax and stay focused. Are there any calming habits that you practice to feel balanced?
+[S20_T12] Deborah: Yeah, same here, Jolene! Yoga and meditation help me find balance and inner peace. Going out for walks and staying mindful also keep me grounded. I take similar photos on walks. [shares an image: a photo of a sunset over a body of water]
+[S20_T13] Jolene: Gorgeous! Going for a walk and feeling so peaceful must be amazing.
+[S20_T14] Deborah: Moments like that I'll always cherish.
+[S20_T15] Jolene: That calm and peaceful feeling is so nice - it's great for recharging and thinking.
+[S20_T16] Deborah:  It's like a reboot for me.
+[S20_T17] Jolene: Got it! It's like hitting the refresh button and coming back even better. [shares an image: a photo of a green cushion on a floor in front of a window]
+[S20_T18] Deborah: What's your favorite yoga pose for some rest?
+[S20_T19] Jolene: I'm a fan of savasana - aka the corpse pose. It's so calming and helps me just let go and surrender. [shares an image: a photo of a person laying on the floor with a paper bag]
+[S20_T20] Deborah: Funny photo! How long have you been doing yoga?
+[S20_T21] Jolene: Been doing it for 3 years. It's a great way to escape studying and work stress.
+[S20_T22] Deborah: Wow, Jolene! Taking time to unwind is key and that seems just right for you!
+[S20_T23] Jolene: I'm really finding my zen again!
+[S20_T24] Deborah: Keep it up!
+[S20_T25] Jolene: Thanks for your support, Deb! 
+[S20_T26] Deborah: Good luck with everything. Stay in touch.
+
+### S21 (9:34 am on 24 August, 2023)
+[S21_T01] Deborah: Hey Jolene! Good to hear from you! A lot's happened since we talked - last week I got to go to this yoga retreat near my mom's place. It was so cool - I got to hang with nature and really get to know myself. Definitely life-changing! That's how beautiful it was there! [shares an image: a photo of a trail in a forest with moss and trees]
+[S21_T02] Jolene: Wow, Deb, sounds great! Glad you got to connect with yourself and nature. That's my own way to relax. What are your thoughts on life now? [shares an image: a photo of a man bending over on a blanket in the grass]
+[S21_T03] Deborah: Life's been super meaningful lately. Nature and self-reflection have helped me see how beautiful every moment is. We can really grow and learn when we listen to ourselves. What's been up with you lately? Any insights or experiences?
+ [shares an image: a photo of a mountain range with a colorful sunset in the background]
+[S21_T04] Jolene: Life's been hectic, but I'm making strides toward my goals. It's tough, but satisfying.
+[S21_T05] Deborah: Can you tell me a bit more about it and what you've achieved?
+[S21_T06] Jolene: My goal is to be successful in my field and make a positive impact. I've been studying, attending workshops, and networking to make it happen. Recently, I had the opportunity to present at a virtual conference and received positive feedback.  It was a great experience and confirmed that I'm on the right track.
+[S21_T07] Deborah: You really put your heart and soul into it. Must have been amazing having it go so well. How did it feel when people gave you positive feedback? Any ideas for what comes next?
+[S21_T08] Jolene: I was thrilled to receive such positive feedback! It felt so rewarding to know that my efforts were appreciated. Right now, I'm focusing on studying and gaining more experience. I'm even thinking about more internships to further enhance my skills. Exciting times! Hopefully, there will be more updates to share with you soon.
+[S21_T09] Deborah: Wow, Jolene! Way to go! I'm super proud of all you've achieved. Let me know if you need any help. Onward!
+[S21_T10] Jolene: Thanks, Deb! Your support means a lot to me. 
+[S21_T11] Deborah: No problem. You got this! 
+[S21_T12] Jolene:  I'm not giving up, just gonna keep pushing forward.
+[S21_T13] Deborah: Reach for your goals and don't forget to enjoy the journey. 
+[S21_T14] Jolene: Thanks, Deb. Your support means a lot. I'll keep pushing forward and remember to enjoy every step of the way.
+[S21_T15] Deborah: Come on! The journey's as important as the destination. Take time for yourself and find joy in it. We believe in you! [shares an image: a photo of a field of sunflowers with a sunset in the background]
+[S21_T16] Jolene: Yeah, you're right! I'll take your advice and find joy on the way. Cheers for the support! [shares an image: a photo of a city skyline at sunset with a body of water]
+[S21_T17] Deborah: Always by your side!
+
+### S22 (5:33 pm on 26 August, 2023)
+[S22_T01] Deborah: Hey Jolene, since we talked I've been thinking about my mom's influence. Remembering those we love is important.
+[S22_T02] Jolene: I understand, Deb. Remembering and cherishing the memories of our loved ones is so important. It's comforting to know that their influence still guides us. Last Friday, my partner and I talked about how our loved ones have influenced us and what their values meant to us. It was an emotional chat, but it made us feel closer and showed us what really matters. 
+[S22_T03] Deborah: Those types of conversations really help build relationships. Can you tell me more about the values they have given you?
+[S22_T04] Jolene: Definitely! Our loved ones have taught us to persevere and stay resilient, like my mom always said to never give up, and my partner's dad showed them to stay determined. Their values have influenced us to pursue our goals, such as me with engineering and my partner with their creative endeavors. Even though they're not here, we both feel their values encouraging us along our paths.
+[S22_T05] Deborah: That's wonderful to hear, Jolene! It's amazing how their values continue to guide you, even in their absence. It sounds like you and your partner are honoring their memory by pursuing your respective passions. Have you ever considered incorporating those values into your work as well?
+[S22_T06] Jolene: Yeah, Deborah! We've been figuring out how to add these values into our projects. As an engineering student, I want to use my talents to do good and help solve important problems. I'm keen on coming up with new ideas and making things more efficient to make the world a better place. Going further, my mom stressed the value of helping others and that's something I want to keep in mind for my engineering projects.
+[S22_T07] Deborah: When our work ties into our values, it becomes more meaningful. What goals or ideas do you have for incorporating those values into your future projects?
+[S22_T08] Jolene: In the future, I'm aiming to work on projects that make a real difference to communities. I'm interested in sustainable initiatives and developing innovative solutions for environmental issues. I also want to get involved with organizations that focus on social causes, using my skills to help out. It's about connecting my passion for engineering with my commitment to making a positive impact.
+[S22_T09] Deborah: You've got a lot of amazing plans for the future. Which projects are you most interested in getting involved in?
+[S22_T10] Jolene: I'm keen on two projects in particular. One is focused on developing renewable energy, like solar, to help communities and reduce dependence on non-renewables. 
+[S22_T11] Deborah: Wow Jolene, that's really inspiring!
+[S22_T12] Jolene: The other is finding ways to supply clean water to those with limited access. Both align with my beliefs about sustainability and assisting those in need. I still have so much to figure out before beginning, but I'm up for the challenge.
+[S22_T13] Deborah: Sounds great, Jolene! Research is key to success. Little steps and being up for challenges make you stronger. I'm here for you. Connecting to yourself helps tackle any issue. Here's a photo that reminds me of the beauty of nature during a yoga session. [shares an image: a photo of a woman doing a yoga pose on the beach]
+[S22_T14] Jolene: It helps with challenges, giving balance and strength. Any tips for staying relaxed while studying?
+[S22_T15] Deborah: Taking breaks, doing some stretching/yoga, or just going for a walk is really helpful. And don't forget to get enough sleep and take time for self-care. Finding a balance between work and taking care of yourself is important. What self-care activities have you been doing lately?
+[S22_T16] Jolene: I've been into yoga and meditation lately. It helps me recharge. Doing different poses relieves tension and calms my mind. I've already shared my newfound love for yoga with my partner, and we're planning to go on a meditation retreat together to enhance our practice together. [shares an image: a photo of a woman in a pink shirt doing a yoga pose]
+[S22_T17] Deborah: Glad to hear that yoga is helping you rest and recharge. It's great for reflection and self-care. Do your snakes also enjoy it?
+[S22_T18] Jolene: My snakes just like watching me chill. But she's a great company and always brings a sense of calm.
+[S22_T19] Deborah: Having a pet around is such a calming feeling. They sure can bring a great sense of comfort. I still have cats, Luna is sitting on the left. [shares an image: a photo of two cats sitting on a window sill looking out]
+[S22_T20] Jolene: Aww, that's adorable! What's the second one's name?
+[S22_T21] Deborah: Max! They bring lots of joy and peace to our home. [shares an image: a photo of a brown leather chair and a black and white floor]
+[S22_T22] Jolene: How did you get them?
+[S22_T23] Deborah: Max is my mother's cat, I took him when my mother passed away. [shares an image: a photo of a car with a fan and a mesh bag]
+[S22_T24] Jolene: You're great for taming him. How did you get Luna?
+[S22_T25] Deborah: I took Luna from the shelter.
+[S22_T26] Jolene: It’s wonderful that you have become their loving owner!
+[S22_T27] Deborah: Yes, I really love cats, and they also need a home, love, and care! Moreover, Max is already old, he is 8 years old.
+[S22_T28] Jolene: How old is Luna?
+[S22_T29] Deborah: She is younger, she is 5 years old.
+[S22_T30] Jolene: I am proud of your action to tame these pets!
+
+### S23 (11:46 am on 30 August, 2023)
+[S23_T01] Jolene: Hey Deborah, how's it going? Guess what? Yesterday my partner and I got back from an awesome trip to Rio de Janeiro- we checked out some cool yoga classes. [shares an image: a photo of a woman doing a yoga pose in a mirror]
+[S23_T02] Deborah: That yoga pose looks great. Must've been a cool experience for the two of you. What did the trip teach you?
+[S23_T03] Jolene: This country was awesome! It showed me different kinds of yoga and their backgrounds, which made me appreciate it even more. We visited a lot of delicious cafes! Have you ever been somewhere that was important to you?
+[S23_T04] Deborah: Yep, last month I visited my mom`s house which holds a special place in my heart. My mom had good and bad times there, but it's still a symbol of her strength and the love she shared with me. This is my husband in front of this house. [shares an image: a photo of a man standing in front of a house]
+[S23_T05] Jolene: What was it like?
+[S23_T06] Deborah: It brought back fond memories as I relaxed outside.
+[S23_T07] Jolene: Sounds great! So glad you have a place to relax and find peace.
+[S23_T08] Deborah: Thanks, Jolene. It's special for me. How about you? Is there a place that helps you relax?
+[S23_T09] Jolene: I go to this nearby place to meditate by a tranquil spot. [shares an image: a photo of a pond with lily pads and a tree in the background]
+[S23_T10] Deborah: Looks chill. What's been the effect of that?
+[S23_T11] Jolene: It helps me make sense of everything and relieves stress. It's like a restart.
+[S23_T12] Deborah: Cool, glad you found a place to chill. We all need that occasionally. This is one of my favorite spots to ponder and let things go.
+ [shares an image: a photo of a lake with a few trees in the water]
+[S23_T13] Jolene: Looks great! What made you pick that spot?
+[S23_T14] Deborah: The soothing vibes and nice views made it ideal for reflecting and letting go.
+[S23_T15] Jolene: Here is one more photo from Rio de Janeiro. We went on many excursions there. [shares an image: a photo of a group of people walking up a set of stairs]
+[S23_T16] Deborah: Wow, those stairs look cool! Where were they taken?
+[S23_T17] Jolene: We had a great time visiting an old temple. The stairs were amazing!
+[S23_T18] Deborah: Wow, exploring those temples must have been incredible! Three years ago I was also in Rio de Janeiro, I took a beautiful photo on one of the excursions. [shares an image: a photo of a large stone structure with a mountain in the background]
+[S23_T19] Jolene: The architecture and history of it all were really interesting. I'm sure you also liked the places you visited there!
+[S23_T20] Deborah: Exploring historical places and learning their stories is so fun. It was a great experience. I want to share this photo with you. [shares an image: a photo of a hand holding a piece of paper with writing on it]
+[S23_T21] Jolene:  By the way, what did that paper have written on it in the photo?
+[S23_T22] Deborah: This was written to me by a friend who, unfortunately, will never be able to support me. I miss him here. This quote says"Let go of what no longer serves you."
+[S23_T23] Jolene: I'm sorry! That's a good reminder to stay focused and let go of what no longer serves us. Remember the quote in my notebook? It also inspires me! [shares an image: a photo of a notebook with a quote on it]
+[S23_T24] Deborah: What other quotes give you strength?
+[S23_T25] Jolene: I came across this one while browsing and it really hit home with me. It's a great reminder to ditch the negative stuff and focus on growing and being positive. [shares an image: a photo of a notebook with a pen and a plant on a table]
+[S23_T26] Deborah: Surrounding ourselves with good stuff and striving to improve is key.
+[S23_T27] Jolene: Yep, Deborah! It's about creating a good atmosphere to help us grow and improve. By the way, I have a new plant. [shares an image: a photo of a plant in a pot on a patio]
+[S23_T28] Deborah: What made you pick it?
+[S23_T29] Jolene: I got this as a reminder to nurture myself and embrace fresh starts.
+[S23_T30] Deborah: Nice job, Jolene! Take care of yourself and embrace new beginnings.
+[S23_T31] Jolene: Thanks Deb! Will do. Good talking to you. Take care!
+[S23_T32] Deborah: Have a great day!
+
+### S24 (2:14 pm on 3 September, 2023)
+[S24_T01] Deborah: Hey Jolene, just catching up. I went to a cool event last week with the aim to support each other - pretty inspiring. Have you been connecting with anyone lately?
+[S24_T02] Jolene: Hey Deb, great to hear from you! I've been focusing on studying and my relationship with my partner. We're taking little trips to the beach, it's a great way to relax. How about you, anything new going on?
+[S24_T03] Deborah: I was busy too - went to a community meetup last Friday. We shared stories and it was nice to feel how connected we are. It made me think about how important relationships are. How about you, how are things going in that area?
+[S24_T04] Jolene: I'm really thankful for my significant other right now. It's great to have someone encouraging my goals! How are things with your friends and family? Any updates on that front?
+[S24_T05] Deborah: Relationships with family and friends are so vital. My yoga pals have been my second family - we've held each other up through a lot. The other day I found this old photo. That was when I first started doing yoga. My mum was my biggest fan and source of motivation. She'd often come to my classes with me. [shares an image: a photo of a woman sitting on a yoga mat with two children]
+[S24_T06] Jolene: Our loved ones sure are supportive! When I was 10, my parents got me that and it was the start of my passion for video games. [shares an image: a photo of a nintendo game console and a game controller]
+[S24_T07] Deborah: Cool that they shared that with you. Did you learn on your own or did they teach you?
+[S24_T08] Jolene: I taught myself, but my dad was always supportive and my mom would play games with me.  [shares an image: a photo of a nintendo wii game system with a game on the screen]
+[S24_T09] Deborah: That's awesome! Sounds like you had a lot of support from your parents. What was your favorite game to play with mom?
+[S24_T10] Jolene: One of my favorites was "Monster Hunter: World". The immersive story and open-world gaming are amazing!
+[S24_T11] Deborah:  It can be so freeing when you get immersed in a game like that. 
+[S24_T12] Jolene: Yeah! It's my way to de-stress and take a break from life.
+[S24_T13] Deborah: What's up this month? Anything fun happening for you?
+[S24_T14] Jolene: Got a lot of finals coming up this month, so I've been studying real hard. It's been quite stressful, but it'll be worth it in the end. Thinking about taking a trip somewhere to relax and recharge afterward.
+[S24_T15] Deborah: Good luck with it! Let me know if there's anything I can do to assist you.
+
+### S25 (8:31 pm on 6 September, 2023)
+[S25_T01] Jolene: Woohoo! I signed up for a meditation course at a retreat near a lake. Can't wait to share this experience with my partner and learn some new techniques. Sooo excited! [shares an image: a photo of a building with a curved roof on a hill]
+[S25_T02] Deborah: That`s awesome! It looks so calm in the pic - I hope you enjoy your experience and learn some new techniques!
+[S25_T03] Jolene:  It's amazing how something so easy can make such a big difference to our health!
+[S25_T04] Deborah: Yep, it's become part of my routine now. Can't imagine my life without it.
+[S25_T05] Jolene: Yeah, same! It helps me stay balanced during my studies.
+[S25_T06] Deborah: Glad to hear it, Jolene. How's the project going?
+[S25_T07] Jolene:  It's tough but I'm chugging along. Thanks!
+[S25_T08] Deborah: You're so strong for handling all the challenges. You've got this!
+[S25_T09] Jolene: Thanks, Deb! Your support really means a lot. I'll keep pushing forward.
+[S25_T10] Deborah: No worries, Jolene. I'm here if you need me. Take care of yourself and don't forget to rest up.
+[S25_T11] Jolene: What have you been doing lately?
+[S25_T12] Deborah: I recently saw this wonderful sunrise again. [shares an image: a photo of a person walking on the beach with a surfboard]
+[S25_T13] Jolene: Glimpsing that calms me. Taking beach walks relaxes me. 
+[S25_T14] Deborah: Did my photo remind you of something?
+[S25_T15] Jolene: That shot was like a reminder of my last beach getaway. So chill and nice. 
+[S25_T16] Deborah: Glad it brought back good memories. 
+[S25_T17] Jolene: Maybe one day we will be able to watch the sunrise together!
+[S25_T18] Deborah: An offer I can't refuse!
+[S25_T19] Jolene: Bye, Deb! See you later!
+[S25_T20] Deborah: See ya! Stay safe and catch you later. Bye!
+
+### S26 (7:39 pm on 8 September, 2023)
+[S26_T01] Deborah: Hey Jolene, had a tough week. Storm forced us to cancel our yoga getaway.
+[S26_T02] Jolene: Sorry to hear about it. How are you feeling now?
+[S26_T03] Deborah: I was bummed about it, but I'm doing better now. It was just a setback, but I found comfort in my work and spending time at home. Reminds me to be grateful for the little things. And you? How's it going?
+[S26_T04] Jolene: My partner and I plan a camping trip to connect with nature and practice yoga.
+[S26_T05] Deborah: It can be both good and tough to plan activities with a busy schedule - what strategies do you use?
+[S26_T06] Jolene: Having a routine helps me stay on top of everything I need to do. I have a schedule for classes, studying, and personal time. Self-care activities like yoga and meditation help me stay balanced and relax.
+[S26_T07] Deborah: I'd love to learn more about how you do it.
+[S26_T08] Jolene:  I can tell you about it if you're interested. It took a bit of experimenting, but it's really helped me.
+[S26_T09] Deborah: Sounds great! Let's set up a coffee date and talk about it!
+[S26_T10] Jolene: Wanna meet up at that cafe next Monday? Let's try fresh pastries. [shares an image: a photo of a coffee shop with a bunch of coffee machines]
+[S26_T11] Deborah: Sounds good, Jolene! When did you have in mind? That cafe rocks.
+[S26_T12] Jolene: How about Wednesday at 4? Can't wait to catch up over coffee! [shares an image: a photo of a person holding a cup of coffee in front of a bunch of flowers]
+[S26_T13] Deborah: That pic looks so peaceful. Reminded me of a cool hidden coffee shop near me. Rate it! [shares an image: a photo of a group of people sitting at tables in a room]
+[S26_T14] Jolene: Tell me more about it when we meet, maybe next time we’ll be there.
+[S26_T15] Deborah: Sorry, I remembered that I already have plans for this day.
+[S26_T16] Jolene: Now I'll see when it's more convenient for me.
+[S26_T17] Deborah: Thank you for your understanding, I'm waiting.
+[S26_T18] Jolene: How about Friday at 5? I will need to sort out the books from this bookcase and I will be free. [shares an image: a photo of a room with a book shelf and a ceiling fan]
+[S26_T19] Deborah: Absolutely, let's do that! Can't wait for our coffee date next week. See you then. Stay safe!
+[S26_T20] Jolene: See ya soon, Deb! Be safe and I'm excited for our coffee date!
+[S26_T21] Deborah: Maybe just grab me some interesting books!
+
+### S27 (2:18 pm on 12 September, 2023)
+[S27_T01] Jolene: Hey Deb! So sorry for the late reply, been super busy. Last weekend my partner and I traveled to a meditation retreat for a few weeks in Phuket. Amazing experience! Nature, reflection and a break from engineering studies were awesome - it helped me find inner peace. [shares an image: a photo of a woman doing a yoga pose on the beach]
+[S27_T02] Deborah:  I'd love to hear more about your reflections there and how they changed you.
+[S27_T03] Jolene: At the retreat, I had time to reflect on what makes me happy. It made me realize the importance of incorporating relaxation, self-care, and balance in life alongside my engineering studies. The beauty of nature there was so inspiring and refreshing!
+[S27_T04] Deborah:  Was there anything from the retreat that stood out to you?
+[S27_T05] Jolene: The one session that really stood out was about releasing expectations and judgments and just savoring the present. It was a strong reminder to not just dwell on the finish line, but to appreciate the journey too. I usually get too consumed with hitting my goals that I forget to appreciate the ride.
+[S27_T06] Deborah:  I've been thinking about this a lot, too. Life's full of small moments and being grateful for those can really boost our happiness.
+[S27_T07] Jolene: Yup, totally agree! Sometimes we get too focused on the big stuff and don't appreciate all the tiny wins. Like the feeling of the sun or a great cup of coffee - can be small but they make life much better. Trying to be more mindful and grateful to take it all in now.
+[S27_T08] Deborah: That's great, Jolene! Practicing mindfulness and gratitude can really change our day-to-day. Even just a different outlook can make the little things in life joyful. Glad you're getting into it!
+[S27_T09] Jolene: I'm experiencing a new level of joy and happiness!
+[S27_T10] Deborah:  It's wonderful to see your progress, and I'm excited to be on this journey with you!
+[S27_T11] Jolene: Thanks, Deb! Appreciate your support. It's great that we can do this together.
+[S27_T12] Deborah: Having a supportive community definitely helps. We can motivate and encourage each other! By the way, I recently played a game. I don't remember what it's called. This is a card game about cats, where you take cards one by one from a deck, and then you can attack your opponent with them. We'll definitely play it with you! [shares an image: a photo of two children standing on yoga mats in a room]
+[S27_T13] Jolene: I look forward to meeting you and playing this game!
+
+### S28 (3:09 pm on 15 September, 2023)
+[S28_T01] Deborah: Since speaking last, I reconnected with my mom's old friends. Their stories made me tear up and reminded me how lucky I am to have had her. [shares an image: a photo of a living room with a couch and a fire place]
+[S28_T02] Jolene:  It's great that you could reconnect with them. Hearing stories about our loved ones can be tough but also comforting.
+[S28_T03] Deborah: Hearing stories about my mom was emotional. It was both happy and sad to hear things I hadn't heard before. It was a mix of emotions, but overall it was comforting to reconnect with her friends.
+[S28_T04] Jolene: It can bring up a range of emotions, and it's okay to feel a mix of happiness and sadness. Those moments with her friends must've been meaningful to you.
+[S28_T05] Deborah: Wow, it was so special. A glimpse into her life beyond what I knew. Through their eyes, I appreciate her more. Here I am and my mom. [shares an image: a photo of two women in pajamas taking a selfie in a mirror]
+[S28_T06] Jolene: That looks like a blast! What did you and your mom's friends do on that day?
+[S28_T07] Deborah: We reminisced and looked through her photos. It was really sweet.
+[S28_T08] Jolene: Looking at old photos must have been so nostalgic! It's great that you could share that experience with friends. It's amazing how photos and memories can give us a deeper appreciation for the people we love.
+[S28_T09] Deborah: Pictures really have a way of bringing back memories and making us appreciate the special bond we have with our loved ones. They remind me of how strong love is and how amazing human relationships can be. Just like this one. [shares an image: a photo of a person walking on the beach with a surfboard]
+[S28_T10] Jolene: Wow, what a gorgeous pic! Do you have any special memories of that beach or just love surfing in general?
+[S28_T11] Deborah: That beach is super special to me. It's where I got married and discovered my love for surfing. It's always filled with joy and peace.
+[S28_T12] Jolene: What pleasant memories.
+[S28_T13] Deborah: Here is another photo from my classes. [shares an image: a photo of a woman doing a yoga pose on the beach]
+[S28_T14] Jolene: Wow, that yoga pose looks amazing! Does it help you relax?
+[S28_T15] Deborah: Oh yeah! Doing this on the beach is so peaceful - the ocean, sand, and fresh air create a super relaxing atmosphere. The perfect way to take care of myself.
+[S28_T16] Jolene:  I like to create my own serene yoga space with candles and oils for extra chill vibes. Also, we tried a new style of meditation in Thailand - with flowers. [shares an image: a photography of a couple of towels sitting on top of a table]
+[S28_T17] Deborah: Oh, same for me!
+[S28_T18] Jolene: I find calm when I do yoga or meditate. I use essential oils and put on some soft, soothing music in the background to create a peaceful atmosphere. It really helps me chill out and center myself.
+[S28_T19] Deborah:  It's amazing how our environment can enhance our practice.
+[S28_T20] Jolene: Yeah, totally! Our surroundings can really affect our mood and how much zen we can get from our routine. Creating a place that feels safe and chill is key. [shares an image: a photo of a bed with a colorful blanket and pillows]
+[S28_T21] Deborah: Wow, that looks so comfy and inviting! Where do you usually go to relax in your house?
+[S28_T22] Jolene: In my room, I usually go to relax and feel at ease. After a busy day, it's my little haven for peace and rest - the perfect spot to relax and recharge.
+[S28_T23] Deborah: Sounds like your room does the job. That's awesome.
+[S28_T24] Jolene:  Here are my pals keeping me company. [shares an image: a photo of a person holding a snake in a container]
+[S28_T25] Deborah: Hey, that's Susie or Seraphim? How long has he been hanging out with you?
+[S28_T26] Jolene: It`s Susie! I've had her for two years now. 
+[S28_T27] Deborah: It's awesome how pets can bring us comfort and peace when we need it.
+[S28_T28] Jolene: Susie is a great companion.
+[S28_T29] Deborah: The love pets give is priceless.
+[S28_T30] Jolene: Plus, they make life a lot brighter!
+
+### S29 (1:24 pm on 17 September, 2023)
+[S29_T01] Deborah: Hey Jolene, I'm so excited to tell you! Yesterday, me and my neighbor ran a free gardening class for the community, it was awesome! People of any age joined in and it was such a great thing to see.
+[S29_T02] Jolene: Wow, Deborah, that's awesome! Keep up the great work, and here's hoping for more events like this in the future!
+[S29_T03] Deborah:  Gardening is really amazing. It brings us together in such a cool way. It was awesome to share my love of plants and help people take care of the world. So, what about you? Anything new happened lately?
+[S29_T04] Jolene: We tried a scuba diving lesson last Friday and had an awesome time! We found a cool dive spot we can explore together. Trying new things opens up a world of adventure - maybe one day I'll be a certified diver. Anything fun going on with you?
+[S29_T05] Deborah: That sounds amazing, Jolene! I've been interested in underwater life, but I haven't had the chance to try scuba diving yet. Recently, I've been spending time remembering my mom. Last Sunday, I visited her old house and sat on a bench. It was a comforting experience, as if I could feel her presence guide me and remind me of her love.
+[S29_T06] Jolene: Visiting your mom's old home sounds like it was really special. Is there something special you remember about her?
+[S29_T07] Deborah: Thanks, Jolene! It was really special. My mom had a big passion for cooking. She would make amazing meals for us, each one full of love and warmth. I can still remember the smell of her special dish, it would fill the house and bring us all together. [shares an image: a photo of a bowl of food with a spoon in it]
+[S29_T08] Jolene: Mmm, that looks delicious, Deb! So sweet how cooking with your mom brought everyone together. What's your best memory of cooking with her?
+[S29_T09] Deborah: I loved it when she would bake pineapple birthday cakes for me when I was a kid. It always made me feel so special. [shares an image: a photo of a pineapple cake with a smiley face on it]
+[S29_T10] Jolene: No wonder it made you feel special. 
+[S29_T11] Deborah: Have you ever had something like that with someone close? [shares an image: a photo of a mixer with a whisk in it]
+[S29_T12] Jolene: I used to bake cookies with someone close to me. [shares an image: a photo of four chocolate chip cookies on a baking sheet]
+[S29_T13] Deborah: What's your favorite cookie to make?
+[S29_T14] Jolene: The warm, gooey chocolate and soft, buttery cookie are a match made in heaven.
+[S29_T15] Deborah: I really want to eat this now.
+[S29_T16] Jolene: Well look what I have here! [shares an image: a photo of a person holding a book open on a bed]
+[S29_T17] Deborah:  Is there anything special about it or the photo?
+[S29_T18] Jolene: It takes me to another world when I read it!
+[S29_T19] Deborah: Did I show you that I have a big bookshelf too? [shares an image: a photo of a living room with a couch and a book shelf]
+[S29_T20] Jolene: I think not, I really like it!
+[S29_T21] Deborah: Having a space like this is important for escaping reality and relaxing with a book. Do you have any books that really moved you? [shares an image: a photo of a bathroom with a black and white wall and a wooden stool]
+[S29_T22] Jolene: My bathroom has an aesthetic vibe. Once I read a self-discovery book there and it really resonated with me.
+[S29_T23] Deborah: Wow! A special book that speaks to you and helps with self-discovery? That's awesome. Plus, having a cozy nook to chill? That's my best one! [shares an image: a photo of a person walking on the beach with a surfboard]
+[S29_T24] Jolene: Sounds nice, Deb! A cozy nook is a must! The beach is a great place for finding peace and relaxation. Have you ever tried surfing?
+[S29_T25] Deborah: Certainly! Here's the confirmation. [shares an image: a photo of a man riding a surfboard on a wave in the ocean]
+[S29_T26] Jolene: How cool! But I never decided to try it.
+[S29_T27] Deborah: It's okay, maybe we can try it together sometime!
+[S29_T28] Jolene: I already know what fate awaits me if I do this! [shares an image: a photo of a surfboard painted with a palm tree on it]
+[S29_T29] Deborah: Have you ever been interested in this or do you know nothing about it?
+[S29_T30] Jolene: Just started learning, but haven't gone yet. Want to come with me sometime?
+[S29_T31] Deborah: It'll be an adventure! Let's make it happen soon! [shares an image: a photo of a sunset over the ocean with a boat in the distance]
+[S29_T32] Jolene: So glad, all that remains is to agree and choose the right time for both of us.
+[S29_T33] Deborah:  Can't wait. What day works for you? I'm really excited!
+[S29_T34] Jolene: Let's plan for next month - I'll check my schedule and let you know. Can't wait!
+
+### S30 (10:17 am on 20 September, 2023)
+[S30_T01] Deborah: I had a great time at the music festival with my pals! The vibes were unreal and the music was magical. It was so freeing to dance and bop around. Music brings us together and helps us show our feelings. It reminds me of my mom and her soothing voice when she'd sing lullabies to me. Lucky to have those memories!
+[S30_T02] Jolene: Wow, festivals sound so fun! Here's me and my partner at one last year - had an awesome time! It's my way of expressing myself and getting away from all the stress of everyday life. Just got back from a trip with my partner - so cool! [shares an image: a photo of a man and woman standing in a field at night]
+[S30_T03] Deborah: Wow, what a gorgeous shot! It looks so tranquil and serene. You two look very happy together. Trips create awesome memories that we can share. Where did you go on your trip and what's something you'll never forget?
+[S30_T04] Jolene: Thanks! We had an awesome yoga retreat. The place was so peaceful and the view during yoga was amazing - the sunrise lit up the whole sky with bright colors. It was so beautiful, it made us feel so alive and grateful. [shares an image: a photo of a sunset over a valley with a horse]
+[S30_T05] Deborah: Wow, what a view!  How did it make you feel?
+[S30_T06] Jolene: It was amazing! Doing yoga with that backdrop made me feel connected to nature and myself. I felt incredibly peaceful and thankful.
+[S30_T07] Deborah: Like, it's no wonder looking at such beauty can really help us refocus and connect with who we are. Have you ever experienced that?
+[S30_T08] Jolene: I remember taking a hike with my partner and coming across a waterfall oasis. Everything just felt so peaceful and my worries just disappeared. It was such a refreshing experience.
+[S30_T09] Deborah: Are you planning to experience it again soon?
+[S30_T10] Jolene: Yeah! I'm planning to get out in nature again next month. It's going to be great reconnecting with it!
+[S30_T11] Deborah:  Enjoy it! This photo made me think of a gorgeous blossom tree from near my home. Every spring, it was magical to watch it bloom. [shares an image: a photo of a pink flowered tree with a blue sky in the background]
+[S30_T12] Jolene: That sounds magical! How was it watching the tree bloom each spring?
+[S30_T13] Deborah: It was like admiring nature's artwork. It filled me with awe and made me appreciate the beauty of life. Even in tough times, there's hope for growth.
+[S30_T14] Jolene: This photo I took is a great visual representation of that idea. It reminds me that I can keep growing through any obstacles. [shares an image: a photo of a plant growing out of a corner of a building]
+[S30_T15] Deborah: It really captures resilience and strength. I love how you find inspiration in the small things.
+[S30_T16] Jolene: Thanks, Deborah! Appreciating those small things is important. It helps me remember that even when times are tough, there's always something positive to hang onto.
+[S30_T17] Deborah: It's a great habit. Thanks for reminding me!
+[S30_T18] Jolene: Sure Deb, it's great catching up. Keep on finding those beauties!
+
+## Current situation: S31 (23 September, 2023)
+[S31_T01] Jolene: Hey Deb! How did dropping off those boxes go?
+[S31_T02] Deborah: I meant to stop by the old house for ten minutes, just to drop the boxes. But I ended up sitting on the bench by the window for over an hour, watching the street. My chest felt warm and quiet, and I honestly didn't want to get up.   <- target turn
+
+## Candidate cues
+- c1: the moving boxes
+- c2: the roses and dahlias
+- c3: the bench by the window
+- none: none of these (no supporting cue in the history)

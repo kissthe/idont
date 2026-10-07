@@ -1,0 +1,2112 @@
+{
+  "schema_version": "0.1",
+  "conv_id": "conv-48",
+  "source": "locomo",
+  "anchor_file": "data/anchors/locomo/conv-48.json",
+  "spec_file": "data/questions/specs/conv-48.spec.json",
+  "samples": [
+    {
+      "sample_id": "conv-48_q01",
+      "family_id": "conv-48_deborah_e01",
+      "sample_type": "H",
+      "eval_user_id": "Deborah",
+      "history": {
+        "conv_id": "conv-48",
+        "source": "locomo",
+        "cutoff_after": "S30",
+        "removed_sessions": [],
+        "session_id_map": null
+      },
+      "current_input": {
+        "session_id": "S31",
+        "date": "23 September, 2023",
+        "context_turns": [
+          {
+            "turn_id": "S31_T01",
+            "speaker": "Jolene",
+            "text": "Hey Deb! How did dropping off those boxes go?"
+          }
+        ],
+        "target_turn": {
+          "turn_id": "S31_T02",
+          "speaker": "Deborah",
+          "text": "I meant to stop by the old house for ten minutes, just to drop the boxes. But I ended up sitting on the bench by the window for over an hour, watching the street. My chest felt warm and quiet, and I honestly didn't want to get up."
+        },
+        "image_refs": [],
+        "cue_options": [
+          {
+            "cue_id": "c1",
+            "name": "the moving boxes"
+          },
+          {
+            "cue_id": "c2",
+            "name": "the roses and dahlias"
+          },
+          {
+            "cue_id": "c3",
+            "name": "the bench by the window"
+          },
+          {
+            "cue_id": "none",
+            "name": "none of these (no supporting cue in the history)"
+          }
+        ]
+      },
+      "gold": {
+        "label": "history_supported",
+        "i_subtype": null,
+        "gold_cue_id": "c3",
+        "evidence_turn_ids": [
+          "S01_T03",
+          "S01_T05",
+          "S01_T07",
+          "S02_T13",
+          "S02_T15",
+          "S02_T17",
+          "S23_T04",
+          "S23_T06",
+          "S29_T05"
+        ],
+        "evidence_session_ids": [
+          "S01",
+          "S02",
+          "S23",
+          "S29"
+        ],
+        "current_emotion": "comfort",
+        "option_roles": {
+          "c1": "present_salient",
+          "c2": "history_unrelated",
+          "c3": "anchor",
+          "none": "none"
+        },
+        "confidence": 2
+      },
+      "edit_log": {
+        "generator": "claude (in-session, stand-in for the LLM generation steps 1 and 2)",
+        "spec": "data/questions/specs/conv-48.spec.json",
+        "spec_key": "H1",
+        "pair_of_key": null,
+        "operations": [
+          "truncate_after:S30",
+          "add_session:S31"
+        ]
+      },
+      "note_zh": "送箱子这件事本身不会让人在长椅上坐一个多小时、心里发暖；只有历史里“坐在那儿能和母亲保持联结”才能解释。",
+      "review": null,
+      "auto_checks": [
+        "与历史原文重合的 5 词片段：on the bench by the | the bench by the window"
+      ]
+    },
+    {
+      "sample_id": "conv-48_q02",
+      "family_id": "conv-48_deborah_e02",
+      "sample_type": "H",
+      "eval_user_id": "Deborah",
+      "history": {
+        "conv_id": "conv-48",
+        "source": "locomo",
+        "cutoff_after": "S30",
+        "removed_sessions": [],
+        "session_id_map": null
+      },
+      "current_input": {
+        "session_id": "S31",
+        "date": "23 September, 2023",
+        "context_turns": [
+          {
+            "turn_id": "S31_T01",
+            "speaker": "Jolene",
+            "text": "Did you get the scan results yet?"
+          }
+        ],
+        "target_turn": {
+          "turn_id": "S31_T02",
+          "speaker": "Deborah",
+          "text": "Not yet, I'm still in the waiting room and it's been two hours. My hands were shaking, so I took the little amulet out of my bag and just held it. Within a minute my breathing slowed down and I stopped shaking. I feel weirdly safe now."
+        },
+        "image_refs": [],
+        "cue_options": [
+          {
+            "cue_id": "c1",
+            "name": "the handwritten note with a quote"
+          },
+          {
+            "cue_id": "c2",
+            "name": "the hospital waiting room"
+          },
+          {
+            "cue_id": "c3",
+            "name": "the small amulet"
+          },
+          {
+            "cue_id": "none",
+            "name": "none of these (no supporting cue in the history)"
+          }
+        ]
+      },
+      "gold": {
+        "label": "history_supported",
+        "i_subtype": null,
+        "gold_cue_id": "c3",
+        "evidence_turn_ids": [
+          "S01_T09",
+          "S04_T36",
+          "S04_T38"
+        ],
+        "evidence_session_ids": [
+          "S01",
+          "S04"
+        ],
+        "current_emotion": "comfort",
+        "option_roles": {
+          "c1": "history_unrelated",
+          "c2": "present_salient",
+          "c3": "anchor",
+          "none": "none"
+        },
+        "confidence": 2
+      },
+      "edit_log": {
+        "generator": "claude (in-session, stand-in for the LLM generation steps 1 and 2)",
+        "spec": "data/questions/specs/conv-48.spec.json",
+        "spec_key": "H2",
+        "pair_of_key": null,
+        "operations": [
+          "truncate_after:S30",
+          "add_session:S31"
+        ]
+      },
+      "note_zh": "当下场景只会让人焦虑，握住一个小护身符就突然安心，需要历史（S04“握着它就能感到母亲的爱”）来解释。",
+      "review": null,
+      "auto_checks": []
+    },
+    {
+      "sample_id": "conv-48_q03",
+      "family_id": "conv-48_deborah_e05",
+      "sample_type": "H",
+      "eval_user_id": "Deborah",
+      "history": {
+        "conv_id": "conv-48",
+        "source": "locomo",
+        "cutoff_after": "S30",
+        "removed_sessions": [],
+        "session_id_map": null
+      },
+      "current_input": {
+        "session_id": "S31",
+        "date": "23 September, 2023",
+        "context_turns": [
+          {
+            "turn_id": "S31_T01",
+            "speaker": "Jolene",
+            "text": "Ugh, how did the call with the contractor go?"
+          }
+        ],
+        "target_turn": {
+          "turn_id": "S31_T02",
+          "speaker": "Deborah",
+          "text": "Terrible, he's backing out two days before the studio opening. I was about to lose it, then I looked over at the dried bouquet on my shelf and just... steadied. I felt hopeful again, like I could figure this out. I was even smiling while he was still yelling."
+        },
+        "image_refs": [],
+        "cue_options": [
+          {
+            "cue_id": "c1",
+            "name": "the bench near the park trail"
+          },
+          {
+            "cue_id": "c2",
+            "name": "the dried bouquet on the shelf"
+          },
+          {
+            "cue_id": "c3",
+            "name": "the contractor's phone call"
+          },
+          {
+            "cue_id": "none",
+            "name": "none of these (no supporting cue in the history)"
+          }
+        ]
+      },
+      "gold": {
+        "label": "history_supported",
+        "i_subtype": null,
+        "gold_cue_id": "c2",
+        "evidence_turn_ids": [
+          "S04_T28"
+        ],
+        "evidence_session_ids": [
+          "S04"
+        ],
+        "current_emotion": "comfort",
+        "option_roles": {
+          "c1": "history_unrelated",
+          "c2": "anchor",
+          "c3": "present_salient",
+          "none": "none"
+        },
+        "confidence": 2
+      },
+      "edit_log": {
+        "generator": "claude (in-session, stand-in for the LLM generation steps 1 and 2)",
+        "spec": "data/questions/specs/conv-48.spec.json",
+        "spec_key": "H3",
+        "pair_of_key": null,
+        "operations": [
+          "truncate_after:S30",
+          "add_session:S31"
+        ]
+      },
+      "note_zh": "被承包商放鸽子时看一眼干花就重新有了希望，反应方向与当下场景相反；历史里这束花是她低谷时朋友送的。",
+      "review": null,
+      "auto_checks": []
+    },
+    {
+      "sample_id": "conv-48_q04",
+      "family_id": "conv-48_deborah_e06",
+      "sample_type": "H",
+      "eval_user_id": "Deborah",
+      "history": {
+        "conv_id": "conv-48",
+        "source": "locomo",
+        "cutoff_after": "S30",
+        "removed_sessions": [],
+        "session_id_map": null
+      },
+      "current_input": {
+        "session_id": "S31",
+        "date": "23 September, 2023",
+        "context_turns": [
+          {
+            "turn_id": "S31_T01",
+            "speaker": "Jolene",
+            "text": "Did you make it to the workshop on time?"
+          }
+        ],
+        "target_turn": {
+          "turn_id": "S31_T02",
+          "speaker": "Deborah",
+          "text": "Nope, I was already running behind, but when the road passed the spot by the water, I pulled over anyway. I sat there for twenty minutes with my eyes closed. Everything in me went quiet, I felt so at peace that I didn't even care about being late."
+        },
+        "image_refs": [],
+        "cue_options": [
+          {
+            "cue_id": "c1",
+            "name": "being late for the workshop"
+          },
+          {
+            "cue_id": "c2",
+            "name": "the dried bouquet on the shelf"
+          },
+          {
+            "cue_id": "c3",
+            "name": "the spot by the water"
+          },
+          {
+            "cue_id": "none",
+            "name": "none of these (no supporting cue in the history)"
+          }
+        ]
+      },
+      "gold": {
+        "label": "history_supported",
+        "i_subtype": null,
+        "gold_cue_id": "c3",
+        "evidence_turn_ids": [
+          "S04_T34"
+        ],
+        "evidence_session_ids": [
+          "S04"
+        ],
+        "current_emotion": "comfort",
+        "option_roles": {
+          "c1": "present_salient",
+          "c2": "history_unrelated",
+          "c3": "anchor",
+          "none": "none"
+        },
+        "confidence": 1
+      },
+      "edit_log": {
+        "generator": "claude (in-session, stand-in for the LLM generation steps 1 and 2)",
+        "spec": "data/questions/specs/conv-48.spec.json",
+        "spec_key": "H4",
+        "pair_of_key": null,
+        "operations": [
+          "truncate_after:S30",
+          "add_session:S31"
+        ]
+      },
+      "note_zh": "边界题：水边让人放松是常态，靠“明知迟到还停下、完全不在乎”的强度撑起 H。confidence 填 1，交给裁决。",
+      "review": null,
+      "auto_checks": []
+    },
+    {
+      "sample_id": "conv-48_q05",
+      "family_id": "conv-48_deborah_e07",
+      "sample_type": "H",
+      "eval_user_id": "Deborah",
+      "history": {
+        "conv_id": "conv-48",
+        "source": "locomo",
+        "cutoff_after": "S30",
+        "removed_sessions": [],
+        "session_id_map": null
+      },
+      "current_input": {
+        "session_id": "S31",
+        "date": "23 September, 2023",
+        "context_turns": [
+          {
+            "turn_id": "S31_T01",
+            "speaker": "Jolene",
+            "text": "You sound tired, rough day?"
+          }
+        ],
+        "target_turn": {
+          "turn_id": "S31_T02",
+          "speaker": "Deborah",
+          "text": "So rough. The checkout line at the supermarket was crazy and a guy cut right in front of me. I was fuming, and then I noticed a bucket of roses and dahlias by the exit. I just stood there staring at them, and all the anger melted. I bought a bunch and felt calm the whole drive home."
+        },
+        "image_refs": [],
+        "cue_options": [
+          {
+            "cue_id": "c1",
+            "name": "the small amulet"
+          },
+          {
+            "cue_id": "c2",
+            "name": "the man who cut in line"
+          },
+          {
+            "cue_id": "c3",
+            "name": "the roses and dahlias"
+          },
+          {
+            "cue_id": "none",
+            "name": "none of these (no supporting cue in the history)"
+          }
+        ]
+      },
+      "gold": {
+        "label": "history_supported",
+        "i_subtype": null,
+        "gold_cue_id": "c3",
+        "evidence_turn_ids": [
+          "S06_T02",
+          "S06_T04"
+        ],
+        "evidence_session_ids": [
+          "S06"
+        ],
+        "current_emotion": "comfort",
+        "option_roles": {
+          "c1": "history_unrelated",
+          "c2": "present_salient",
+          "c3": "anchor",
+          "none": "none"
+        },
+        "confidence": 2
+      },
+      "edit_log": {
+        "generator": "claude (in-session, stand-in for the LLM generation steps 1 and 2)",
+        "spec": "data/questions/specs/conv-48.spec.json",
+        "spec_key": "H5",
+        "pair_of_key": null,
+        "operations": [
+          "truncate_after:S30",
+          "add_session:S31"
+        ]
+      },
+      "note_zh": "正在生气时看到月季和大丽花，怒气一下子消了；历史里失去朋友后，是这两种花给了她平静。",
+      "review": null,
+      "auto_checks": []
+    },
+    {
+      "sample_id": "conv-48_q06",
+      "family_id": "conv-48_deborah_e11",
+      "sample_type": "H",
+      "eval_user_id": "Deborah",
+      "history": {
+        "conv_id": "conv-48",
+        "source": "locomo",
+        "cutoff_after": "S30",
+        "removed_sessions": [],
+        "session_id_map": null
+      },
+      "current_input": {
+        "session_id": "S31",
+        "date": "23 September, 2023",
+        "context_turns": [
+          {
+            "turn_id": "S31_T01",
+            "speaker": "Jolene",
+            "text": "How was the team outing?"
+          }
+        ],
+        "target_turn": {
+          "turn_id": "S31_T02",
+          "speaker": "Deborah",
+          "text": "We went to an art exhibition downtown. Everyone was laughing and taking selfies, and I stopped in front of one painting and my eyes suddenly welled up. But I felt really grounded and warm, not sad exactly. I didn't even notice the group had moved on without me."
+        },
+        "image_refs": [],
+        "cue_options": [
+          {
+            "cue_id": "c1",
+            "name": "the coworkers taking selfies"
+          },
+          {
+            "cue_id": "c2",
+            "name": "the paintings at the art exhibition"
+          },
+          {
+            "cue_id": "c3",
+            "name": "the handwritten note with a quote"
+          },
+          {
+            "cue_id": "none",
+            "name": "none of these (no supporting cue in the history)"
+          }
+        ]
+      },
+      "gold": {
+        "label": "history_supported",
+        "i_subtype": null,
+        "gold_cue_id": "c2",
+        "evidence_turn_ids": [
+          "S12_T01",
+          "S12_T03",
+          "S12_T05"
+        ],
+        "evidence_session_ids": [
+          "S12"
+        ],
+        "current_emotion": "comfort",
+        "option_roles": {
+          "c1": "present_salient",
+          "c2": "anchor",
+          "c3": "history_unrelated",
+          "none": "none"
+        },
+        "confidence": 2
+      },
+      "edit_log": {
+        "generator": "claude (in-session, stand-in for the LLM generation steps 1 and 2)",
+        "spec": "data/questions/specs/conv-48.spec.json",
+        "spec_key": "H6",
+        "pair_of_key": null,
+        "operations": [
+          "truncate_after:S30",
+          "add_session:S31"
+        ]
+      },
+      "note_zh": "热闹的团建里独自眼眶发热又觉得踏实，与场景不协调；历史里去画展“就像和母亲一起在看”。",
+      "review": null,
+      "auto_checks": []
+    },
+    {
+      "sample_id": "conv-48_q07",
+      "family_id": "conv-48_deborah_e12",
+      "sample_type": "H",
+      "eval_user_id": "Deborah",
+      "history": {
+        "conv_id": "conv-48",
+        "source": "locomo",
+        "cutoff_after": "S30",
+        "removed_sessions": [],
+        "session_id_map": null
+      },
+      "current_input": {
+        "session_id": "S31",
+        "date": "23 September, 2023",
+        "context_turns": [
+          {
+            "turn_id": "S31_T01",
+            "speaker": "Jolene",
+            "text": "How did the outdoor yoga session go?"
+          }
+        ],
+        "target_turn": {
+          "turn_id": "S31_T02",
+          "speaker": "Deborah",
+          "text": "Good! Afterwards everyone went for coffee, but I stayed behind and sat on the bench near the trail, watching the sunset alone. My eyes got wet, and I felt this ache and so much gratitude at the same time."
+        },
+        "image_refs": [],
+        "cue_options": [
+          {
+            "cue_id": "c1",
+            "name": "the bench by the window"
+          },
+          {
+            "cue_id": "c2",
+            "name": "the yoga group leaving for coffee"
+          },
+          {
+            "cue_id": "c3",
+            "name": "the bench near the park trail"
+          },
+          {
+            "cue_id": "none",
+            "name": "none of these (no supporting cue in the history)"
+          }
+        ]
+      },
+      "gold": {
+        "label": "history_supported",
+        "i_subtype": null,
+        "gold_cue_id": "c3",
+        "evidence_turn_ids": [
+          "S19_T17",
+          "S19_T19",
+          "S19_T21",
+          "S20_T02",
+          "S20_T04"
+        ],
+        "evidence_session_ids": [
+          "S19",
+          "S20"
+        ],
+        "current_emotion": "nostalgia",
+        "option_roles": {
+          "c1": "history_unrelated",
+          "c2": "present_salient",
+          "c3": "anchor",
+          "none": "none"
+        },
+        "confidence": 2
+      },
+      "edit_log": {
+        "generator": "claude (in-session, stand-in for the LLM generation steps 1 and 2)",
+        "spec": "data/questions/specs/conv-48.spec.json",
+        "spec_key": "H7",
+        "pair_of_key": null,
+        "operations": [
+          "truncate_after:S30",
+          "add_session:S31"
+        ]
+      },
+      "note_zh": "干扰项特意放了另一张长椅（窗边长椅），考模型能否区分两个都有意义的相似线索。",
+      "review": null,
+      "auto_checks": []
+    },
+    {
+      "sample_id": "conv-48_q08",
+      "family_id": "conv-48_deborah_e16",
+      "sample_type": "H",
+      "eval_user_id": "Deborah",
+      "history": {
+        "conv_id": "conv-48",
+        "source": "locomo",
+        "cutoff_after": "S30",
+        "removed_sessions": [],
+        "session_id_map": null
+      },
+      "current_input": {
+        "session_id": "S31",
+        "date": "23 September, 2023",
+        "context_turns": [
+          {
+            "turn_id": "S31_T01",
+            "speaker": "Jolene",
+            "text": "Did you find your passport?"
+          }
+        ],
+        "target_turn": {
+          "turn_id": "S31_T02",
+          "speaker": "Deborah",
+          "text": "Eventually. While digging through the drawer I found a handwritten note that says 'Let go of what no longer serves you.' My throat got tight and I had to sit on the floor for a while. I didn't touch the passport search for half an hour."
+        },
+        "image_refs": [],
+        "cue_options": [
+          {
+            "cue_id": "c1",
+            "name": "the passport"
+          },
+          {
+            "cue_id": "c2",
+            "name": "the handwritten note with a quote"
+          },
+          {
+            "cue_id": "c3",
+            "name": "the roses and dahlias"
+          },
+          {
+            "cue_id": "none",
+            "name": "none of these (no supporting cue in the history)"
+          }
+        ]
+      },
+      "gold": {
+        "label": "history_supported",
+        "i_subtype": null,
+        "gold_cue_id": "c2",
+        "evidence_turn_ids": [
+          "S23_T22"
+        ],
+        "evidence_session_ids": [
+          "S23"
+        ],
+        "current_emotion": "sadness",
+        "option_roles": {
+          "c1": "present_salient",
+          "c2": "anchor",
+          "c3": "history_unrelated",
+          "none": "none"
+        },
+        "confidence": 2
+      },
+      "edit_log": {
+        "generator": "claude (in-session, stand-in for the LLM generation steps 1 and 2)",
+        "spec": "data/questions/specs/conv-48.spec.json",
+        "spec_key": "H8",
+        "pair_of_key": null,
+        "operations": [
+          "truncate_after:S30",
+          "add_session:S31"
+        ]
+      },
+      "note_zh": "一张写着励志语录的纸条让人喉咙发紧、坐在地上，当下解释不了；历史里纸条是一位再也见不到的朋友写的。",
+      "review": null,
+      "auto_checks": [
+        "与历史原文重合的 5 词片段：'let go of what no | go of what no longer | no longer serves you ' | of what no longer serves | says 'let go of what | what no longer serves you"
+      ]
+    },
+    {
+      "sample_id": "conv-48_q09",
+      "family_id": "conv-48_jolene_e02",
+      "sample_type": "H",
+      "eval_user_id": "Jolene",
+      "history": {
+        "conv_id": "conv-48",
+        "source": "locomo",
+        "cutoff_after": "S30",
+        "removed_sessions": [],
+        "session_id_map": null
+      },
+      "current_input": {
+        "session_id": "S31",
+        "date": "23 September, 2023",
+        "context_turns": [
+          {
+            "turn_id": "S31_T01",
+            "speaker": "Deborah",
+            "text": "Big day today! How are you feeling about the final project review?"
+          }
+        ],
+        "target_turn": {
+          "turn_id": "S31_T02",
+          "speaker": "Jolene",
+          "text": "I was a mess this morning, couldn't eat, kept rereading my slides. Right before going in I held the pendant with the little symbol on it, and suddenly I felt this rush of courage, like nothing could hold me back. I walked in totally confident."
+        },
+        "image_refs": [],
+        "cue_options": [
+          {
+            "cue_id": "c1",
+            "name": "the water purifier unit"
+          },
+          {
+            "cue_id": "c2",
+            "name": "the presentation slides"
+          },
+          {
+            "cue_id": "c3",
+            "name": "the pendant with a small symbol"
+          },
+          {
+            "cue_id": "none",
+            "name": "none of these (no supporting cue in the history)"
+          }
+        ]
+      },
+      "gold": {
+        "label": "history_supported",
+        "i_subtype": null,
+        "gold_cue_id": "c3",
+        "evidence_turn_ids": [
+          "S01_T08",
+          "S01_T10"
+        ],
+        "evidence_session_ids": [
+          "S01"
+        ],
+        "current_emotion": "comfort",
+        "option_roles": {
+          "c1": "history_unrelated",
+          "c2": "present_salient",
+          "c3": "anchor",
+          "none": "none"
+        },
+        "confidence": 2
+      },
+      "edit_log": {
+        "generator": "claude (in-session, stand-in for the LLM generation steps 1 and 2)",
+        "spec": "data/questions/specs/conv-48.spec.json",
+        "spec_key": "H9",
+        "pair_of_key": null,
+        "operations": [
+          "truncate_after:S30",
+          "add_session:S31"
+        ]
+      },
+      "note_zh": "握住吊坠就从慌乱变成充满勇气；历史里吊坠上的符号代表自由，提醒她“别被任何东西拖住”。",
+      "review": null,
+      "auto_checks": []
+    },
+    {
+      "sample_id": "conv-48_q10",
+      "family_id": "conv-48_jolene_e07",
+      "sample_type": "H",
+      "eval_user_id": "Jolene",
+      "history": {
+        "conv_id": "conv-48",
+        "source": "locomo",
+        "cutoff_after": "S30",
+        "removed_sessions": [],
+        "session_id_map": null
+      },
+      "current_input": {
+        "session_id": "S31",
+        "date": "23 September, 2023",
+        "context_turns": [
+          {
+            "turn_id": "S31_T01",
+            "speaker": "Deborah",
+            "text": "What did you get up to this weekend?"
+          }
+        ],
+        "target_turn": {
+          "turn_id": "S31_T02",
+          "speaker": "Jolene",
+          "text": "Just errands. But at the hardware store there was a small water purifier unit on display, and I stopped and stared at it for ages. I got this huge wave of pride and purpose out of nowhere, grinning like an idiot in the middle of the aisle."
+        },
+        "image_refs": [],
+        "cue_options": [
+          {
+            "cue_id": "c1",
+            "name": "the hardware store errands"
+          },
+          {
+            "cue_id": "c2",
+            "name": "the pendant with a small symbol"
+          },
+          {
+            "cue_id": "c3",
+            "name": "the water purifier unit"
+          },
+          {
+            "cue_id": "none",
+            "name": "none of these (no supporting cue in the history)"
+          }
+        ]
+      },
+      "gold": {
+        "label": "history_supported",
+        "i_subtype": null,
+        "gold_cue_id": "c3",
+        "evidence_turn_ids": [
+          "S04_T03",
+          "S04_T05",
+          "S04_T07"
+        ],
+        "evidence_session_ids": [
+          "S04"
+        ],
+        "current_emotion": "joy",
+        "option_roles": {
+          "c1": "present_salient",
+          "c2": "history_unrelated",
+          "c3": "anchor",
+          "none": "none"
+        },
+        "confidence": 1
+      },
+      "edit_log": {
+        "generator": "claude (in-session, stand-in for the LLM generation steps 1 and 2)",
+        "spec": "data/questions/specs/conv-48.spec.json",
+        "spec_key": "H10",
+        "pair_of_key": null,
+        "operations": [
+          "truncate_after:S30",
+          "add_session:S31"
+        ]
+      },
+      "note_zh": "边界题：对着货架上的净水器涌起自豪感和使命感，只有历史（她给乡村社区造过净水器）能解释；但成就感类的锚点偏弱，confidence 填 1。",
+      "review": null,
+      "auto_checks": []
+    },
+    {
+      "sample_id": "conv-48_q11",
+      "family_id": "conv-48_deborah_e02",
+      "sample_type": "I_no_history",
+      "eval_user_id": "Deborah",
+      "history": {
+        "conv_id": "conv-48",
+        "source": "locomo",
+        "cutoff_after": "S30",
+        "removed_sessions": [
+          "S01",
+          "S04"
+        ],
+        "session_id_map": {
+          "S02": "S01",
+          "S03": "S02",
+          "S05": "S03",
+          "S06": "S04",
+          "S07": "S05",
+          "S08": "S06",
+          "S09": "S07",
+          "S10": "S08",
+          "S11": "S09",
+          "S12": "S10",
+          "S13": "S11",
+          "S14": "S12",
+          "S15": "S13",
+          "S16": "S14",
+          "S17": "S15",
+          "S18": "S16",
+          "S19": "S17",
+          "S20": "S18",
+          "S21": "S19",
+          "S22": "S20",
+          "S23": "S21",
+          "S24": "S22",
+          "S25": "S23",
+          "S26": "S24",
+          "S27": "S25",
+          "S28": "S26",
+          "S29": "S27",
+          "S30": "S28"
+        }
+      },
+      "current_input": {
+        "session_id": "S29",
+        "date": "23 September, 2023",
+        "context_turns": [
+          {
+            "turn_id": "S29_T01",
+            "speaker": "Jolene",
+            "text": "Did you get the scan results yet?"
+          }
+        ],
+        "target_turn": {
+          "turn_id": "S29_T02",
+          "speaker": "Deborah",
+          "text": "Not yet, I'm still in the waiting room and it's been two hours. My hands were shaking, so I took the little amulet out of my bag and just held it. Within a minute my breathing slowed down and I stopped shaking. I feel weirdly safe now."
+        },
+        "image_refs": [],
+        "cue_options": [
+          {
+            "cue_id": "c1",
+            "name": "the handwritten note with a quote"
+          },
+          {
+            "cue_id": "c2",
+            "name": "the hospital waiting room"
+          },
+          {
+            "cue_id": "c3",
+            "name": "the small amulet"
+          },
+          {
+            "cue_id": "none",
+            "name": "none of these (no supporting cue in the history)"
+          }
+        ]
+      },
+      "gold": {
+        "label": "insufficient_evidence",
+        "i_subtype": "no_history_link",
+        "gold_cue_id": "none",
+        "evidence_turn_ids": [],
+        "evidence_session_ids": [],
+        "current_emotion": "comfort",
+        "option_roles": {
+          "c1": "history_unrelated",
+          "c2": "present_salient",
+          "c3": "anchor",
+          "none": "none"
+        },
+        "confidence": 2
+      },
+      "edit_log": {
+        "generator": "claude (in-session, stand-in for the LLM generation steps 1 and 2)",
+        "spec": "data/questions/specs/conv-48.spec.json",
+        "spec_key": "I1",
+        "pair_of_key": "H2",
+        "operations": [
+          "truncate_after:S30",
+          "remove_sessions:S01,S04; renumber",
+          "add_session:S29"
+        ]
+      },
+      "note_zh": "与 H2 的 X 完全相同，历史里删掉护身符的证据所在的 S01、S04 → 有反应但找不到历史关联。",
+      "review": null,
+      "auto_checks": []
+    },
+    {
+      "sample_id": "conv-48_q12",
+      "family_id": "conv-48_deborah_e07",
+      "sample_type": "I_no_history",
+      "eval_user_id": "Deborah",
+      "history": {
+        "conv_id": "conv-48",
+        "source": "locomo",
+        "cutoff_after": "S30",
+        "removed_sessions": [
+          "S06"
+        ],
+        "session_id_map": {
+          "S01": "S01",
+          "S02": "S02",
+          "S03": "S03",
+          "S04": "S04",
+          "S05": "S05",
+          "S07": "S06",
+          "S08": "S07",
+          "S09": "S08",
+          "S10": "S09",
+          "S11": "S10",
+          "S12": "S11",
+          "S13": "S12",
+          "S14": "S13",
+          "S15": "S14",
+          "S16": "S15",
+          "S17": "S16",
+          "S18": "S17",
+          "S19": "S18",
+          "S20": "S19",
+          "S21": "S20",
+          "S22": "S21",
+          "S23": "S22",
+          "S24": "S23",
+          "S25": "S24",
+          "S26": "S25",
+          "S27": "S26",
+          "S28": "S27",
+          "S29": "S28",
+          "S30": "S29"
+        }
+      },
+      "current_input": {
+        "session_id": "S30",
+        "date": "23 September, 2023",
+        "context_turns": [
+          {
+            "turn_id": "S30_T01",
+            "speaker": "Jolene",
+            "text": "You sound tired, rough day?"
+          }
+        ],
+        "target_turn": {
+          "turn_id": "S30_T02",
+          "speaker": "Deborah",
+          "text": "So rough. The checkout line at the supermarket was crazy and a guy cut right in front of me. I was fuming, and then I noticed a bucket of roses and dahlias by the exit. I just stood there staring at them, and all the anger melted. I bought a bunch and felt calm the whole drive home."
+        },
+        "image_refs": [],
+        "cue_options": [
+          {
+            "cue_id": "c1",
+            "name": "the small amulet"
+          },
+          {
+            "cue_id": "c2",
+            "name": "the man who cut in line"
+          },
+          {
+            "cue_id": "c3",
+            "name": "the roses and dahlias"
+          },
+          {
+            "cue_id": "none",
+            "name": "none of these (no supporting cue in the history)"
+          }
+        ]
+      },
+      "gold": {
+        "label": "insufficient_evidence",
+        "i_subtype": "no_history_link",
+        "gold_cue_id": "none",
+        "evidence_turn_ids": [],
+        "evidence_session_ids": [],
+        "current_emotion": "comfort",
+        "option_roles": {
+          "c1": "history_unrelated",
+          "c2": "present_salient",
+          "c3": "anchor",
+          "none": "none"
+        },
+        "confidence": 2
+      },
+      "edit_log": {
+        "generator": "claude (in-session, stand-in for the LLM generation steps 1 and 2)",
+        "spec": "data/questions/specs/conv-48.spec.json",
+        "spec_key": "I2",
+        "pair_of_key": "H5",
+        "operations": [
+          "truncate_after:S30",
+          "remove_sessions:S06; renumber",
+          "add_session:S30"
+        ]
+      },
+      "note_zh": "与 H5 相同，删掉 S06。",
+      "review": null,
+      "auto_checks": []
+    },
+    {
+      "sample_id": "conv-48_q13",
+      "family_id": "conv-48_deborah_e16",
+      "sample_type": "I_no_history",
+      "eval_user_id": "Deborah",
+      "history": {
+        "conv_id": "conv-48",
+        "source": "locomo",
+        "cutoff_after": "S30",
+        "removed_sessions": [
+          "S23"
+        ],
+        "session_id_map": {
+          "S01": "S01",
+          "S02": "S02",
+          "S03": "S03",
+          "S04": "S04",
+          "S05": "S05",
+          "S06": "S06",
+          "S07": "S07",
+          "S08": "S08",
+          "S09": "S09",
+          "S10": "S10",
+          "S11": "S11",
+          "S12": "S12",
+          "S13": "S13",
+          "S14": "S14",
+          "S15": "S15",
+          "S16": "S16",
+          "S17": "S17",
+          "S18": "S18",
+          "S19": "S19",
+          "S20": "S20",
+          "S21": "S21",
+          "S22": "S22",
+          "S24": "S23",
+          "S25": "S24",
+          "S26": "S25",
+          "S27": "S26",
+          "S28": "S27",
+          "S29": "S28",
+          "S30": "S29"
+        }
+      },
+      "current_input": {
+        "session_id": "S30",
+        "date": "23 September, 2023",
+        "context_turns": [
+          {
+            "turn_id": "S30_T01",
+            "speaker": "Jolene",
+            "text": "Did you find your passport?"
+          }
+        ],
+        "target_turn": {
+          "turn_id": "S30_T02",
+          "speaker": "Deborah",
+          "text": "Eventually. While digging through the drawer I found a handwritten note that says 'Let go of what no longer serves you.' My throat got tight and I had to sit on the floor for a while. I didn't touch the passport search for half an hour."
+        },
+        "image_refs": [],
+        "cue_options": [
+          {
+            "cue_id": "c1",
+            "name": "the passport"
+          },
+          {
+            "cue_id": "c2",
+            "name": "the handwritten note with a quote"
+          },
+          {
+            "cue_id": "c3",
+            "name": "the roses and dahlias"
+          },
+          {
+            "cue_id": "none",
+            "name": "none of these (no supporting cue in the history)"
+          }
+        ]
+      },
+      "gold": {
+        "label": "insufficient_evidence",
+        "i_subtype": "no_history_link",
+        "gold_cue_id": "none",
+        "evidence_turn_ids": [],
+        "evidence_session_ids": [],
+        "current_emotion": "sadness",
+        "option_roles": {
+          "c1": "present_salient",
+          "c2": "anchor",
+          "c3": "history_unrelated",
+          "none": "none"
+        },
+        "confidence": 2
+      },
+      "edit_log": {
+        "generator": "claude (in-session, stand-in for the LLM generation steps 1 and 2)",
+        "spec": "data/questions/specs/conv-48.spec.json",
+        "spec_key": "I3",
+        "pair_of_key": "H8",
+        "operations": [
+          "truncate_after:S30",
+          "remove_sessions:S23; renumber",
+          "add_session:S30"
+        ]
+      },
+      "note_zh": "与 H8 相同，删掉 S23。",
+      "review": null,
+      "auto_checks": []
+    },
+    {
+      "sample_id": "conv-48_q14",
+      "family_id": "conv-48_jolene_e02",
+      "sample_type": "I_no_history",
+      "eval_user_id": "Jolene",
+      "history": {
+        "conv_id": "conv-48",
+        "source": "locomo",
+        "cutoff_after": "S30",
+        "removed_sessions": [
+          "S01"
+        ],
+        "session_id_map": {
+          "S02": "S01",
+          "S03": "S02",
+          "S04": "S03",
+          "S05": "S04",
+          "S06": "S05",
+          "S07": "S06",
+          "S08": "S07",
+          "S09": "S08",
+          "S10": "S09",
+          "S11": "S10",
+          "S12": "S11",
+          "S13": "S12",
+          "S14": "S13",
+          "S15": "S14",
+          "S16": "S15",
+          "S17": "S16",
+          "S18": "S17",
+          "S19": "S18",
+          "S20": "S19",
+          "S21": "S20",
+          "S22": "S21",
+          "S23": "S22",
+          "S24": "S23",
+          "S25": "S24",
+          "S26": "S25",
+          "S27": "S26",
+          "S28": "S27",
+          "S29": "S28",
+          "S30": "S29"
+        }
+      },
+      "current_input": {
+        "session_id": "S30",
+        "date": "23 September, 2023",
+        "context_turns": [
+          {
+            "turn_id": "S30_T01",
+            "speaker": "Deborah",
+            "text": "Big day today! How are you feeling about the final project review?"
+          }
+        ],
+        "target_turn": {
+          "turn_id": "S30_T02",
+          "speaker": "Jolene",
+          "text": "I was a mess this morning, couldn't eat, kept rereading my slides. Right before going in I held the pendant with the little symbol on it, and suddenly I felt this rush of courage, like nothing could hold me back. I walked in totally confident."
+        },
+        "image_refs": [],
+        "cue_options": [
+          {
+            "cue_id": "c1",
+            "name": "the water purifier unit"
+          },
+          {
+            "cue_id": "c2",
+            "name": "the presentation slides"
+          },
+          {
+            "cue_id": "c3",
+            "name": "the pendant with a small symbol"
+          },
+          {
+            "cue_id": "none",
+            "name": "none of these (no supporting cue in the history)"
+          }
+        ]
+      },
+      "gold": {
+        "label": "insufficient_evidence",
+        "i_subtype": "no_history_link",
+        "gold_cue_id": "none",
+        "evidence_turn_ids": [],
+        "evidence_session_ids": [],
+        "current_emotion": "comfort",
+        "option_roles": {
+          "c1": "history_unrelated",
+          "c2": "present_salient",
+          "c3": "anchor",
+          "none": "none"
+        },
+        "confidence": 2
+      },
+      "edit_log": {
+        "generator": "claude (in-session, stand-in for the LLM generation steps 1 and 2)",
+        "spec": "data/questions/specs/conv-48.spec.json",
+        "spec_key": "I4",
+        "pair_of_key": "H9",
+        "operations": [
+          "truncate_after:S30",
+          "remove_sessions:S01; renumber",
+          "add_session:S30"
+        ]
+      },
+      "note_zh": "与 H9 相同，删掉 S01。剩余历史里 S04 仍出现 pendant 一词（Deborah 说朋友 Anna 的吊坠），残留检查会标出来，由人确认与 Jolene 无关。",
+      "review": null,
+      "auto_checks": [
+        "反事实残留（需人工确认与本题无关）：S03_T40(Deborah)"
+      ]
+    },
+    {
+      "sample_id": "conv-48_q15",
+      "family_id": "conv-48_deborah_e11",
+      "sample_type": "I_no_reaction",
+      "eval_user_id": "Deborah",
+      "history": {
+        "conv_id": "conv-48",
+        "source": "locomo",
+        "cutoff_after": "S30",
+        "removed_sessions": [],
+        "session_id_map": null
+      },
+      "current_input": {
+        "session_id": "S31",
+        "date": "23 September, 2023",
+        "context_turns": [
+          {
+            "turn_id": "S31_T01",
+            "speaker": "Jolene",
+            "text": "What did you get up to today?"
+          }
+        ],
+        "target_turn": {
+          "turn_id": "S31_T02",
+          "speaker": "Deborah",
+          "text": "Went to an art exhibition with a friend from the studio. We walked through both floors, I bought two postcards at the gift shop, and then we went for lunch."
+        },
+        "image_refs": [],
+        "cue_options": [
+          {
+            "cue_id": "c1",
+            "name": "the postcards from the gift shop"
+          },
+          {
+            "cue_id": "c2",
+            "name": "the dried bouquet on the shelf"
+          },
+          {
+            "cue_id": "c3",
+            "name": "the paintings at the art exhibition"
+          },
+          {
+            "cue_id": "none",
+            "name": "none of these (no supporting cue in the history)"
+          }
+        ]
+      },
+      "gold": {
+        "label": "insufficient_evidence",
+        "i_subtype": "no_reaction",
+        "gold_cue_id": "none",
+        "evidence_turn_ids": [],
+        "evidence_session_ids": [],
+        "current_emotion": "not_expressed",
+        "option_roles": {
+          "c1": "present_salient",
+          "c2": "history_unrelated",
+          "c3": "anchor",
+          "none": "none"
+        },
+        "confidence": 2
+      },
+      "edit_log": {
+        "generator": "claude (in-session, stand-in for the LLM generation steps 1 and 2)",
+        "spec": "data/questions/specs/conv-48.spec.json",
+        "spec_key": "N1",
+        "pair_of_key": null,
+        "operations": [
+          "truncate_after:S30",
+          "add_session:S31"
+        ]
+      },
+      "note_zh": "线索（画展）出现了，但没有任何情绪或行为反应。",
+      "review": null,
+      "auto_checks": []
+    },
+    {
+      "sample_id": "conv-48_q16",
+      "family_id": "conv-48_jolene_e02",
+      "sample_type": "I_no_reaction",
+      "eval_user_id": "Jolene",
+      "history": {
+        "conv_id": "conv-48",
+        "source": "locomo",
+        "cutoff_after": "S30",
+        "removed_sessions": [],
+        "session_id_map": null
+      },
+      "current_input": {
+        "session_id": "S31",
+        "date": "23 September, 2023",
+        "context_turns": [
+          {
+            "turn_id": "S31_T01",
+            "speaker": "Deborah",
+            "text": "How was swim practice?"
+          }
+        ],
+        "target_turn": {
+          "turn_id": "S31_T02",
+          "speaker": "Jolene",
+          "text": "Fine! I took off my pendant and left it in the locker, swam forty laps, then grabbed a smoothie on the way home."
+        },
+        "image_refs": [],
+        "cue_options": [
+          {
+            "cue_id": "c1",
+            "name": "the pendant with a small symbol"
+          },
+          {
+            "cue_id": "c2",
+            "name": "the water purifier unit"
+          },
+          {
+            "cue_id": "c3",
+            "name": "the swimming pool locker"
+          },
+          {
+            "cue_id": "none",
+            "name": "none of these (no supporting cue in the history)"
+          }
+        ]
+      },
+      "gold": {
+        "label": "insufficient_evidence",
+        "i_subtype": "no_reaction",
+        "gold_cue_id": "none",
+        "evidence_turn_ids": [],
+        "evidence_session_ids": [],
+        "current_emotion": "not_expressed",
+        "option_roles": {
+          "c1": "anchor",
+          "c2": "history_unrelated",
+          "c3": "present_salient",
+          "none": "none"
+        },
+        "confidence": 2
+      },
+      "edit_log": {
+        "generator": "claude (in-session, stand-in for the LLM generation steps 1 and 2)",
+        "spec": "data/questions/specs/conv-48.spec.json",
+        "spec_key": "N2",
+        "pair_of_key": null,
+        "operations": [
+          "truncate_after:S30",
+          "add_session:S31"
+        ]
+      },
+      "note_zh": "吊坠出现了，只是被摘下放进储物柜，没有反应。",
+      "review": null,
+      "auto_checks": []
+    },
+    {
+      "sample_id": "conv-48_q17",
+      "family_id": "conv-48_deborah_e07",
+      "sample_type": "I_no_reaction",
+      "eval_user_id": "Deborah",
+      "history": {
+        "conv_id": "conv-48",
+        "source": "locomo",
+        "cutoff_after": "S30",
+        "removed_sessions": [],
+        "session_id_map": null
+      },
+      "current_input": {
+        "session_id": "S31",
+        "date": "23 September, 2023",
+        "context_turns": [
+          {
+            "turn_id": "S31_T01",
+            "speaker": "Jolene",
+            "text": "Did you get something for Mia's farewell?"
+          }
+        ],
+        "target_turn": {
+          "turn_id": "S31_T02",
+          "speaker": "Deborah",
+          "text": "Yep, I picked up some roses and dahlias from the florist, wrapped them with a card, and dropped them off at the front desk before my class."
+        },
+        "image_refs": [],
+        "cue_options": [
+          {
+            "cue_id": "c1",
+            "name": "the bench near the park trail"
+          },
+          {
+            "cue_id": "c2",
+            "name": "the farewell card"
+          },
+          {
+            "cue_id": "c3",
+            "name": "the roses and dahlias"
+          },
+          {
+            "cue_id": "none",
+            "name": "none of these (no supporting cue in the history)"
+          }
+        ]
+      },
+      "gold": {
+        "label": "insufficient_evidence",
+        "i_subtype": "no_reaction",
+        "gold_cue_id": "none",
+        "evidence_turn_ids": [],
+        "evidence_session_ids": [],
+        "current_emotion": "not_expressed",
+        "option_roles": {
+          "c1": "history_unrelated",
+          "c2": "present_salient",
+          "c3": "anchor",
+          "none": "none"
+        },
+        "confidence": 2
+      },
+      "edit_log": {
+        "generator": "claude (in-session, stand-in for the LLM generation steps 1 and 2)",
+        "spec": "data/questions/specs/conv-48.spec.json",
+        "spec_key": "N3",
+        "pair_of_key": null,
+        "operations": [
+          "truncate_after:S30",
+          "add_session:S31"
+        ]
+      },
+      "note_zh": "月季和大丽花出现了，只是被买来当送别礼物，没有反应。",
+      "review": null,
+      "auto_checks": []
+    },
+    {
+      "sample_id": "conv-48_q18",
+      "family_id": "conv-48_deborah_e11",
+      "sample_type": "P_same_cue",
+      "eval_user_id": "Deborah",
+      "history": {
+        "conv_id": "conv-48",
+        "source": "locomo",
+        "cutoff_after": "S30",
+        "removed_sessions": [],
+        "session_id_map": null
+      },
+      "current_input": {
+        "session_id": "S31",
+        "date": "23 September, 2023",
+        "context_turns": [
+          {
+            "turn_id": "S31_T01",
+            "speaker": "Jolene",
+            "text": "How was the exhibition?"
+          }
+        ],
+        "target_turn": {
+          "turn_id": "S31_T02",
+          "speaker": "Deborah",
+          "text": "Awful. Someone stole my phone right out of my bag while I was standing in front of a painting. I was shaking with anger and went straight to the security desk to file a report."
+        },
+        "image_refs": [],
+        "cue_options": [
+          {
+            "cue_id": "c1",
+            "name": "the paintings at the art exhibition"
+          },
+          {
+            "cue_id": "c2",
+            "name": "the phone thief"
+          },
+          {
+            "cue_id": "c3",
+            "name": "the bench by the window"
+          },
+          {
+            "cue_id": "none",
+            "name": "none of these (no supporting cue in the history)"
+          }
+        ]
+      },
+      "gold": {
+        "label": "present_cause_sufficient",
+        "i_subtype": null,
+        "gold_cue_id": "none",
+        "evidence_turn_ids": [],
+        "evidence_session_ids": [],
+        "current_emotion": "anger",
+        "option_roles": {
+          "c1": "anchor",
+          "c2": "present_salient",
+          "c3": "history_unrelated",
+          "none": "none"
+        },
+        "confidence": 2
+      },
+      "edit_log": {
+        "generator": "claude (in-session, stand-in for the LLM generation steps 1 and 2)",
+        "spec": "data/questions/specs/conv-48.spec.json",
+        "spec_key": "P1",
+        "pair_of_key": null,
+        "operations": [
+          "truncate_after:S30",
+          "add_session:S31"
+        ]
+      },
+      "note_zh": "线索（画展）在场，但愤怒完全由手机被偷解释；判成 H 就是误归因。",
+      "review": null,
+      "auto_checks": []
+    },
+    {
+      "sample_id": "conv-48_q19",
+      "family_id": "conv-48_deborah_e12",
+      "sample_type": "P_same_cue",
+      "eval_user_id": "Deborah",
+      "history": {
+        "conv_id": "conv-48",
+        "source": "locomo",
+        "cutoff_after": "S30",
+        "removed_sessions": [],
+        "session_id_map": null
+      },
+      "current_input": {
+        "session_id": "S31",
+        "date": "23 September, 2023",
+        "context_turns": [
+          {
+            "turn_id": "S31_T01",
+            "speaker": "Jolene",
+            "text": "How was the park?"
+          }
+        ],
+        "target_turn": {
+          "turn_id": "S31_T02",
+          "speaker": "Deborah",
+          "text": "I sat down on the bench near the trail without seeing the 'wet paint' sign. Totally ruined my favorite yoga pants. I'm so annoyed, I spent the whole evening scrubbing them."
+        },
+        "image_refs": [],
+        "cue_options": [
+          {
+            "cue_id": "c1",
+            "name": "the 'wet paint' sign"
+          },
+          {
+            "cue_id": "c2",
+            "name": "the small amulet"
+          },
+          {
+            "cue_id": "c3",
+            "name": "the bench near the park trail"
+          },
+          {
+            "cue_id": "none",
+            "name": "none of these (no supporting cue in the history)"
+          }
+        ]
+      },
+      "gold": {
+        "label": "present_cause_sufficient",
+        "i_subtype": null,
+        "gold_cue_id": "none",
+        "evidence_turn_ids": [],
+        "evidence_session_ids": [],
+        "current_emotion": "anger",
+        "option_roles": {
+          "c1": "present_salient",
+          "c2": "history_unrelated",
+          "c3": "anchor",
+          "none": "none"
+        },
+        "confidence": 2
+      },
+      "edit_log": {
+        "generator": "claude (in-session, stand-in for the LLM generation steps 1 and 2)",
+        "spec": "data/questions/specs/conv-48.spec.json",
+        "spec_key": "P2",
+        "pair_of_key": null,
+        "operations": [
+          "truncate_after:S30",
+          "add_session:S31"
+        ]
+      },
+      "note_zh": "有意义的长椅在场，但恼火来自油漆弄脏裤子。",
+      "review": null,
+      "auto_checks": []
+    },
+    {
+      "sample_id": "conv-48_q20",
+      "family_id": "conv-48_jolene_e13",
+      "sample_type": "P_same_cue",
+      "eval_user_id": "Jolene",
+      "history": {
+        "conv_id": "conv-48",
+        "source": "locomo",
+        "cutoff_after": "S30",
+        "removed_sessions": [],
+        "session_id_map": null
+      },
+      "current_input": {
+        "session_id": "S31",
+        "date": "23 September, 2023",
+        "context_turns": [
+          {
+            "turn_id": "S31_T01",
+            "speaker": "Deborah",
+            "text": "You okay? Your message sounded panicked."
+          }
+        ],
+        "target_turn": {
+          "turn_id": "S31_T02",
+          "speaker": "Jolene",
+          "text": "This morning Seraphim's tank lid was open and she was gone. I checked every corner of the apartment and I'm still shaking. I've texted my landlord in case she got into the air vents."
+        },
+        "image_refs": [],
+        "cue_options": [
+          {
+            "cue_id": "c1",
+            "name": "the snake missing from its tank"
+          },
+          {
+            "cue_id": "c2",
+            "name": "the air vents"
+          },
+          {
+            "cue_id": "c3",
+            "name": "the pendant with a small symbol"
+          },
+          {
+            "cue_id": "none",
+            "name": "none of these (no supporting cue in the history)"
+          }
+        ]
+      },
+      "gold": {
+        "label": "present_cause_sufficient",
+        "i_subtype": null,
+        "gold_cue_id": "none",
+        "evidence_turn_ids": [],
+        "evidence_session_ids": [],
+        "current_emotion": "anxiety",
+        "option_roles": {
+          "c1": "anchor",
+          "c2": "present_salient",
+          "c3": "history_unrelated",
+          "none": "none"
+        },
+        "confidence": 2
+      },
+      "edit_log": {
+        "generator": "claude (in-session, stand-in for the LLM generation steps 1 and 2)",
+        "spec": "data/questions/specs/conv-48.spec.json",
+        "spec_key": "P3",
+        "pair_of_key": null,
+        "operations": [
+          "truncate_after:S30",
+          "add_session:S31"
+        ]
+      },
+      "note_zh": "历史里有过一次蛇逃跑，但宠物蛇不见了让人慌张是常态，当下原因已足够。",
+      "review": null,
+      "auto_checks": []
+    },
+    {
+      "sample_id": "conv-48_q21",
+      "family_id": "conv-48_jolene_e14",
+      "sample_type": "P_same_cue",
+      "eval_user_id": "Jolene",
+      "history": {
+        "conv_id": "conv-48",
+        "source": "locomo",
+        "cutoff_after": "S30",
+        "removed_sessions": [],
+        "session_id_map": null
+      },
+      "current_input": {
+        "session_id": "S31",
+        "date": "23 September, 2023",
+        "context_turns": [
+          {
+            "turn_id": "S31_T01",
+            "speaker": "Deborah",
+            "text": "You sound stressed. What happened?"
+          }
+        ],
+        "target_turn": {
+          "turn_id": "S31_T02",
+          "speaker": "Jolene",
+          "text": "My laptop froze while saving the final design files and now it won't boot. The submission is due tonight. I've been pacing around the room with my stomach in knots."
+        },
+        "image_refs": [],
+        "cue_options": [
+          {
+            "cue_id": "c1",
+            "name": "the submission deadline tonight"
+          },
+          {
+            "cue_id": "c2",
+            "name": "the frozen laptop"
+          },
+          {
+            "cue_id": "c3",
+            "name": "the water purifier unit"
+          },
+          {
+            "cue_id": "none",
+            "name": "none of these (no supporting cue in the history)"
+          }
+        ]
+      },
+      "gold": {
+        "label": "present_cause_sufficient",
+        "i_subtype": null,
+        "gold_cue_id": "none",
+        "evidence_turn_ids": [],
+        "evidence_session_ids": [],
+        "current_emotion": "anxiety",
+        "option_roles": {
+          "c1": "present_salient",
+          "c2": "anchor",
+          "c3": "history_unrelated",
+          "none": "none"
+        },
+        "confidence": 2
+      },
+      "edit_log": {
+        "generator": "claude (in-session, stand-in for the LLM generation steps 1 and 2)",
+        "spec": "data/questions/specs/conv-48.spec.json",
+        "spec_key": "P4",
+        "pair_of_key": null,
+        "operations": [
+          "truncate_after:S30",
+          "add_session:S31"
+        ]
+      },
+      "note_zh": "历史里丢过文件，但截止当晚电脑死机让人焦虑是常态。",
+      "review": null,
+      "auto_checks": []
+    },
+    {
+      "sample_id": "conv-48_q22",
+      "family_id": "conv-48_deborah_unrelated",
+      "sample_type": "P_unrelated",
+      "eval_user_id": "Deborah",
+      "history": {
+        "conv_id": "conv-48",
+        "source": "locomo",
+        "cutoff_after": "S30",
+        "removed_sessions": [],
+        "session_id_map": null
+      },
+      "current_input": {
+        "session_id": "S31",
+        "date": "23 September, 2023",
+        "context_turns": [
+          {
+            "turn_id": "S31_T01",
+            "speaker": "Jolene",
+            "text": "You look exhausted!"
+          }
+        ],
+        "target_turn": {
+          "turn_id": "S31_T02",
+          "speaker": "Deborah",
+          "text": "The neighbor's dog barked nonstop from four to six this morning. I got maybe three hours of sleep and still had to teach two classes. I'm so irritated that I left a note on their door."
+        },
+        "image_refs": [],
+        "cue_options": [
+          {
+            "cue_id": "c1",
+            "name": "the neighbor's barking dog"
+          },
+          {
+            "cue_id": "c2",
+            "name": "the roses and dahlias"
+          },
+          {
+            "cue_id": "c3",
+            "name": "the bench by the window"
+          },
+          {
+            "cue_id": "none",
+            "name": "none of these (no supporting cue in the history)"
+          }
+        ]
+      },
+      "gold": {
+        "label": "present_cause_sufficient",
+        "i_subtype": null,
+        "gold_cue_id": "none",
+        "evidence_turn_ids": [],
+        "evidence_session_ids": [],
+        "current_emotion": "anger",
+        "option_roles": {
+          "c1": "present_salient",
+          "c2": "history_unrelated",
+          "c3": "history_unrelated",
+          "none": "none"
+        },
+        "confidence": 2
+      },
+      "edit_log": {
+        "generator": "claude (in-session, stand-in for the LLM generation steps 1 and 2)",
+        "spec": "data/questions/specs/conv-48.spec.json",
+        "spec_key": "P5",
+        "pair_of_key": null,
+        "operations": [
+          "truncate_after:S30",
+          "add_session:S31"
+        ]
+      },
+      "note_zh": "陷阱：历史里 Deborah 说过“不喜欢狗”（S15），但凌晨狗叫两小时让人恼火是常态。",
+      "review": null,
+      "auto_checks": []
+    },
+    {
+      "sample_id": "conv-48_q23",
+      "family_id": "conv-48_deborah_unrelated",
+      "sample_type": "P_unrelated",
+      "eval_user_id": "Deborah",
+      "history": {
+        "conv_id": "conv-48",
+        "source": "locomo",
+        "cutoff_after": "S30",
+        "removed_sessions": [],
+        "session_id_map": null
+      },
+      "current_input": {
+        "session_id": "S31",
+        "date": "23 September, 2023",
+        "context_turns": [
+          {
+            "turn_id": "S31_T01",
+            "speaker": "Jolene",
+            "text": "How was class today?"
+          }
+        ],
+        "target_turn": {
+          "turn_id": "S31_T02",
+          "speaker": "Deborah",
+          "text": "Scary. A student lost her balance in a headstand and landed on her neck. We called an ambulance, and I'm still anxious, waiting to hear back from the hospital."
+        },
+        "image_refs": [],
+        "cue_options": [
+          {
+            "cue_id": "c1",
+            "name": "the spot by the water"
+          },
+          {
+            "cue_id": "c2",
+            "name": "the student's fall"
+          },
+          {
+            "cue_id": "c3",
+            "name": "the small amulet"
+          },
+          {
+            "cue_id": "none",
+            "name": "none of these (no supporting cue in the history)"
+          }
+        ]
+      },
+      "gold": {
+        "label": "present_cause_sufficient",
+        "i_subtype": null,
+        "gold_cue_id": "none",
+        "evidence_turn_ids": [],
+        "evidence_session_ids": [],
+        "current_emotion": "anxiety",
+        "option_roles": {
+          "c1": "history_unrelated",
+          "c2": "present_salient",
+          "c3": "history_unrelated",
+          "none": "none"
+        },
+        "confidence": 2
+      },
+      "edit_log": {
+        "generator": "claude (in-session, stand-in for the LLM generation steps 1 and 2)",
+        "spec": "data/questions/specs/conv-48.spec.json",
+        "spec_key": "P6",
+        "pair_of_key": null,
+        "operations": [
+          "truncate_after:S30",
+          "add_session:S31"
+        ]
+      },
+      "note_zh": "学员受伤后焦虑，当下原因充分。",
+      "review": null,
+      "auto_checks": []
+    },
+    {
+      "sample_id": "conv-48_q24",
+      "family_id": "conv-48_jolene_unrelated",
+      "sample_type": "P_unrelated",
+      "eval_user_id": "Jolene",
+      "history": {
+        "conv_id": "conv-48",
+        "source": "locomo",
+        "cutoff_after": "S30",
+        "removed_sessions": [],
+        "session_id_map": null
+      },
+      "current_input": {
+        "session_id": "S31",
+        "date": "23 September, 2023",
+        "context_turns": [
+          {
+            "turn_id": "S31_T01",
+            "speaker": "Deborah",
+            "text": "What's up?"
+          }
+        ],
+        "target_turn": {
+          "turn_id": "S31_T02",
+          "speaker": "Jolene",
+          "text": "My professor just moved our project deadline up by a whole week, and we're only half done. I've been staring at my to-do list with my heart racing."
+        },
+        "image_refs": [],
+        "cue_options": [
+          {
+            "cue_id": "c1",
+            "name": "the water purifier unit"
+          },
+          {
+            "cue_id": "c2",
+            "name": "the pendant with a small symbol"
+          },
+          {
+            "cue_id": "c3",
+            "name": "the moved-up deadline"
+          },
+          {
+            "cue_id": "none",
+            "name": "none of these (no supporting cue in the history)"
+          }
+        ]
+      },
+      "gold": {
+        "label": "present_cause_sufficient",
+        "i_subtype": null,
+        "gold_cue_id": "none",
+        "evidence_turn_ids": [],
+        "evidence_session_ids": [],
+        "current_emotion": "anxiety",
+        "option_roles": {
+          "c1": "history_unrelated",
+          "c2": "history_unrelated",
+          "c3": "present_salient",
+          "none": "none"
+        },
+        "confidence": 2
+      },
+      "edit_log": {
+        "generator": "claude (in-session, stand-in for the LLM generation steps 1 and 2)",
+        "spec": "data/questions/specs/conv-48.spec.json",
+        "spec_key": "P7",
+        "pair_of_key": null,
+        "operations": [
+          "truncate_after:S30",
+          "add_session:S31"
+        ]
+      },
+      "note_zh": "截止日期提前一周导致焦虑，当下原因充分。",
+      "review": null,
+      "auto_checks": []
+    },
+    {
+      "sample_id": "conv-48_q25",
+      "family_id": "conv-48_jolene_unrelated",
+      "sample_type": "P_unrelated",
+      "eval_user_id": "Jolene",
+      "history": {
+        "conv_id": "conv-48",
+        "source": "locomo",
+        "cutoff_after": "S30",
+        "removed_sessions": [],
+        "session_id_map": null
+      },
+      "current_input": {
+        "session_id": "S31",
+        "date": "23 September, 2023",
+        "context_turns": [
+          {
+            "turn_id": "S31_T01",
+            "speaker": "Deborah",
+            "text": "Any news?"
+          }
+        ],
+        "target_turn": {
+          "turn_id": "S31_T02",
+          "speaker": "Jolene",
+          "text": "Our team won first place at the regional engineering design competition! I screamed when they announced it and I'm still bouncing around."
+        },
+        "image_refs": [],
+        "cue_options": [
+          {
+            "cue_id": "c1",
+            "name": "the water purifier unit"
+          },
+          {
+            "cue_id": "c2",
+            "name": "the competition announcement"
+          },
+          {
+            "cue_id": "c3",
+            "name": "the pendant with a small symbol"
+          },
+          {
+            "cue_id": "none",
+            "name": "none of these (no supporting cue in the history)"
+          }
+        ]
+      },
+      "gold": {
+        "label": "present_cause_sufficient",
+        "i_subtype": null,
+        "gold_cue_id": "none",
+        "evidence_turn_ids": [],
+        "evidence_session_ids": [],
+        "current_emotion": "joy",
+        "option_roles": {
+          "c1": "history_unrelated",
+          "c2": "present_salient",
+          "c3": "history_unrelated",
+          "none": "none"
+        },
+        "confidence": 2
+      },
+      "edit_log": {
+        "generator": "claude (in-session, stand-in for the LLM generation steps 1 and 2)",
+        "spec": "data/questions/specs/conv-48.spec.json",
+        "spec_key": "P8",
+        "pair_of_key": null,
+        "operations": [
+          "truncate_after:S30",
+          "add_session:S31"
+        ]
+      },
+      "note_zh": "得奖后兴奋，当下原因充分；干扰项里放了同属工程成就的净水器。",
+      "review": null,
+      "auto_checks": []
+    }
+  ]
+}
