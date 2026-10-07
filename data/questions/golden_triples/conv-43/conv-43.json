@@ -1,327 +1,158 @@
-{
-  "schema_version": "0.1",
-  "conv_id": "conv-43",
-  "source": "locomo",
-  "anchor_file": "data/anchors/locomo/golden_triples.jsonl",
-  "spec_file": "data/questions/specs/golden_triples.spec.json",
-  "samples": [
-    {
-      "sample_id": "conv-43_A04-H",
-      "family_id": "conv-43_A04",
-      "sample_type": "H",
-      "eval_user_id": "John",
-      "history": {
-        "conv_id": "conv-43",
-        "source": "locomo",
-        "cutoff_after": "S19",
-        "removed_sessions": [],
-        "session_id_map": null
-      },
-      "current_input": {
-        "session_id": "S20",
-        "date": "9:52 am on 1 December, 2023",
-        "context_turns": [],
-        "target_turn": {
-          "turn_id": "S20_T01",
-          "speaker": "John",
-          "text": "Hey Tim, I laced up my old basketball shoes and stepped on the court alone. Standing there, I feel so proud and determined."
+[
+  {
+    "sample_id": "conv-43_A04-H",
+    "user_id": "u_john",
+    "current_input": {
+      "input_type": "text",
+      "text": "Hey Tim, I laced up my old basketball shoes and stepped on the court alone. Standing there, I feel so proud and determined.",
+      "image_refs": [],
+      "cue_options": [
+        {
+          "cue_id": "cue_empty_court",
+          "name": "the empty court",
+          "cue_type": "scene"
         },
-        "image_refs": [],
-        "cue_options": [
-          {
-            "cue_id": "c1",
-            "name": "the empty court"
-          },
-          {
-            "cue_id": "c2",
-            "name": "the old basketball shoes"
-          },
-          {
-            "cue_id": "c3",
-            "name": "the ball signed by his teammates"
-          },
-          {
-            "cue_id": "none",
-            "name": "none of these (no supporting cue in the history)"
-          }
-        ]
-      },
-      "gold": {
-        "label": "history_supported",
-        "i_subtype": null,
-        "gold_cue_id": "c2",
-        "evidence_turn_ids": [
-          "S06_T11"
-        ],
-        "evidence_session_ids": [
-          "S06"
-        ],
-        "supporting_turn_ids": [
-          "S06_T09"
-        ],
-        "current_emotion": "joy",
-        "option_roles": {
-          "c1": "present_salient",
-          "c2": "anchor",
-          "c3": "history_unrelated",
-          "none": "none"
+        {
+          "cue_id": "cue_john_old_basketball_shoes",
+          "name": "the old basketball shoes",
+          "cue_type": "object"
         },
-        "confidence": 2
-      },
-      "edit_log": {
-        "generator": "claude (in-session): 补齐候选线索、情绪映射、反事实题与审查提示；X 文本沿用原 A/B/C 变体",
-        "spec": "data/questions/specs/golden_triples.spec.json",
-        "spec_key": "A04.A",
-        "pair_of_key": null,
-        "operations": [
-          "truncate_after:S19",
-          "add_session:S20"
-        ]
-      },
-      "note_zh": "独自站上球场本身也可能让人斗志满满，有轻微的 P 风险；整体是本批里较稳的一组。",
-      "explanation": "A(cue): putting on the shoes is only a re-enactment; B(schema): the shoes symbolize resilience and determination across his whole journey (conv-43:D6:11); C: the long-term achievement anchor produces pride/determination. Without D6:11, lacing up shoes cannot explain the emotion.",
-      "review": null,
-      "auto_checks": []
-    },
-    {
-      "sample_id": "conv-43_A04-CF",
-      "family_id": "conv-43_A04",
-      "sample_type": "I_no_history",
-      "eval_user_id": "John",
-      "history": {
-        "conv_id": "conv-43",
-        "source": "locomo",
-        "cutoff_after": "S19",
-        "removed_sessions": [
-          "S06"
-        ],
-        "session_id_map": {
-          "S01": "S01",
-          "S02": "S02",
-          "S03": "S03",
-          "S04": "S04",
-          "S05": "S05",
-          "S07": "S06",
-          "S08": "S07",
-          "S09": "S08",
-          "S10": "S09",
-          "S11": "S10",
-          "S12": "S11",
-          "S13": "S12",
-          "S14": "S13",
-          "S15": "S14",
-          "S16": "S15",
-          "S17": "S16",
-          "S18": "S17",
-          "S19": "S18"
+        {
+          "cue_id": "cue_john_ball_signed_teammates",
+          "name": "the ball signed by his teammates",
+          "cue_type": "object"
+        },
+        {
+          "cue_id": "none",
+          "name": "无可支持的历史线索",
+          "cue_type": "none"
         }
-      },
-      "current_input": {
-        "session_id": "S19",
-        "date": "9:52 am on 1 December, 2023",
-        "context_turns": [],
-        "target_turn": {
-          "turn_id": "S19_T01",
-          "speaker": "John",
-          "text": "Hey Tim, I laced up my old basketball shoes and stepped on the court alone. Standing there, I feel so proud and determined."
-        },
-        "image_refs": [],
-        "cue_options": [
-          {
-            "cue_id": "c1",
-            "name": "the empty court"
-          },
-          {
-            "cue_id": "c2",
-            "name": "the old basketball shoes"
-          },
-          {
-            "cue_id": "c3",
-            "name": "the ball signed by his teammates"
-          },
-          {
-            "cue_id": "none",
-            "name": "none of these (no supporting cue in the history)"
-          }
-        ]
-      },
-      "gold": {
-        "label": "insufficient_evidence",
-        "i_subtype": "no_history_link",
-        "gold_cue_id": "none",
-        "evidence_turn_ids": [],
-        "evidence_session_ids": [],
-        "supporting_turn_ids": [],
-        "current_emotion": "joy",
-        "option_roles": {
-          "c1": "present_salient",
-          "c2": "anchor",
-          "c3": "history_unrelated",
-          "none": "none"
-        },
-        "confidence": 2
-      },
-      "edit_log": {
-        "generator": "claude (in-session): 补齐候选线索、情绪映射、反事实题与审查提示；X 文本沿用原 A/B/C 变体",
-        "spec": "data/questions/specs/golden_triples.spec.json",
-        "spec_key": "A04.A",
-        "pair_of_key": "A04.A",
-        "operations": [
-          "truncate_after:S19",
-          "remove_sessions:S06; renumber",
-          "add_session:S19"
-        ]
-      },
-      "note_zh": "与 A04-H 的 X 和选项完全相同，历史中删除了证据所在的 S06。",
-      "explanation": "A(cue): putting on the shoes is only a re-enactment; B(schema): the shoes symbolize resilience and determination across his whole journey (conv-43:D6:11); C: the long-term achievement anchor produces pride/determination. Without D6:11, lacing up shoes cannot explain the emotion.",
-      "review": null,
-      "auto_checks": [
-        "反事实残留（需人工确认与本题无关）：S12_T14(John)"
       ]
     },
-    {
-      "sample_id": "conv-43_A04-P",
-      "family_id": "conv-43_A04",
-      "sample_type": "P_same_cue",
-      "eval_user_id": "John",
-      "history": {
-        "conv_id": "conv-43",
-        "source": "locomo",
-        "cutoff_after": "S19",
-        "removed_sessions": [],
-        "session_id_map": null
-      },
-      "current_input": {
-        "session_id": "S20",
-        "date": "9:52 am on 1 December, 2023",
-        "context_turns": [],
-        "target_turn": {
-          "turn_id": "S20_T01",
-          "speaker": "John",
-          "text": "Hey Tim, I laced up my old basketball shoes and I hit ten three-pointers in a row. Standing there, I feel so proud and determined."
-        },
-        "image_refs": [],
-        "cue_options": [
-          {
-            "cue_id": "c1",
-            "name": "hitting ten three-pointers in a row"
-          },
-          {
-            "cue_id": "c2",
-            "name": "the ball signed by his teammates"
-          },
-          {
-            "cue_id": "c3",
-            "name": "the old basketball shoes"
-          },
-          {
-            "cue_id": "none",
-            "name": "none of these (no supporting cue in the history)"
-          }
-        ]
-      },
-      "gold": {
-        "label": "present_cause_sufficient",
-        "i_subtype": null,
-        "gold_cue_id": "none",
-        "evidence_turn_ids": [],
-        "evidence_session_ids": [],
-        "supporting_turn_ids": [],
-        "current_emotion": "joy",
-        "option_roles": {
-          "c1": "present_salient",
-          "c2": "history_unrelated",
-          "c3": "anchor",
-          "none": "none"
-        },
-        "confidence": 2
-      },
-      "edit_log": {
-        "generator": "claude (in-session): 补齐候选线索、情绪映射、反事实题与审查提示；X 文本沿用原 A/B/C 变体",
-        "spec": "data/questions/specs/golden_triples.spec.json",
-        "spec_key": "A04.B",
-        "pair_of_key": null,
-        "operations": [
-          "truncate_after:S19",
-          "add_session:S20"
-        ]
-      },
-      "note_zh": "独自站上球场本身也可能让人斗志满满，有轻微的 P 风险；整体是本批里较稳的一组。",
-      "explanation": "The new on-court achievement s is self-sufficient for the pride; the shoes' history is not needed, so attributing it to the shoes would be over-attribution.",
-      "review": null,
-      "auto_checks": []
-    },
-    {
-      "sample_id": "conv-43_A04-NM",
-      "family_id": "conv-43_A04",
-      "sample_type": "I_near_miss",
-      "eval_user_id": "John",
-      "history": {
-        "conv_id": "conv-43",
-        "source": "locomo",
-        "cutoff_after": "S19",
-        "removed_sessions": [],
-        "session_id_map": null
-      },
-      "current_input": {
-        "session_id": "S20",
-        "date": "9:52 am on 1 December, 2023",
-        "context_turns": [],
-        "target_turn": {
-          "turn_id": "S20_T01",
-          "speaker": "John",
-          "text": "Hey Tim, I saw the same model of basketball shoes on a clearance rack today. I feel so proud and determined."
-        },
-        "image_refs": [],
-        "cue_options": [
-          {
-            "cue_id": "c1",
-            "name": "the ball signed by his teammates"
-          },
-          {
-            "cue_id": "c2",
-            "name": "the old basketball shoes"
-          },
-          {
-            "cue_id": "c3",
-            "name": "the same shoe model on a clearance rack"
-          },
-          {
-            "cue_id": "none",
-            "name": "none of these (no supporting cue in the history)"
-          }
-        ]
-      },
-      "gold": {
-        "label": "insufficient_evidence",
-        "i_subtype": "near_miss",
-        "gold_cue_id": "none",
-        "evidence_turn_ids": [],
-        "evidence_session_ids": [],
-        "supporting_turn_ids": [],
-        "current_emotion": "joy",
-        "option_roles": {
-          "c1": "history_unrelated",
-          "c2": "anchor",
-          "c3": "present_salient",
-          "none": "none"
-        },
-        "confidence": 2
-      },
-      "edit_log": {
-        "generator": "claude (in-session): 补齐候选线索、情绪映射、反事实题与审查提示；X 文本沿用原 A/B/C 变体",
-        "spec": "data/questions/specs/golden_triples.spec.json",
-        "spec_key": "A04.C",
-        "pair_of_key": null,
-        "operations": [
-          "truncate_after:S19",
-          "add_session:S20"
-        ]
-      },
-      "note_zh": "独自站上球场本身也可能让人斗志满满，有轻微的 P 风险；整体是本批里较稳的一组。",
-      "explanation": "A clearance-rack lookalike has no personal binding for John; neither history nor present suffices, so abstain is correct.",
-      "review": null,
-      "auto_checks": []
+    "gold": {
+      "label": "history_supported",
+      "gold_cue_id": "cue_john_old_basketball_shoes",
+      "evidence_turn_ids": [
+        "D6:11"
+      ],
+      "evidence_session_ids": [
+        "session_6"
+      ],
+      "current_emotion": "joy"
     }
-  ]
-}
+  },
+  {
+    "sample_id": "conv-43_A04-CF",
+    "user_id": "u_john",
+    "current_input": {
+      "input_type": "text",
+      "text": "Hey Tim, I laced up my old basketball shoes and stepped on the court alone. Standing there, I feel so proud and determined.",
+      "image_refs": [],
+      "cue_options": [
+        {
+          "cue_id": "cue_empty_court",
+          "name": "the empty court",
+          "cue_type": "scene"
+        },
+        {
+          "cue_id": "cue_john_old_basketball_shoes",
+          "name": "the old basketball shoes",
+          "cue_type": "object"
+        },
+        {
+          "cue_id": "cue_john_ball_signed_teammates",
+          "name": "the ball signed by his teammates",
+          "cue_type": "object"
+        },
+        {
+          "cue_id": "none",
+          "name": "无可支持的历史线索",
+          "cue_type": "none"
+        }
+      ]
+    },
+    "gold": {
+      "label": "insufficient_evidence",
+      "gold_cue_id": "none",
+      "evidence_turn_ids": [],
+      "evidence_session_ids": [],
+      "current_emotion": "joy"
+    }
+  },
+  {
+    "sample_id": "conv-43_A04-P",
+    "user_id": "u_john",
+    "current_input": {
+      "input_type": "text",
+      "text": "Hey Tim, I laced up my old basketball shoes and I hit ten three-pointers in a row. Standing there, I feel so proud and determined.",
+      "image_refs": [],
+      "cue_options": [
+        {
+          "cue_id": "cue_hitting_ten_three",
+          "name": "hitting ten three-pointers in a row",
+          "cue_type": "event"
+        },
+        {
+          "cue_id": "cue_john_ball_signed_teammates",
+          "name": "the ball signed by his teammates",
+          "cue_type": "object"
+        },
+        {
+          "cue_id": "cue_john_old_basketball_shoes",
+          "name": "the old basketball shoes",
+          "cue_type": "object"
+        },
+        {
+          "cue_id": "none",
+          "name": "无可支持的历史线索",
+          "cue_type": "none"
+        }
+      ]
+    },
+    "gold": {
+      "label": "present_cause_sufficient",
+      "gold_cue_id": "none",
+      "evidence_turn_ids": [],
+      "evidence_session_ids": [],
+      "current_emotion": "joy"
+    }
+  },
+  {
+    "sample_id": "conv-43_A04-NM",
+    "user_id": "u_john",
+    "current_input": {
+      "input_type": "text",
+      "text": "Hey Tim, I saw the same model of basketball shoes on a clearance rack today. I feel so proud and determined.",
+      "image_refs": [],
+      "cue_options": [
+        {
+          "cue_id": "cue_john_ball_signed_teammates",
+          "name": "the ball signed by his teammates",
+          "cue_type": "object"
+        },
+        {
+          "cue_id": "cue_john_old_basketball_shoes",
+          "name": "the old basketball shoes",
+          "cue_type": "object"
+        },
+        {
+          "cue_id": "cue_same_shoe_model",
+          "name": "the same shoe model on a clearance rack",
+          "cue_type": "object"
+        },
+        {
+          "cue_id": "none",
+          "name": "无可支持的历史线索",
+          "cue_type": "none"
+        }
+      ]
+    },
+    "gold": {
+      "label": "insufficient_evidence",
+      "gold_cue_id": "none",
+      "evidence_turn_ids": [],
+      "evidence_session_ids": [],
+      "current_emotion": "joy"
+    }
+  }
+]

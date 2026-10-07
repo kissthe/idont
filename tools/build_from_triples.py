@@ -16,6 +16,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+import eval_format  # noqa: E402
 from build_questions import (EMOTIONS, LABEL, LEAK_RE, build_history, load_locomo_sessions,  # noqa: E402
                              make_options, ngrams, render_turn, INSTRUCTIONS)
 
@@ -226,11 +227,8 @@ def main():
         by_conv.setdefault(a["tr"]["sample_id"], []).append(a)
     for conv, group in by_conv.items():
         (OUT / conv).mkdir(exist_ok=True)
-        doc = {"schema_version": "0.1", "conv_id": conv, "source": "locomo",
-               "anchor_file": spec["source_file"], "spec_file": spec_rel,
-               "samples": [to_sample(q, a, spec_rel) for a in group for q in a["questions"]]}
-        with open(OUT / conv / f"{conv}.json", "w") as f:
-            json.dump(doc, f, ensure_ascii=False, indent=2)
+        samples = [to_sample(q, a, spec_rel) for a in group for q in a["questions"]]
+        eval_format.write(OUT / conv / f"{conv}.json", samples, cache[conv][-1]["session_id"])
     rows = []
     for a in anchors:
         tr = a["tr"]
@@ -249,10 +247,10 @@ def main():
     L = ["# golden_triples 评测题目", "",
          f"由 `tools/build_from_triples.py` 根据 `{spec['source_file']}` 和 "
          f"`{spec_path.relative_to(ROOT)}` 生成。每个对话一个文件夹，同一对话的锚点放在同一个文件夹里。", "",
-         "每个文件夹里有：每个锚点一个 Markdown（便于阅读）；一个 `<conv_id>.json`，结构与 "
-         "`data/questions/locomo/conv-48.json` 相同，供评测脚本读取。JSON 比原格式多两个字段："
-         "`gold.supporting_turn_ids`（辅助证据）和 `explanation`（原 A/B/C 变体的解释）；"
-         "题型多一种 `I_near_miss`（来自 C 变体）。", "",
+         "每个文件夹里有：每个锚点一个 Markdown（便于阅读）；`<conv_id>.json` 是评测题目，格式与 eval.json 相同；"
+         "`<conv_id>.meta.json` 按 sample_id 记录主文件放不下的信息，其中 `history_filter` 评测时必须用到："
+         "`until_session` 表示历史只取到该 session 为止，`exclude_sessions` 表示要从历史中删掉的 session"
+         "（“I-无历史关联”题）。", "",
          f"共 {len(anchors)} 个锚点、{len(rows)} 题：H {labs.count(LABEL['H'])} / P {labs.count(LABEL['P'])} / "
          f"I {labs.count(LABEL['I'])}（其中近错 {sum(q['i_subtype'] == 'near_miss' for _, _, q in rows)}、"
          f"无历史关联 {sum(q['i_subtype'] == 'no_history_link' for _, _, q in rows)}）。", "",

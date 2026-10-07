@@ -1,231 +1,121 @@
-{
-  "schema_version": "0.1",
-  "conv_id": "conv-44",
-  "source": "locomo",
-  "anchor_file": "data/anchors/locomo/golden_triples.jsonl",
-  "spec_file": "data/questions/specs/golden_triples.spec.json",
-  "samples": [
-    {
-      "sample_id": "conv-44_A05-H",
-      "family_id": "conv-44_A05",
-      "sample_type": "H",
-      "eval_user_id": "Audrey",
-      "history": {
-        "conv_id": "conv-44",
-        "source": "locomo",
-        "cutoff_after": "S14",
-        "removed_sessions": [],
-        "session_id_map": null
-      },
-      "current_input": {
-        "session_id": "S15",
-        "date": "9:58 pm on 16 August, 2023",
-        "context_turns": [],
-        "target_turn": {
-          "turn_id": "S15_T01",
-          "speaker": "Audrey",
-          "text": "Hey Andrew, I looked down at the tattoos of my four pups on my arm again. My heart just bursts with love - they mean everything to me."
+[
+  {
+    "sample_id": "conv-44_A05-H",
+    "user_id": "u_audrey",
+    "current_input": {
+      "input_type": "text",
+      "text": "Hey Andrew, I looked down at the tattoos of my four pups on my arm again. My heart just bursts with love - they mean everything to me.",
+      "image_refs": [],
+      "cue_options": [
+        {
+          "cue_id": "cue_audrey_family_recipe",
+          "name": "the family recipe",
+          "cue_type": "object"
         },
-        "image_refs": [],
-        "cue_options": [
-          {
-            "cue_id": "c1",
-            "name": "the family recipe"
-          },
-          {
-            "cue_id": "c2",
-            "name": "the tattoos of her four dogs"
-          },
-          {
-            "cue_id": "c3",
-            "name": "the dogs' new collars and tags"
-          },
-          {
-            "cue_id": "none",
-            "name": "none of these (no supporting cue in the history)"
-          }
-        ]
-      },
-      "gold": {
-        "label": "history_supported",
-        "i_subtype": null,
-        "gold_cue_id": "c2",
-        "evidence_turn_ids": [
-          "S03_T26",
-          "S03_T28"
-        ],
-        "evidence_session_ids": [
-          "S03"
-        ],
-        "supporting_turn_ids": [],
-        "current_emotion": "joy",
-        "option_roles": {
-          "c1": "history_unrelated",
-          "c2": "anchor",
-          "c3": "history_unrelated",
-          "none": "none"
+        {
+          "cue_id": "cue_audrey_tattoos_four_dogs",
+          "name": "the tattoos of her four dogs",
+          "cue_type": "object"
         },
-        "confidence": 2
-      },
-      "edit_log": {
-        "generator": "claude (in-session): 补齐候选线索、情绪映射、反事实题与审查提示；X 文本沿用原 A/B/C 变体",
-        "spec": "data/questions/specs/golden_triples.spec.json",
-        "spec_key": "A05.A",
-        "pair_of_key": null,
-        "operations": [
-          "truncate_after:S14",
-          "add_session:S15"
-        ]
-      },
-      "note_zh": "B 变体原文写的是 “Toby finally learned to roll over”，但 Toby 是 Andrew 的狗（S12_T01），Audrey 的狗是 Pepper、Precious、Panda、Pixie，已改成 Pixie。；A 变体里 “they mean everything to me” 直接给出了解释，X 几乎能自证，H 与 P 的边界不清。",
-      "explanation": "A(cue): Audrey merely looks at her tattoo; B(schema): her four dogs mean the world to her and the tattoo is the lasting symbol of that love (conv-44:D3:26, conv-44:D3:28); C: the long-term pet-family bond yields the love. Without those turns, looking at a tattoo cannot explain the emotion.",
-      "review": null,
-      "auto_checks": []
+        {
+          "cue_id": "cue_audrey_dogs_new_collars",
+          "name": "the dogs' new collars and tags",
+          "cue_type": "object"
+        },
+        {
+          "cue_id": "none",
+          "name": "无可支持的历史线索",
+          "cue_type": "none"
+        }
+      ]
     },
-    {
-      "sample_id": "conv-44_A05-P",
-      "family_id": "conv-44_A05",
-      "sample_type": "P_same_cue",
-      "eval_user_id": "Audrey",
-      "history": {
-        "conv_id": "conv-44",
-        "source": "locomo",
-        "cutoff_after": "S14",
-        "removed_sessions": [],
-        "session_id_map": null
-      },
-      "current_input": {
-        "session_id": "S15",
-        "date": "9:58 pm on 16 August, 2023",
-        "context_turns": [],
-        "target_turn": {
-          "turn_id": "S15_T01",
-          "speaker": "Audrey",
-          "text": "Hey Andrew, I looked down at the tattoos of my four pups on my arm right after Pixie finally learned to roll over! My heart just bursts with love - they mean everything to me."
-        },
-        "image_refs": [],
-        "cue_options": [
-          {
-            "cue_id": "c1",
-            "name": "the family recipe"
-          },
-          {
-            "cue_id": "c2",
-            "name": "the tattoos of her four dogs"
-          },
-          {
-            "cue_id": "c3",
-            "name": "Pixie finally learning to roll over"
-          },
-          {
-            "cue_id": "none",
-            "name": "none of these (no supporting cue in the history)"
-          }
-        ]
-      },
-      "gold": {
-        "label": "present_cause_sufficient",
-        "i_subtype": null,
-        "gold_cue_id": "none",
-        "evidence_turn_ids": [],
-        "evidence_session_ids": [],
-        "supporting_turn_ids": [],
-        "current_emotion": "joy",
-        "option_roles": {
-          "c1": "history_unrelated",
-          "c2": "anchor",
-          "c3": "present_salient",
-          "none": "none"
-        },
-        "confidence": 2
-      },
-      "edit_log": {
-        "generator": "claude (in-session): 补齐候选线索、情绪映射、反事实题与审查提示；X 文本沿用原 A/B/C 变体",
-        "spec": "data/questions/specs/golden_triples.spec.json",
-        "spec_key": "A05.B",
-        "pair_of_key": null,
-        "operations": [
-          "truncate_after:S14",
-          "add_session:S15",
-          "text_fix:Toby->Pixie"
-        ]
-      },
-      "note_zh": "B 变体原文写的是 “Toby finally learned to roll over”，但 Toby 是 Andrew 的狗（S12_T01），Audrey 的狗是 Pepper、Precious、Panda、Pixie，已改成 Pixie。；A 变体里 “they mean everything to me” 直接给出了解释，X 几乎能自证，H 与 P 的边界不清。",
-      "explanation": "The present event s (her dog Toby learning a new trick) is self-sufficient to explain the burst of love; invoking the long-term bond is over-attribution here.",
-      "review": null,
-      "auto_checks": []
-    },
-    {
-      "sample_id": "conv-44_A05-NM",
-      "family_id": "conv-44_A05",
-      "sample_type": "I_near_miss",
-      "eval_user_id": "Audrey",
-      "history": {
-        "conv_id": "conv-44",
-        "source": "locomo",
-        "cutoff_after": "S14",
-        "removed_sessions": [],
-        "session_id_map": null
-      },
-      "current_input": {
-        "session_id": "S15",
-        "date": "9:58 pm on 16 August, 2023",
-        "context_turns": [],
-        "target_turn": {
-          "turn_id": "S15_T01",
-          "speaker": "Audrey",
-          "text": "Hey Andrew, I met a woman at the park today who has matching tattoos of her four dogs. My heart just bursts with love - they mean everything to me."
-        },
-        "image_refs": [],
-        "cue_options": [
-          {
-            "cue_id": "c1",
-            "name": "the family recipe"
-          },
-          {
-            "cue_id": "c2",
-            "name": "a woman's tattoos of her own four dogs"
-          },
-          {
-            "cue_id": "c3",
-            "name": "the tattoos of her four dogs"
-          },
-          {
-            "cue_id": "none",
-            "name": "none of these (no supporting cue in the history)"
-          }
-        ]
-      },
-      "gold": {
-        "label": "insufficient_evidence",
-        "i_subtype": "near_miss",
-        "gold_cue_id": "none",
-        "evidence_turn_ids": [],
-        "evidence_session_ids": [],
-        "supporting_turn_ids": [],
-        "current_emotion": "joy",
-        "option_roles": {
-          "c1": "history_unrelated",
-          "c2": "present_salient",
-          "c3": "anchor",
-          "none": "none"
-        },
-        "confidence": 2
-      },
-      "edit_log": {
-        "generator": "claude (in-session): 补齐候选线索、情绪映射、反事实题与审查提示；X 文本沿用原 A/B/C 变体",
-        "spec": "data/questions/specs/golden_triples.spec.json",
-        "spec_key": "A05.C",
-        "pair_of_key": null,
-        "operations": [
-          "truncate_after:S14",
-          "add_session:S15"
-        ]
-      },
-      "note_zh": "B 变体原文写的是 “Toby finally learned to roll over”，但 Toby 是 Andrew 的狗（S12_T01），Audrey 的狗是 Pepper、Precious、Panda、Pixie，已改成 Pixie。；A 变体里 “they mean everything to me” 直接给出了解释，X 几乎能自证，H 与 P 的边界不清。",
-      "explanation": "Someone else's tattoos on someone else's dogs have no personal binding for Audrey; neither history nor present suffices, so abstain is correct.",
-      "review": null,
-      "auto_checks": []
+    "gold": {
+      "label": "history_supported",
+      "gold_cue_id": "cue_audrey_tattoos_four_dogs",
+      "evidence_turn_ids": [
+        "D3:26",
+        "D3:28"
+      ],
+      "evidence_session_ids": [
+        "session_3"
+      ],
+      "current_emotion": "joy"
     }
-  ]
-}
+  },
+  {
+    "sample_id": "conv-44_A05-P",
+    "user_id": "u_audrey",
+    "current_input": {
+      "input_type": "text",
+      "text": "Hey Andrew, I looked down at the tattoos of my four pups on my arm right after Pixie finally learned to roll over! My heart just bursts with love - they mean everything to me.",
+      "image_refs": [],
+      "cue_options": [
+        {
+          "cue_id": "cue_audrey_family_recipe",
+          "name": "the family recipe",
+          "cue_type": "object"
+        },
+        {
+          "cue_id": "cue_audrey_tattoos_four_dogs",
+          "name": "the tattoos of her four dogs",
+          "cue_type": "object"
+        },
+        {
+          "cue_id": "cue_pixie_finally_learning",
+          "name": "Pixie finally learning to roll over",
+          "cue_type": "event"
+        },
+        {
+          "cue_id": "none",
+          "name": "无可支持的历史线索",
+          "cue_type": "none"
+        }
+      ]
+    },
+    "gold": {
+      "label": "present_cause_sufficient",
+      "gold_cue_id": "none",
+      "evidence_turn_ids": [],
+      "evidence_session_ids": [],
+      "current_emotion": "joy"
+    }
+  },
+  {
+    "sample_id": "conv-44_A05-NM",
+    "user_id": "u_audrey",
+    "current_input": {
+      "input_type": "text",
+      "text": "Hey Andrew, I met a woman at the park today who has matching tattoos of her four dogs. My heart just bursts with love - they mean everything to me.",
+      "image_refs": [],
+      "cue_options": [
+        {
+          "cue_id": "cue_audrey_family_recipe",
+          "name": "the family recipe",
+          "cue_type": "object"
+        },
+        {
+          "cue_id": "cue_woman_s_tattoos",
+          "name": "a woman's tattoos of her own four dogs",
+          "cue_type": "object"
+        },
+        {
+          "cue_id": "cue_audrey_tattoos_four_dogs",
+          "name": "the tattoos of her four dogs",
+          "cue_type": "object"
+        },
+        {
+          "cue_id": "none",
+          "name": "无可支持的历史线索",
+          "cue_type": "none"
+        }
+      ]
+    },
+    "gold": {
+      "label": "insufficient_evidence",
+      "gold_cue_id": "none",
+      "evidence_turn_ids": [],
+      "evidence_session_ids": [],
+      "current_emotion": "joy"
+    }
+  }
+]

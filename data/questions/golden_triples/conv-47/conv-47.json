@@ -1,339 +1,158 @@
-{
-  "schema_version": "0.1",
-  "conv_id": "conv-47",
-  "source": "locomo",
-  "anchor_file": "data/anchors/locomo/golden_triples.jsonl",
-  "spec_file": "data/questions/specs/golden_triples.spec.json",
-  "samples": [
-    {
-      "sample_id": "conv-47_A06-H",
-      "family_id": "conv-47_A06",
-      "sample_type": "H",
-      "eval_user_id": "John",
-      "history": {
-        "conv_id": "conv-47",
-        "source": "locomo",
-        "cutoff_after": "S27",
-        "removed_sessions": [],
-        "session_id_map": null
-      },
-      "current_input": {
-        "session_id": "S28",
-        "date": "7:36 pm on 21 October, 2022",
-        "context_turns": [],
-        "target_turn": {
-          "turn_id": "S28_T01",
-          "speaker": "John",
-          "text": "Hey James, I was just remembering my old drum set today. Thinking about those sessions still leaves me feeling relaxed and content."
+[
+  {
+    "sample_id": "conv-47_A06-H",
+    "user_id": "u_john",
+    "current_input": {
+      "input_type": "text",
+      "text": "Hey James, I was just remembering my old drum set today. Thinking about those sessions still leaves me feeling relaxed and content.",
+      "image_refs": [],
+      "cue_options": [
+        {
+          "cue_id": "cue_john_old_drum_set",
+          "name": "the old drum set",
+          "cue_type": "object"
         },
-        "image_refs": [],
-        "cue_options": [
-          {
-            "cue_id": "c1",
-            "name": "the old drum set"
-          },
-          {
-            "cue_id": "c2",
-            "name": "the trophy"
-          },
-          {
-            "cue_id": "c3",
-            "name": "the elementary school photo"
-          },
-          {
-            "cue_id": "none",
-            "name": "none of these (no supporting cue in the history)"
-          }
-        ]
-      },
-      "gold": {
-        "label": "history_supported",
-        "i_subtype": null,
-        "gold_cue_id": "c1",
-        "evidence_turn_ids": [
-          "S24_T15"
-        ],
-        "evidence_session_ids": [
-          "S24"
-        ],
-        "supporting_turn_ids": [
-          "S03_T03"
-        ],
-        "current_emotion": "comfort",
-        "option_roles": {
-          "c1": "anchor",
-          "c2": "history_unrelated",
-          "c3": "history_unrelated",
-          "none": "none"
+        {
+          "cue_id": "cue_john_trophy",
+          "name": "the trophy",
+          "cue_type": "object"
         },
-        "confidence": 2
-      },
-      "edit_log": {
-        "generator": "claude (in-session): 补齐候选线索、情绪映射、反事实题与审查提示；X 文本沿用原 A/B/C 变体",
-        "spec": "data/questions/specs/golden_triples.spec.json",
-        "spec_key": "A06.A",
-        "pair_of_key": null,
-        "operations": [
-          "truncate_after:S27",
-          "add_session:S28"
-        ]
-      },
-      "note_zh": "A 变体同样是纯回忆，X 里没有当下出现的线索。；原标注情绪为 joy（注明实际语义是 relaxed/content），本题改用 comfort。",
-      "explanation": "A(cue): the memory of the drum set only; B(schema): playing drums was John's long-term way to let off steam and unwind (conv-47:D24:15); C: that rooted coping routine explains the present calm. Without D24:15, merely recalling a drum set cannot explain relaxed/content.",
-      "review": null,
-      "auto_checks": [
-        "泄漏词：remembering"
-      ]
-    },
-    {
-      "sample_id": "conv-47_A06-CF",
-      "family_id": "conv-47_A06",
-      "sample_type": "I_no_history",
-      "eval_user_id": "John",
-      "history": {
-        "conv_id": "conv-47",
-        "source": "locomo",
-        "cutoff_after": "S27",
-        "removed_sessions": [
-          "S03",
-          "S24"
-        ],
-        "session_id_map": {
-          "S01": "S01",
-          "S02": "S02",
-          "S04": "S03",
-          "S05": "S04",
-          "S06": "S05",
-          "S07": "S06",
-          "S08": "S07",
-          "S09": "S08",
-          "S10": "S09",
-          "S11": "S10",
-          "S12": "S11",
-          "S13": "S12",
-          "S14": "S13",
-          "S15": "S14",
-          "S16": "S15",
-          "S17": "S16",
-          "S18": "S17",
-          "S19": "S18",
-          "S20": "S19",
-          "S21": "S20",
-          "S22": "S21",
-          "S23": "S22",
-          "S25": "S23",
-          "S26": "S24",
-          "S27": "S25"
+        {
+          "cue_id": "cue_john_elementary_school_photo",
+          "name": "the elementary school photo",
+          "cue_type": "object"
+        },
+        {
+          "cue_id": "none",
+          "name": "无可支持的历史线索",
+          "cue_type": "none"
         }
-      },
-      "current_input": {
-        "session_id": "S26",
-        "date": "7:36 pm on 21 October, 2022",
-        "context_turns": [],
-        "target_turn": {
-          "turn_id": "S26_T01",
-          "speaker": "John",
-          "text": "Hey James, I was just remembering my old drum set today. Thinking about those sessions still leaves me feeling relaxed and content."
-        },
-        "image_refs": [],
-        "cue_options": [
-          {
-            "cue_id": "c1",
-            "name": "the old drum set"
-          },
-          {
-            "cue_id": "c2",
-            "name": "the trophy"
-          },
-          {
-            "cue_id": "c3",
-            "name": "the elementary school photo"
-          },
-          {
-            "cue_id": "none",
-            "name": "none of these (no supporting cue in the history)"
-          }
-        ]
-      },
-      "gold": {
-        "label": "insufficient_evidence",
-        "i_subtype": "no_history_link",
-        "gold_cue_id": "none",
-        "evidence_turn_ids": [],
-        "evidence_session_ids": [],
-        "supporting_turn_ids": [],
-        "current_emotion": "comfort",
-        "option_roles": {
-          "c1": "anchor",
-          "c2": "history_unrelated",
-          "c3": "history_unrelated",
-          "none": "none"
-        },
-        "confidence": 2
-      },
-      "edit_log": {
-        "generator": "claude (in-session): 补齐候选线索、情绪映射、反事实题与审查提示；X 文本沿用原 A/B/C 变体",
-        "spec": "data/questions/specs/golden_triples.spec.json",
-        "spec_key": "A06.A",
-        "pair_of_key": "A06.A",
-        "operations": [
-          "truncate_after:S27",
-          "remove_sessions:S03,S24; renumber",
-          "add_session:S26"
-        ]
-      },
-      "note_zh": "与 A06-H 的 X 和选项完全相同，历史中删除了证据所在的 S03, S24。",
-      "explanation": "A(cue): the memory of the drum set only; B(schema): playing drums was John's long-term way to let off steam and unwind (conv-47:D24:15); C: that rooted coping routine explains the present calm. Without D24:15, merely recalling a drum set cannot explain relaxed/content.",
-      "review": null,
-      "auto_checks": [
-        "泄漏词：remembering"
       ]
     },
-    {
-      "sample_id": "conv-47_A06-P",
-      "family_id": "conv-47_A06",
-      "sample_type": "P_same_cue",
-      "eval_user_id": "John",
-      "history": {
-        "conv_id": "conv-47",
-        "source": "locomo",
-        "cutoff_after": "S27",
-        "removed_sessions": [],
-        "session_id_map": null
-      },
-      "current_input": {
-        "session_id": "S28",
-        "date": "7:36 pm on 21 October, 2022",
-        "context_turns": [],
-        "target_turn": {
-          "turn_id": "S28_T01",
-          "speaker": "John",
-          "text": "Hey James, I was just remembering my old drum set, and I just booked the community studio for this weekend. I feel relaxed and content."
-        },
-        "image_refs": [],
-        "cue_options": [
-          {
-            "cue_id": "c1",
-            "name": "the old drum set"
-          },
-          {
-            "cue_id": "c2",
-            "name": "booking the community studio for the weekend"
-          },
-          {
-            "cue_id": "c3",
-            "name": "the trophy"
-          },
-          {
-            "cue_id": "none",
-            "name": "none of these (no supporting cue in the history)"
-          }
-        ]
-      },
-      "gold": {
-        "label": "present_cause_sufficient",
-        "i_subtype": null,
-        "gold_cue_id": "none",
-        "evidence_turn_ids": [],
-        "evidence_session_ids": [],
-        "supporting_turn_ids": [],
-        "current_emotion": "comfort",
-        "option_roles": {
-          "c1": "anchor",
-          "c2": "present_salient",
-          "c3": "history_unrelated",
-          "none": "none"
-        },
-        "confidence": 2
-      },
-      "edit_log": {
-        "generator": "claude (in-session): 补齐候选线索、情绪映射、反事实题与审查提示；X 文本沿用原 A/B/C 变体",
-        "spec": "data/questions/specs/golden_triples.spec.json",
-        "spec_key": "A06.B",
-        "pair_of_key": null,
-        "operations": [
-          "truncate_after:S27",
-          "add_session:S28"
-        ]
-      },
-      "note_zh": "A 变体同样是纯回忆，X 里没有当下出现的线索。；原标注情绪为 joy（注明实际语义是 relaxed/content），本题改用 comfort。",
-      "explanation": "The new event s (booking a studio session) is self-sufficient to explain the relaxed/content mood; invoking the childhood drum history would be over-attribution.",
-      "review": null,
-      "auto_checks": [
-        "泄漏词：remembering"
-      ]
-    },
-    {
-      "sample_id": "conv-47_A06-NM",
-      "family_id": "conv-47_A06",
-      "sample_type": "I_near_miss",
-      "eval_user_id": "John",
-      "history": {
-        "conv_id": "conv-47",
-        "source": "locomo",
-        "cutoff_after": "S27",
-        "removed_sessions": [],
-        "session_id_map": null
-      },
-      "current_input": {
-        "session_id": "S28",
-        "date": "7:36 pm on 21 October, 2022",
-        "context_turns": [],
-        "target_turn": {
-          "turn_id": "S28_T01",
-          "speaker": "John",
-          "text": "Hey James, I saw an old drum set in a music store window today. I feel relaxed and content."
-        },
-        "image_refs": [],
-        "cue_options": [
-          {
-            "cue_id": "c1",
-            "name": "the trophy"
-          },
-          {
-            "cue_id": "c2",
-            "name": "the old drum set"
-          },
-          {
-            "cue_id": "c3",
-            "name": "an old drum set in a music store window"
-          },
-          {
-            "cue_id": "none",
-            "name": "none of these (no supporting cue in the history)"
-          }
-        ]
-      },
-      "gold": {
-        "label": "insufficient_evidence",
-        "i_subtype": "near_miss",
-        "gold_cue_id": "none",
-        "evidence_turn_ids": [],
-        "evidence_session_ids": [],
-        "supporting_turn_ids": [],
-        "current_emotion": "comfort",
-        "option_roles": {
-          "c1": "history_unrelated",
-          "c2": "anchor",
-          "c3": "present_salient",
-          "none": "none"
-        },
-        "confidence": 2
-      },
-      "edit_log": {
-        "generator": "claude (in-session): 补齐候选线索、情绪映射、反事实题与审查提示；X 文本沿用原 A/B/C 变体",
-        "spec": "data/questions/specs/golden_triples.spec.json",
-        "spec_key": "A06.C",
-        "pair_of_key": null,
-        "operations": [
-          "truncate_after:S27",
-          "add_session:S28"
-        ]
-      },
-      "note_zh": "A 变体同样是纯回忆，X 里没有当下出现的线索。；原标注情绪为 joy（注明实际语义是 relaxed/content），本题改用 comfort。",
-      "explanation": "A store-window drum set has no personal binding; neither history nor present suffices, so abstain is correct.",
-      "review": null,
-      "auto_checks": []
+    "gold": {
+      "label": "history_supported",
+      "gold_cue_id": "cue_john_old_drum_set",
+      "evidence_turn_ids": [
+        "D24:15"
+      ],
+      "evidence_session_ids": [
+        "session_24"
+      ],
+      "current_emotion": "comfort"
     }
-  ]
-}
+  },
+  {
+    "sample_id": "conv-47_A06-CF",
+    "user_id": "u_john",
+    "current_input": {
+      "input_type": "text",
+      "text": "Hey James, I was just remembering my old drum set today. Thinking about those sessions still leaves me feeling relaxed and content.",
+      "image_refs": [],
+      "cue_options": [
+        {
+          "cue_id": "cue_john_old_drum_set",
+          "name": "the old drum set",
+          "cue_type": "object"
+        },
+        {
+          "cue_id": "cue_john_trophy",
+          "name": "the trophy",
+          "cue_type": "object"
+        },
+        {
+          "cue_id": "cue_john_elementary_school_photo",
+          "name": "the elementary school photo",
+          "cue_type": "object"
+        },
+        {
+          "cue_id": "none",
+          "name": "无可支持的历史线索",
+          "cue_type": "none"
+        }
+      ]
+    },
+    "gold": {
+      "label": "insufficient_evidence",
+      "gold_cue_id": "none",
+      "evidence_turn_ids": [],
+      "evidence_session_ids": [],
+      "current_emotion": "comfort"
+    }
+  },
+  {
+    "sample_id": "conv-47_A06-P",
+    "user_id": "u_john",
+    "current_input": {
+      "input_type": "text",
+      "text": "Hey James, I was just remembering my old drum set, and I just booked the community studio for this weekend. I feel relaxed and content.",
+      "image_refs": [],
+      "cue_options": [
+        {
+          "cue_id": "cue_john_old_drum_set",
+          "name": "the old drum set",
+          "cue_type": "object"
+        },
+        {
+          "cue_id": "cue_booking_community_studio",
+          "name": "booking the community studio for the weekend",
+          "cue_type": "event"
+        },
+        {
+          "cue_id": "cue_john_trophy",
+          "name": "the trophy",
+          "cue_type": "object"
+        },
+        {
+          "cue_id": "none",
+          "name": "无可支持的历史线索",
+          "cue_type": "none"
+        }
+      ]
+    },
+    "gold": {
+      "label": "present_cause_sufficient",
+      "gold_cue_id": "none",
+      "evidence_turn_ids": [],
+      "evidence_session_ids": [],
+      "current_emotion": "comfort"
+    }
+  },
+  {
+    "sample_id": "conv-47_A06-NM",
+    "user_id": "u_john",
+    "current_input": {
+      "input_type": "text",
+      "text": "Hey James, I saw an old drum set in a music store window today. I feel relaxed and content.",
+      "image_refs": [],
+      "cue_options": [
+        {
+          "cue_id": "cue_john_trophy",
+          "name": "the trophy",
+          "cue_type": "object"
+        },
+        {
+          "cue_id": "cue_john_old_drum_set",
+          "name": "the old drum set",
+          "cue_type": "object"
+        },
+        {
+          "cue_id": "cue_old_drum_set",
+          "name": "an old drum set in a music store window",
+          "cue_type": "object"
+        },
+        {
+          "cue_id": "none",
+          "name": "无可支持的历史线索",
+          "cue_type": "none"
+        }
+      ]
+    },
+    "gold": {
+      "label": "insufficient_evidence",
+      "gold_cue_id": "none",
+      "evidence_turn_ids": [],
+      "evidence_session_ids": [],
+      "current_emotion": "comfort"
+    }
+  }
+]

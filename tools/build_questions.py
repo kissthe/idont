@@ -12,6 +12,8 @@ import re
 import sys
 from pathlib import Path
 
+import eval_format
+
 ROOT = Path(__file__).resolve().parent.parent
 LOCOMO = ROOT / "locomo10.json"
 
@@ -363,9 +365,7 @@ def main():
     out.parent.mkdir(parents=True, exist_ok=True)
     for s in samples:
         del s["_opt_events"]
-    json.dump({"schema_version": "0.1", "conv_id": conv, "source": spec["source"],
-               "anchor_file": spec["anchor_file"], "spec_file": str(spec_path.relative_to(ROOT)),
-               "samples": samples}, open(out, "w"), ensure_ascii=False, indent=2)
+    eval_format.write(out, samples, sessions[-1]["session_id"])   # 评测格式 + <conv>.meta.json
     labs = [s["gold"]["label"] for s in samples]
     print(f"{len(samples)} samples -> {out.relative_to(ROOT)}  H/P/I = "
           f"{labs.count(LABEL['H'])}/{labs.count(LABEL['P'])}/{labs.count(LABEL['I'])}")
