@@ -1,0 +1,136 @@
+{
+  "spec_version": "0.1",
+  "source_file": "data/anchors/locomo/golden_triples.jsonl",
+  "generator": "claude (in-session): 补齐候选线索、情绪映射、反事实题与审查提示；X 文本沿用原 A/B/C 变体",
+  "notes": "每个锚点出 4 题：A→H，A 派生→I-无历史关联（同一 X，删除证据 session），B→P，C→I-近错。A 变体里没有“当下显眼”事物时，第 3 个选项改用第二个历史干扰项。",
+  "anchors": {
+    "A01": {
+      "cue_name": "grandma's necklace",
+      "hist": [{"name": "her painting 'Embracing Identity'", "turn": "S11_T12"}, {"name": "the kids' books in her library", "turn": "S06_T09"}],
+      "a_present": null,
+      "b_present": "her sister's call about flying in next week",
+      "c_lookalike": "a stranger's necklace like grandma's at the market",
+      "emotion": "comfort",
+      "residual_keywords": ["necklace"],
+      "review_notes_zh": [
+        "A 变体写了 “just to feel close to home”，X 自己交代了动机，“为了想家而戴上项链，然后感到安定温暖”本身就讲得通，可能被判成 P；“grandma's” 也透露了来历。",
+        "C 变体：看到和外婆那条一样的项链而想起外婆、感到温暖，在常理上是可能的，判 I 有争议。",
+        "原标注情绪为 joy（注明实际语义是 steady/warm），任务定义里有 comfort，本题改用 comfort。"
+      ]
+    },
+    "A02": {
+      "cue_name": "the tattoo on her arm",
+      "hist": [{"name": "the dance contest trophy", "turn": "S09_T10"}],
+      "a_present": "the dance class she was heading to",
+      "b_present": "getting accepted into the regional dance showcase",
+      "c_lookalike": "a stranger's tattoo at the bus stop",
+      "supporting_add": ["S05_T13"],
+      "residual_keywords": ["tattoo"],
+      "review_notes_zh": [
+        "S05_T13（“Even made a tattoo to remind myself about it”）也是 Gina 对这处纹身的意义陈述，已补为辅助证据。",
+        "A 变体里“去上舞蹈课前”本身就可能让人有活力，有轻微的 P 风险。"
+      ]
+    },
+    "A03": {
+      "cue_name": "the little childhood doll",
+      "hist": [{"name": "the film camera he had as a kid", "turn": "S03_T15"}, {"name": "the 'Always look on the bright side of life' sign", "turn": "S10_T15"}],
+      "a_present": null,
+      "b_present": "getting turned down for the loan",
+      "c_lookalike": "a doll in a thrift store window",
+      "residual_keywords": ["doll"],
+      "review_notes_zh": [
+        "A 变体是纯回忆（“thinking about that little childhood doll again”），X 里没有当下出现的线索；“again” 还在回指历史。",
+        "历史里玩偶的意义是“总能让我好受些”（安慰），X 却是“想念那种感觉、情绪低落”；证据没有把玩偶和难过连起来，H 的依据偏弱。"
+      ]
+    },
+    "A04": {
+      "cue_name": "the old basketball shoes",
+      "hist": [{"name": "the ball signed by his teammates", "turn": "S07_T07"}],
+      "a_present": "the empty court",
+      "b_present": "hitting ten three-pointers in a row",
+      "c_lookalike": "the same shoe model on a clearance rack",
+      "residual_keywords": ["shoes", "sneakers"],
+      "review_notes_zh": [
+        "独自站上球场本身也可能让人斗志满满，有轻微的 P 风险；整体是本批里较稳的一组。"
+      ]
+    },
+    "A05": {
+      "cue_name": "the tattoos of her four dogs",
+      "hist": [{"name": "the family recipe", "turn": "S10_T15"}, {"name": "the dogs' new collars and tags", "turn": "S01_T03"}],
+      "a_present": null,
+      "b_present": "Pixie finally learning to roll over",
+      "c_lookalike": "a woman's tattoos of her own four dogs",
+      "text_fixes": {"B": [["Toby", "Pixie"]]},
+      "residual_keywords": ["tattoo", "mean the world", "mean everything"],
+      "skip_cf": "Audrey 对狗的爱在历史里反复出现（如 S14_T18 “Yeah they really mean the world to me”），删掉 S03 后，X 里的反应仍然能被历史解释，反事实题的 gold 不成立。",
+      "review_notes_zh": [
+        "B 变体原文写的是 “Toby finally learned to roll over”，但 Toby 是 Andrew 的狗（S12_T01），Audrey 的狗是 Pepper、Precious、Panda、Pixie，已改成 Pixie。",
+        "A 变体里 “they mean everything to me” 直接给出了解释，X 几乎能自证，H 与 P 的边界不清。"
+      ]
+    },
+    "A06": {
+      "cue_name": "the old drum set",
+      "hist": [{"name": "the trophy", "turn": "S12_T08"}, {"name": "the elementary school photo", "turn": "S17_T13"}],
+      "a_present": null,
+      "b_present": "booking the community studio for the weekend",
+      "c_lookalike": "an old drum set in a music store window",
+      "emotion": "comfort",
+      "residual_keywords": ["drum"],
+      "review_notes_zh": [
+        "A 变体同样是纯回忆，X 里没有当下出现的线索。",
+        "原标注情绪为 joy（注明实际语义是 relaxed/content），本题改用 comfort。"
+      ]
+    },
+    "A07": {
+      "cue_name": "the Paris pendant",
+      "hist": [{"name": "the bullet journal", "turn": "S18_T03"}, {"name": "her snake Susie", "turn": "S02_T20"}],
+      "a_present": null,
+      "b_present": "her mom's birthday",
+      "c_lookalike": "a colleague's pendant bought in Paris",
+      "supporting_add": ["S01_T06"],
+      "residual_keywords": ["pendant"],
+      "review_notes_zh": [
+        "h* 里没有“母亲已去世”这条事实（在 S01_T06），已补为辅助证据；X 中的难过依赖这条事实。",
+        "历史里吊坠的意义是“提醒我追求目标、不被拖住”（S01_T10），和 X 里的难过不是一回事；真正支撑难过的是“母亲所赠 + 母亲已去世”。",
+        "A 变体 “miss my mom so much” 在 X 里直接说出了想念的对象，模型只看 X 也能猜到吊坠与母亲有关。"
+      ]
+    },
+    "A08": {
+      "cue_name": "mom's old house",
+      "hist": [{"name": "the roses and dahlias", "turn": "S06_T04"}, {"name": "the dried bouquet from a friend", "turn": "S04_T28"}],
+      "a_present": null,
+      "b_present": "finding a box of her mother's unopened letters",
+      "c_lookalike": "a woman by the window of a house like mom's",
+      "residual_keywords": ["mom's old house", "mother's old house", "mom's place", "mom's house", "my mom"],
+      "skip_cf": "母亲老房子的意义在 S01、S02 之外还反复出现（如 S04_T34 “spot by the water near my mom's old house … reflect on her life”、S21_T01），删掉 S01、S02 后历史仍能支撑，反事实题的 gold 不成立。",
+      "review_notes_zh": [
+        "A 变体：“开车经过妈妈的老房子，感到想念她的隐痛”，即使没有历史，常人也会这样，H 很可能被判成 P。建议改写成 X 里不出现“妈妈”的版本。"
+      ]
+    },
+    "A09": {
+      "cue_name": "the little plant on his desk",
+      "hist": [{"name": "the vintage guitar from a close friend", "turn": "S16_T10"}],
+      "a_present": "the rough week of health problems",
+      "b_present": "the doctor saying his tests came back clear",
+      "c_lookalike": "a little plant in a store window",
+      "emotion": "comfort",
+      "residual_keywords": ["plant", "bonsai"],
+      "review_notes_zh": [
+        "本批里最符合“反差原则”的一组：一周健康状况糟糕，给植物浇了水就重新安定下来，只有历史能解释。",
+        "线索在原文中只出现在图片里（S05_T15 配图描述为 bonsai tree），文字没有点名；渲染历史时图片描述会以 [shares an image: …] 形式给出。",
+        "原标注情绪为 joy（注明实际语义是 steady），本题改用 comfort。"
+      ]
+    },
+    "A10": {
+      "cue_name": "the octopus guitar",
+      "hist": [{"name": "the gold necklace from another artist", "turn": "S04_T24"}, {"name": "his car", "turn": "S12_T07"}],
+      "a_present": null,
+      "b_present": "getting booked for the Boston show",
+      "c_lookalike": "a guitar with an octopus design in a shop window",
+      "residual_keywords": ["octopus"],
+      "review_notes_zh": [
+        "音乐人拿起心爱的吉他感到快乐，常人也能理解，有 P 风险；“just to hold it” 的反差不算强。"
+      ]
+    }
+  }
+}
