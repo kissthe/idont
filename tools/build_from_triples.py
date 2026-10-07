@@ -28,6 +28,7 @@ VARIANTS = [  # (key, 来源变体, 标签, I 子类, 中文名)
     ("P", "B", "P", None, "P"),
     ("NM", "C", "I", "near_miss", "I-近错"),
 ]
+SAMPLE_TYPE = {"H": "H", "CF": "I_no_history", "P": "P_same_cue", "NM": "I_near_miss"}
 ROLE_ZH = {"anchor": "锚点线索", "history_unrelated": "历史中出现但无关", "present_salient": "当下显眼", "none": "无"}
 
 
@@ -103,6 +104,8 @@ def build_anchor(tr, sp, sessions):
             "x": {"session_id": x_sid, "date": date,
                   "target_turn": {"turn_id": f"{x_sid}_T01", "speaker": user, "text": texts[var]}},
             "explanation": tr["variants"][var]["explanation"],
+            "key": key, "cutoff_after": f"S{target - 1:02d}",
+            "text_fixed": texts[var] != tr["variants"][var]["text"],
         }
         # 自动检查
         flags = []
@@ -128,6 +131,45 @@ def build_anchor(tr, sp, sessions):
         questions.append(q)
     return {"tr": tr, "sp": sp, "required": required, "supporting": supporting, "emotion": emotion,
             "src": src, "residual": residual, "cf_removed": cf_removed, "questions": questions}
+
+
+def to_sample(q, a, spec_rel):
+    """转成与 data/questions/locomo/conv-48.json 相同的题目结构（gold 里多一个 supporting_turn_ids）。"""
+    tr, conv = a["tr"], a["tr"]["sample_id"]
+    ops = [f"truncate_after:{q['cutoff_after']}"]
+    if q["removed"]:
+        ops.append("remove_sessions:" + ",".join(q["removed"]) + "; renumber")
+    ops.append(f"add_session:{q['x']['session_id']}")
+    if q["text_fixed"]:
+        ops.append("text_fix:" + "; ".join(f"{x}->{y}" for x, y in a["sp"]["text_fixes"][q["variant"]]))
+    if q["key"] == "CF":
+        note = f"与 {tr['anchor_id']}-H 的 X 和选项完全相同，历史中删除了证据所在的 {', '.join(q['removed'])}。"
+    else:
+        note = "；".join(a["sp"]["review_notes_zh"])
+    return {
+        "sample_id": f"{conv}_{q['qid']}",
+        "family_id": f"{conv}_{tr['anchor_id']}",
+        "sample_type": SAMPLE_TYPE[q["key"]],
+        "eval_user_id": q["user"],
+        "history": {"conv_id": conv, "source": "locomo", "cutoff_after": q["cutoff_after"],
+                    "removed_sessions": q["removed"], "session_id_map": q["session_map"]},
+        "current_input": {"session_id": q["x"]["session_id"], "date": q["x"]["date"],
+                          "context_turns": [], "target_turn": q["x"]["target_turn"],
+                          "image_refs": [], "cue_options": q["options"]},
+        "gold": {"label": q["label"], "i_subtype": q["i_subtype"], "gold_cue_id": q["gold_cue"],
+                 "evidence_turn_ids": q["evidence"],
+                 "evidence_session_ids": sorted({sid(t) for t in q["evidence"]}),
+                 "supporting_turn_ids": q["supporting"],
+                 "current_emotion": q["emotion"], "option_roles": q["roles"], "confidence": 2},
+        "edit_log": {"generator": a["spec_generator"], "spec": spec_rel,
+                     "spec_key": f"{tr['anchor_id']}.{q['variant']}",
+                     "pair_of_key": f"{tr['anchor_id']}.A" if q["key"] == "CF" else None,
+                     "operations": ops},
+        "note_zh": note,
+        "explanation": q["explanation"],
+        "review": None,
+        "auto_checks": q["flags"],
+    }
 
 
 def anchor_md(a):
@@ -177,6 +219,18 @@ def main():
         anchors.append(build_anchor(tr, spec["anchors"][tr["anchor_id"]], cache[conv]))
 
     OUT.mkdir(parents=True, exist_ok=True)
+    spec_rel = str(spec_path.relative_to(ROOT))
+    by_conv = {}
+    for a in anchors:
+        a["spec_generator"] = spec["generator"]
+        by_conv.setdefault(a["tr"]["sample_id"], []).append(a)
+    for conv, group in by_conv.items():
+        (OUT / conv).mkdir(exist_ok=True)
+        doc = {"schema_version": "0.1", "conv_id": conv, "source": "locomo",
+               "anchor_file": spec["source_file"], "spec_file": spec_rel,
+               "samples": [to_sample(q, a, spec_rel) for a in group for q in a["questions"]]}
+        with open(OUT / conv / f"{conv}.json", "w") as f:
+            json.dump(doc, f, ensure_ascii=False, indent=2)
     rows = []
     for a in anchors:
         tr = a["tr"]
@@ -195,6 +249,10 @@ def main():
     L = ["# golden_triples 评测题目", "",
          f"由 `tools/build_from_triples.py` 根据 `{spec['source_file']}` 和 "
          f"`{spec_path.relative_to(ROOT)}` 生成。每个对话一个文件夹，同一对话的锚点放在同一个文件夹里。", "",
+         "每个文件夹里有：每个锚点一个 Markdown（便于阅读）；一个 `<conv_id>.json`，结构与 "
+         "`data/questions/locomo/conv-48.json` 相同，供评测脚本读取。JSON 比原格式多两个字段："
+         "`gold.supporting_turn_ids`（辅助证据）和 `explanation`（原 A/B/C 变体的解释）；"
+         "题型多一种 `I_near_miss`（来自 C 变体）。", "",
          f"共 {len(anchors)} 个锚点、{len(rows)} 题：H {labs.count(LABEL['H'])} / P {labs.count(LABEL['P'])} / "
          f"I {labs.count(LABEL['I'])}（其中近错 {sum(q['i_subtype'] == 'near_miss' for _, _, q in rows)}、"
          f"无历史关联 {sum(q['i_subtype'] == 'no_history_link' for _, _, q in rows)}）。", "",

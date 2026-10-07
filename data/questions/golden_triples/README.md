@@ -2,6 +2,8 @@
 
 由 `tools/build_from_triples.py` 根据 `data/anchors/locomo/golden_triples.jsonl` 和 `data/questions/specs/golden_triples.spec.json` 生成。每个对话一个文件夹，同一对话的锚点放在同一个文件夹里。
 
+每个文件夹里有：每个锚点一个 Markdown（便于阅读）；一个 `<conv_id>.json`，结构与 `data/questions/locomo/conv-48.json` 相同，供评测脚本读取。JSON 比原格式多两个字段：`gold.supporting_turn_ids`（辅助证据）和 `explanation`（原 A/B/C 变体的解释）；题型多一种 `I_near_miss`（来自 C 变体）。
+
 共 10 个锚点、38 题：H 10 / P 10 / I 18（其中近错 10、无历史关联 8）。
 
 | 题号 | 对话 | 类型 | gold | 情绪 | 自动检查 | 文件 |

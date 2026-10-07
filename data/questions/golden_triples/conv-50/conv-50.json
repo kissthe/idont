@@ -1,0 +1,332 @@
+{
+  "schema_version": "0.1",
+  "conv_id": "conv-50",
+  "source": "locomo",
+  "anchor_file": "data/anchors/locomo/golden_triples.jsonl",
+  "spec_file": "data/questions/specs/golden_triples.spec.json",
+  "samples": [
+    {
+      "sample_id": "conv-50_A10-H",
+      "family_id": "conv-50_A10",
+      "sample_type": "H",
+      "eval_user_id": "Calvin",
+      "history": {
+        "conv_id": "conv-50",
+        "source": "locomo",
+        "cutoff_after": "S27",
+        "removed_sessions": [],
+        "session_id_map": null
+      },
+      "current_input": {
+        "session_id": "S28",
+        "date": "5:46 pm on 2 November, 2023",
+        "context_turns": [],
+        "target_turn": {
+          "turn_id": "S28_T01",
+          "speaker": "Calvin",
+          "text": "Hey Dave, I picked up the octopus guitar today just to hold it for a moment. I feel this deep, warm joy - like everything is on track."
+        },
+        "image_refs": [],
+        "cue_options": [
+          {
+            "cue_id": "c1",
+            "name": "the octopus guitar"
+          },
+          {
+            "cue_id": "c2",
+            "name": "the gold necklace from another artist"
+          },
+          {
+            "cue_id": "c3",
+            "name": "his car"
+          },
+          {
+            "cue_id": "none",
+            "name": "none of these (no supporting cue in the history)"
+          }
+        ]
+      },
+      "gold": {
+        "label": "history_supported",
+        "i_subtype": null,
+        "gold_cue_id": "c1",
+        "evidence_turn_ids": [
+          "S16_T14",
+          "S16_T16"
+        ],
+        "evidence_session_ids": [
+          "S16"
+        ],
+        "supporting_turn_ids": [],
+        "current_emotion": "joy",
+        "option_roles": {
+          "c1": "anchor",
+          "c2": "history_unrelated",
+          "c3": "history_unrelated",
+          "none": "none"
+        },
+        "confidence": 2
+      },
+      "edit_log": {
+        "generator": "claude (in-session): 补齐候选线索、情绪映射、反事实题与审查提示；X 文本沿用原 A/B/C 变体",
+        "spec": "data/questions/specs/golden_triples.spec.json",
+        "spec_key": "A10.A",
+        "pair_of_key": null,
+        "operations": [
+          "truncate_after:S27",
+          "add_session:S28"
+        ]
+      },
+      "note_zh": "音乐人拿起心爱的吉他感到快乐，常人也能理解，有 P 风险；“just to hold it” 的反差不算强。",
+      "explanation": "A(cue): merely holding the guitar; B(schema): it was custom made by his Japanese artist friend with an octopus symbolizing his love for art and the sea, and it embodies his music passion and friendships (conv-50:D16:14, conv-50:D16:16); C: that long-term binding yields the deep joy. Without those turns, holding a guitar cannot explain the emotion.",
+      "review": null,
+      "auto_checks": []
+    },
+    {
+      "sample_id": "conv-50_A10-CF",
+      "family_id": "conv-50_A10",
+      "sample_type": "I_no_history",
+      "eval_user_id": "Calvin",
+      "history": {
+        "conv_id": "conv-50",
+        "source": "locomo",
+        "cutoff_after": "S27",
+        "removed_sessions": [
+          "S16"
+        ],
+        "session_id_map": {
+          "S01": "S01",
+          "S02": "S02",
+          "S03": "S03",
+          "S04": "S04",
+          "S05": "S05",
+          "S06": "S06",
+          "S07": "S07",
+          "S08": "S08",
+          "S09": "S09",
+          "S10": "S10",
+          "S11": "S11",
+          "S12": "S12",
+          "S13": "S13",
+          "S14": "S14",
+          "S15": "S15",
+          "S17": "S16",
+          "S18": "S17",
+          "S19": "S18",
+          "S20": "S19",
+          "S21": "S20",
+          "S22": "S21",
+          "S23": "S22",
+          "S24": "S23",
+          "S25": "S24",
+          "S26": "S25",
+          "S27": "S26"
+        }
+      },
+      "current_input": {
+        "session_id": "S27",
+        "date": "5:46 pm on 2 November, 2023",
+        "context_turns": [],
+        "target_turn": {
+          "turn_id": "S27_T01",
+          "speaker": "Calvin",
+          "text": "Hey Dave, I picked up the octopus guitar today just to hold it for a moment. I feel this deep, warm joy - like everything is on track."
+        },
+        "image_refs": [],
+        "cue_options": [
+          {
+            "cue_id": "c1",
+            "name": "the octopus guitar"
+          },
+          {
+            "cue_id": "c2",
+            "name": "the gold necklace from another artist"
+          },
+          {
+            "cue_id": "c3",
+            "name": "his car"
+          },
+          {
+            "cue_id": "none",
+            "name": "none of these (no supporting cue in the history)"
+          }
+        ]
+      },
+      "gold": {
+        "label": "insufficient_evidence",
+        "i_subtype": "no_history_link",
+        "gold_cue_id": "none",
+        "evidence_turn_ids": [],
+        "evidence_session_ids": [],
+        "supporting_turn_ids": [],
+        "current_emotion": "joy",
+        "option_roles": {
+          "c1": "anchor",
+          "c2": "history_unrelated",
+          "c3": "history_unrelated",
+          "none": "none"
+        },
+        "confidence": 2
+      },
+      "edit_log": {
+        "generator": "claude (in-session): 补齐候选线索、情绪映射、反事实题与审查提示；X 文本沿用原 A/B/C 变体",
+        "spec": "data/questions/specs/golden_triples.spec.json",
+        "spec_key": "A10.A",
+        "pair_of_key": "A10.A",
+        "operations": [
+          "truncate_after:S27",
+          "remove_sessions:S16; renumber",
+          "add_session:S27"
+        ]
+      },
+      "note_zh": "与 A10-H 的 X 和选项完全相同，历史中删除了证据所在的 S16。",
+      "explanation": "A(cue): merely holding the guitar; B(schema): it was custom made by his Japanese artist friend with an octopus symbolizing his love for art and the sea, and it embodies his music passion and friendships (conv-50:D16:14, conv-50:D16:16); C: that long-term binding yields the deep joy. Without those turns, holding a guitar cannot explain the emotion.",
+      "review": null,
+      "auto_checks": []
+    },
+    {
+      "sample_id": "conv-50_A10-P",
+      "family_id": "conv-50_A10",
+      "sample_type": "P_same_cue",
+      "eval_user_id": "Calvin",
+      "history": {
+        "conv_id": "conv-50",
+        "source": "locomo",
+        "cutoff_after": "S27",
+        "removed_sessions": [],
+        "session_id_map": null
+      },
+      "current_input": {
+        "session_id": "S28",
+        "date": "5:46 pm on 2 November, 2023",
+        "context_turns": [],
+        "target_turn": {
+          "turn_id": "S28_T01",
+          "speaker": "Calvin",
+          "text": "Hey Dave, I picked up the octopus guitar today just to hold it, and then I got booked for the Boston show. I feel this deep, warm joy - like everything is on track."
+        },
+        "image_refs": [],
+        "cue_options": [
+          {
+            "cue_id": "c1",
+            "name": "getting booked for the Boston show"
+          },
+          {
+            "cue_id": "c2",
+            "name": "the octopus guitar"
+          },
+          {
+            "cue_id": "c3",
+            "name": "the gold necklace from another artist"
+          },
+          {
+            "cue_id": "none",
+            "name": "none of these (no supporting cue in the history)"
+          }
+        ]
+      },
+      "gold": {
+        "label": "present_cause_sufficient",
+        "i_subtype": null,
+        "gold_cue_id": "none",
+        "evidence_turn_ids": [],
+        "evidence_session_ids": [],
+        "supporting_turn_ids": [],
+        "current_emotion": "joy",
+        "option_roles": {
+          "c1": "present_salient",
+          "c2": "anchor",
+          "c3": "history_unrelated",
+          "none": "none"
+        },
+        "confidence": 2
+      },
+      "edit_log": {
+        "generator": "claude (in-session): 补齐候选线索、情绪映射、反事实题与审查提示；X 文本沿用原 A/B/C 变体",
+        "spec": "data/questions/specs/golden_triples.spec.json",
+        "spec_key": "A10.B",
+        "pair_of_key": null,
+        "operations": [
+          "truncate_after:S27",
+          "add_session:S28"
+        ]
+      },
+      "note_zh": "音乐人拿起心爱的吉他感到快乐，常人也能理解，有 P 风险；“just to hold it” 的反差不算强。",
+      "explanation": "The present event s (being booked for a Boston show) is self-sufficient to explain the deep joy; attributing it to the guitar would be over-attribution.",
+      "review": null,
+      "auto_checks": []
+    },
+    {
+      "sample_id": "conv-50_A10-NM",
+      "family_id": "conv-50_A10",
+      "sample_type": "I_near_miss",
+      "eval_user_id": "Calvin",
+      "history": {
+        "conv_id": "conv-50",
+        "source": "locomo",
+        "cutoff_after": "S27",
+        "removed_sessions": [],
+        "session_id_map": null
+      },
+      "current_input": {
+        "session_id": "S28",
+        "date": "5:46 pm on 2 November, 2023",
+        "context_turns": [],
+        "target_turn": {
+          "turn_id": "S28_T01",
+          "speaker": "Calvin",
+          "text": "Hey Dave, I saw a guitar with an octopus design in a shop window today. I feel this deep, warm joy - like everything is on track."
+        },
+        "image_refs": [],
+        "cue_options": [
+          {
+            "cue_id": "c1",
+            "name": "a guitar with an octopus design in a shop window"
+          },
+          {
+            "cue_id": "c2",
+            "name": "the octopus guitar"
+          },
+          {
+            "cue_id": "c3",
+            "name": "the gold necklace from another artist"
+          },
+          {
+            "cue_id": "none",
+            "name": "none of these (no supporting cue in the history)"
+          }
+        ]
+      },
+      "gold": {
+        "label": "insufficient_evidence",
+        "i_subtype": "near_miss",
+        "gold_cue_id": "none",
+        "evidence_turn_ids": [],
+        "evidence_session_ids": [],
+        "supporting_turn_ids": [],
+        "current_emotion": "joy",
+        "option_roles": {
+          "c1": "present_salient",
+          "c2": "anchor",
+          "c3": "history_unrelated",
+          "none": "none"
+        },
+        "confidence": 2
+      },
+      "edit_log": {
+        "generator": "claude (in-session): 补齐候选线索、情绪映射、反事实题与审查提示；X 文本沿用原 A/B/C 变体",
+        "spec": "data/questions/specs/golden_triples.spec.json",
+        "spec_key": "A10.C",
+        "pair_of_key": null,
+        "operations": [
+          "truncate_after:S27",
+          "add_session:S28"
+        ]
+      },
+      "note_zh": "音乐人拿起心爱的吉他感到快乐，常人也能理解，有 P 风险；“just to hold it” 的反差不算强。",
+      "explanation": "A shop-window guitar is a lookalike without personal binding for Calvin; neither history nor present suffices, so abstain is correct.",
+      "review": null,
+      "auto_checks": []
+    }
+  ]
+}

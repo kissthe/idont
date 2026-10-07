@@ -58,8 +58,10 @@ def build_history(sessions, removed):
 
 
 def history_for(sample, sessions):
-    removed = set(sample["history"]["removed_sessions"])
-    return build_history(sessions, removed)[0]
+    """按 cutoff_after 截断、删除 removed_sessions 并重新编号，得到这道题的历史。"""
+    h = sample["history"]
+    window = [s for s in sessions if s["session_id"] <= h["cutoff_after"]]
+    return build_history(window, set(h["removed_sessions"]))[0]
 
 
 # ---------- 组装 ----------
