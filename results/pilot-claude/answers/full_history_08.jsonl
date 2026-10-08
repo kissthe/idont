@@ -1,0 +1,3 @@
+{"item_id": "full_history_08-01", "label": "history_supported", "cue_id": "cue_colleague_s_pendant", "evidence_turn_ids": ["D1:6", "D1:8"], "current_emotion": "sadness"}
+{"item_id": "full_history_08-02", "label": "history_supported", "cue_id": "cue_jolene_paris_pendant", "evidence_turn_ids": ["D1:6", "D1:8"], "current_emotion": "sadness"}
+{"item_id": "full_history_08-03", "label": "present_cause_sufficient", "cue_id": "none", "evidence_turn_ids": [], "current_emotion": "sadness"}

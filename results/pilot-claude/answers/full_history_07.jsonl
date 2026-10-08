@@ -1,0 +1,3 @@
+{"item_id": "full_history_07-01", "label": "insufficient_evidence", "cue_id": "none", "evidence_turn_ids": [], "current_emotion": "comfort"}
+{"item_id": "full_history_07-02", "label": "history_supported", "cue_id": "cue_john_old_drum_set", "evidence_turn_ids": ["D24:15", "D24:13"], "current_emotion": "comfort"}
+{"item_id": "full_history_07-03", "label": "present_cause_sufficient", "cue_id": "none", "evidence_turn_ids": [], "current_emotion": "comfort"}

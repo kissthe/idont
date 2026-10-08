@@ -1,0 +1,1030 @@
+[
+  {
+    "batch": "x_only_01",
+    "condition": "x_only",
+    "file": "results/pilot-claude/batches/x_only_01.txt",
+    "answers": "results/pilot-claude/answers/x_only_01.jsonl",
+    "items": [
+      {
+        "item_id": "x_only_01-01",
+        "sample_id": "conv-48_q18"
+      },
+      {
+        "item_id": "x_only_01-02",
+        "sample_id": "conv-26_A01-P"
+      },
+      {
+        "item_id": "x_only_01-03",
+        "sample_id": "conv-48_q25"
+      },
+      {
+        "item_id": "x_only_01-04",
+        "sample_id": "conv-41_A03-P"
+      },
+      {
+        "item_id": "x_only_01-05",
+        "sample_id": "conv-48_q24"
+      },
+      {
+        "item_id": "x_only_01-06",
+        "sample_id": "conv-48_A08-H"
+      },
+      {
+        "item_id": "x_only_01-07",
+        "sample_id": "conv-48_q15"
+      },
+      {
+        "item_id": "x_only_01-08",
+        "sample_id": "conv-50_A10-P"
+      },
+      {
+        "item_id": "x_only_01-09",
+        "sample_id": "conv-48_A07-CF"
+      },
+      {
+        "item_id": "x_only_01-10",
+        "sample_id": "conv-48_q17"
+      },
+      {
+        "item_id": "x_only_01-11",
+        "sample_id": "conv-48_q01"
+      },
+      {
+        "item_id": "x_only_01-12",
+        "sample_id": "conv-26_A01-H"
+      },
+      {
+        "item_id": "x_only_01-13",
+        "sample_id": "conv-43_A04-P"
+      },
+      {
+        "item_id": "x_only_01-14",
+        "sample_id": "conv-48_q05"
+      },
+      {
+        "item_id": "x_only_01-15",
+        "sample_id": "conv-47_A06-H"
+      },
+      {
+        "item_id": "x_only_01-16",
+        "sample_id": "conv-48_A07-H"
+      },
+      {
+        "item_id": "x_only_01-17",
+        "sample_id": "conv-49_A09-NM"
+      },
+      {
+        "item_id": "x_only_01-18",
+        "sample_id": "conv-48_q22"
+      },
+      {
+        "item_id": "x_only_01-19",
+        "sample_id": "conv-48_A07-NM"
+      },
+      {
+        "item_id": "x_only_01-20",
+        "sample_id": "conv-48_q16"
+      },
+      {
+        "item_id": "x_only_01-21",
+        "sample_id": "conv-49_A09-P"
+      }
+    ]
+  },
+  {
+    "batch": "x_only_02",
+    "condition": "x_only",
+    "file": "results/pilot-claude/batches/x_only_02.txt",
+    "answers": "results/pilot-claude/answers/x_only_02.jsonl",
+    "items": [
+      {
+        "item_id": "x_only_02-01",
+        "sample_id": "conv-47_A06-CF"
+      },
+      {
+        "item_id": "x_only_02-02",
+        "sample_id": "conv-30_A02-NM"
+      },
+      {
+        "item_id": "x_only_02-03",
+        "sample_id": "conv-44_A05-NM"
+      },
+      {
+        "item_id": "x_only_02-04",
+        "sample_id": "conv-30_A02-CF"
+      },
+      {
+        "item_id": "x_only_02-05",
+        "sample_id": "conv-43_A04-H"
+      },
+      {
+        "item_id": "x_only_02-06",
+        "sample_id": "conv-48_q14"
+      },
+      {
+        "item_id": "x_only_02-07",
+        "sample_id": "conv-26_A01-CF"
+      },
+      {
+        "item_id": "x_only_02-08",
+        "sample_id": "conv-49_A09-H"
+      },
+      {
+        "item_id": "x_only_02-09",
+        "sample_id": "conv-47_A06-P"
+      },
+      {
+        "item_id": "x_only_02-10",
+        "sample_id": "conv-48_q13"
+      },
+      {
+        "item_id": "x_only_02-11",
+        "sample_id": "conv-48_q19"
+      },
+      {
+        "item_id": "x_only_02-12",
+        "sample_id": "conv-48_q23"
+      },
+      {
+        "item_id": "x_only_02-13",
+        "sample_id": "conv-48_A07-P"
+      },
+      {
+        "item_id": "x_only_02-14",
+        "sample_id": "conv-48_q12"
+      },
+      {
+        "item_id": "x_only_02-15",
+        "sample_id": "conv-48_q10"
+      },
+      {
+        "item_id": "x_only_02-16",
+        "sample_id": "conv-50_A10-NM"
+      },
+      {
+        "item_id": "x_only_02-17",
+        "sample_id": "conv-41_A03-H"
+      },
+      {
+        "item_id": "x_only_02-18",
+        "sample_id": "conv-48_A08-P"
+      },
+      {
+        "item_id": "x_only_02-19",
+        "sample_id": "conv-41_A03-CF"
+      },
+      {
+        "item_id": "x_only_02-20",
+        "sample_id": "conv-44_A05-P"
+      },
+      {
+        "item_id": "x_only_02-21",
+        "sample_id": "conv-47_A06-NM"
+      }
+    ]
+  },
+  {
+    "batch": "x_only_03",
+    "condition": "x_only",
+    "file": "results/pilot-claude/batches/x_only_03.txt",
+    "answers": "results/pilot-claude/answers/x_only_03.jsonl",
+    "items": [
+      {
+        "item_id": "x_only_03-01",
+        "sample_id": "conv-50_A10-CF"
+      },
+      {
+        "item_id": "x_only_03-02",
+        "sample_id": "conv-44_A05-H"
+      },
+      {
+        "item_id": "x_only_03-03",
+        "sample_id": "conv-49_A09-CF"
+      },
+      {
+        "item_id": "x_only_03-04",
+        "sample_id": "conv-48_q11"
+      },
+      {
+        "item_id": "x_only_03-05",
+        "sample_id": "conv-26_A01-NM"
+      },
+      {
+        "item_id": "x_only_03-06",
+        "sample_id": "conv-48_A08-NM"
+      },
+      {
+        "item_id": "x_only_03-07",
+        "sample_id": "conv-48_q03"
+      },
+      {
+        "item_id": "x_only_03-08",
+        "sample_id": "conv-48_q02"
+      },
+      {
+        "item_id": "x_only_03-09",
+        "sample_id": "conv-48_q21"
+      },
+      {
+        "item_id": "x_only_03-10",
+        "sample_id": "conv-43_A04-NM"
+      },
+      {
+        "item_id": "x_only_03-11",
+        "sample_id": "conv-48_q07"
+      },
+      {
+        "item_id": "x_only_03-12",
+        "sample_id": "conv-48_q04"
+      },
+      {
+        "item_id": "x_only_03-13",
+        "sample_id": "conv-41_A03-NM"
+      },
+      {
+        "item_id": "x_only_03-14",
+        "sample_id": "conv-30_A02-H"
+      },
+      {
+        "item_id": "x_only_03-15",
+        "sample_id": "conv-48_q06"
+      },
+      {
+        "item_id": "x_only_03-16",
+        "sample_id": "conv-48_q20"
+      },
+      {
+        "item_id": "x_only_03-17",
+        "sample_id": "conv-43_A04-CF"
+      },
+      {
+        "item_id": "x_only_03-18",
+        "sample_id": "conv-30_A02-P"
+      },
+      {
+        "item_id": "x_only_03-19",
+        "sample_id": "conv-48_q08"
+      },
+      {
+        "item_id": "x_only_03-20",
+        "sample_id": "conv-48_q09"
+      },
+      {
+        "item_id": "x_only_03-21",
+        "sample_id": "conv-50_A10-H"
+      }
+    ]
+  },
+  {
+    "batch": "full_history_01",
+    "condition": "full_history",
+    "file": "results/pilot-claude/batches/full_history_01.txt",
+    "answers": "results/pilot-claude/answers/full_history_01.jsonl",
+    "items": [
+      {
+        "item_id": "full_history_01-01",
+        "sample_id": "conv-48_q23"
+      },
+      {
+        "item_id": "full_history_01-02",
+        "sample_id": "conv-48_q03"
+      },
+      {
+        "item_id": "full_history_01-03",
+        "sample_id": "conv-48_q24"
+      },
+      {
+        "item_id": "full_history_01-04",
+        "sample_id": "conv-48_q09"
+      },
+      {
+        "item_id": "full_history_01-05",
+        "sample_id": "conv-48_q15"
+      },
+      {
+        "item_id": "full_history_01-06",
+        "sample_id": "conv-48_q02"
+      },
+      {
+        "item_id": "full_history_01-07",
+        "sample_id": "conv-48_q17"
+      },
+      {
+        "item_id": "full_history_01-08",
+        "sample_id": "conv-48_q16"
+      },
+      {
+        "item_id": "full_history_01-09",
+        "sample_id": "conv-48_q22"
+      },
+      {
+        "item_id": "full_history_01-10",
+        "sample_id": "conv-48_q10"
+      },
+      {
+        "item_id": "full_history_01-11",
+        "sample_id": "conv-48_q20"
+      },
+      {
+        "item_id": "full_history_01-12",
+        "sample_id": "conv-48_q06"
+      },
+      {
+        "item_id": "full_history_01-13",
+        "sample_id": "conv-48_q04"
+      },
+      {
+        "item_id": "full_history_01-14",
+        "sample_id": "conv-48_q21"
+      },
+      {
+        "item_id": "full_history_01-15",
+        "sample_id": "conv-48_q01"
+      },
+      {
+        "item_id": "full_history_01-16",
+        "sample_id": "conv-48_q25"
+      },
+      {
+        "item_id": "full_history_01-17",
+        "sample_id": "conv-48_q19"
+      },
+      {
+        "item_id": "full_history_01-18",
+        "sample_id": "conv-48_q08"
+      },
+      {
+        "item_id": "full_history_01-19",
+        "sample_id": "conv-48_q07"
+      },
+      {
+        "item_id": "full_history_01-20",
+        "sample_id": "conv-48_q18"
+      },
+      {
+        "item_id": "full_history_01-21",
+        "sample_id": "conv-48_q05"
+      }
+    ]
+  },
+  {
+    "batch": "full_history_02",
+    "condition": "full_history",
+    "file": "results/pilot-claude/batches/full_history_02.txt",
+    "answers": "results/pilot-claude/answers/full_history_02.jsonl",
+    "items": [
+      {
+        "item_id": "full_history_02-01",
+        "sample_id": "conv-26_A01-H"
+      },
+      {
+        "item_id": "full_history_02-02",
+        "sample_id": "conv-26_A01-NM"
+      },
+      {
+        "item_id": "full_history_02-03",
+        "sample_id": "conv-26_A01-P"
+      }
+    ]
+  },
+  {
+    "batch": "full_history_03",
+    "condition": "full_history",
+    "file": "results/pilot-claude/batches/full_history_03.txt",
+    "answers": "results/pilot-claude/answers/full_history_03.jsonl",
+    "items": [
+      {
+        "item_id": "full_history_03-01",
+        "sample_id": "conv-30_A02-P"
+      },
+      {
+        "item_id": "full_history_03-02",
+        "sample_id": "conv-30_A02-H"
+      },
+      {
+        "item_id": "full_history_03-03",
+        "sample_id": "conv-30_A02-NM"
+      }
+    ]
+  },
+  {
+    "batch": "full_history_04",
+    "condition": "full_history",
+    "file": "results/pilot-claude/batches/full_history_04.txt",
+    "answers": "results/pilot-claude/answers/full_history_04.jsonl",
+    "items": [
+      {
+        "item_id": "full_history_04-01",
+        "sample_id": "conv-41_A03-H"
+      },
+      {
+        "item_id": "full_history_04-02",
+        "sample_id": "conv-41_A03-P"
+      },
+      {
+        "item_id": "full_history_04-03",
+        "sample_id": "conv-41_A03-NM"
+      }
+    ]
+  },
+  {
+    "batch": "full_history_05",
+    "condition": "full_history",
+    "file": "results/pilot-claude/batches/full_history_05.txt",
+    "answers": "results/pilot-claude/answers/full_history_05.jsonl",
+    "items": [
+      {
+        "item_id": "full_history_05-01",
+        "sample_id": "conv-43_A04-H"
+      },
+      {
+        "item_id": "full_history_05-02",
+        "sample_id": "conv-43_A04-NM"
+      },
+      {
+        "item_id": "full_history_05-03",
+        "sample_id": "conv-43_A04-P"
+      }
+    ]
+  },
+  {
+    "batch": "full_history_06",
+    "condition": "full_history",
+    "file": "results/pilot-claude/batches/full_history_06.txt",
+    "answers": "results/pilot-claude/answers/full_history_06.jsonl",
+    "items": [
+      {
+        "item_id": "full_history_06-01",
+        "sample_id": "conv-44_A05-P"
+      },
+      {
+        "item_id": "full_history_06-02",
+        "sample_id": "conv-44_A05-NM"
+      },
+      {
+        "item_id": "full_history_06-03",
+        "sample_id": "conv-44_A05-H"
+      }
+    ]
+  },
+  {
+    "batch": "full_history_07",
+    "condition": "full_history",
+    "file": "results/pilot-claude/batches/full_history_07.txt",
+    "answers": "results/pilot-claude/answers/full_history_07.jsonl",
+    "items": [
+      {
+        "item_id": "full_history_07-01",
+        "sample_id": "conv-47_A06-NM"
+      },
+      {
+        "item_id": "full_history_07-02",
+        "sample_id": "conv-47_A06-H"
+      },
+      {
+        "item_id": "full_history_07-03",
+        "sample_id": "conv-47_A06-P"
+      }
+    ]
+  },
+  {
+    "batch": "full_history_08",
+    "condition": "full_history",
+    "file": "results/pilot-claude/batches/full_history_08.txt",
+    "answers": "results/pilot-claude/answers/full_history_08.jsonl",
+    "items": [
+      {
+        "item_id": "full_history_08-01",
+        "sample_id": "conv-48_A07-NM"
+      },
+      {
+        "item_id": "full_history_08-02",
+        "sample_id": "conv-48_A07-H"
+      },
+      {
+        "item_id": "full_history_08-03",
+        "sample_id": "conv-48_A07-P"
+      }
+    ]
+  },
+  {
+    "batch": "full_history_09",
+    "condition": "full_history",
+    "file": "results/pilot-claude/batches/full_history_09.txt",
+    "answers": "results/pilot-claude/answers/full_history_09.jsonl",
+    "items": [
+      {
+        "item_id": "full_history_09-01",
+        "sample_id": "conv-48_A08-NM"
+      },
+      {
+        "item_id": "full_history_09-02",
+        "sample_id": "conv-48_A08-H"
+      },
+      {
+        "item_id": "full_history_09-03",
+        "sample_id": "conv-48_A08-P"
+      }
+    ]
+  },
+  {
+    "batch": "full_history_10",
+    "condition": "full_history",
+    "file": "results/pilot-claude/batches/full_history_10.txt",
+    "answers": "results/pilot-claude/answers/full_history_10.jsonl",
+    "items": [
+      {
+        "item_id": "full_history_10-01",
+        "sample_id": "conv-49_A09-NM"
+      },
+      {
+        "item_id": "full_history_10-02",
+        "sample_id": "conv-49_A09-H"
+      },
+      {
+        "item_id": "full_history_10-03",
+        "sample_id": "conv-49_A09-P"
+      }
+    ]
+  },
+  {
+    "batch": "full_history_11",
+    "condition": "full_history",
+    "file": "results/pilot-claude/batches/full_history_11.txt",
+    "answers": "results/pilot-claude/answers/full_history_11.jsonl",
+    "items": [
+      {
+        "item_id": "full_history_11-01",
+        "sample_id": "conv-50_A10-P"
+      },
+      {
+        "item_id": "full_history_11-02",
+        "sample_id": "conv-50_A10-NM"
+      },
+      {
+        "item_id": "full_history_11-03",
+        "sample_id": "conv-50_A10-H"
+      }
+    ]
+  },
+  {
+    "batch": "full_history_12",
+    "condition": "full_history",
+    "file": "results/pilot-claude/batches/full_history_12.txt",
+    "answers": "results/pilot-claude/answers/full_history_12.jsonl",
+    "items": [
+      {
+        "item_id": "full_history_12-01",
+        "sample_id": "conv-26_A01-CF"
+      }
+    ]
+  },
+  {
+    "batch": "full_history_13",
+    "condition": "full_history",
+    "file": "results/pilot-claude/batches/full_history_13.txt",
+    "answers": "results/pilot-claude/answers/full_history_13.jsonl",
+    "items": [
+      {
+        "item_id": "full_history_13-01",
+        "sample_id": "conv-30_A02-CF"
+      }
+    ]
+  },
+  {
+    "batch": "full_history_14",
+    "condition": "full_history",
+    "file": "results/pilot-claude/batches/full_history_14.txt",
+    "answers": "results/pilot-claude/answers/full_history_14.jsonl",
+    "items": [
+      {
+        "item_id": "full_history_14-01",
+        "sample_id": "conv-41_A03-CF"
+      }
+    ]
+  },
+  {
+    "batch": "full_history_15",
+    "condition": "full_history",
+    "file": "results/pilot-claude/batches/full_history_15.txt",
+    "answers": "results/pilot-claude/answers/full_history_15.jsonl",
+    "items": [
+      {
+        "item_id": "full_history_15-01",
+        "sample_id": "conv-43_A04-CF"
+      }
+    ]
+  },
+  {
+    "batch": "full_history_16",
+    "condition": "full_history",
+    "file": "results/pilot-claude/batches/full_history_16.txt",
+    "answers": "results/pilot-claude/answers/full_history_16.jsonl",
+    "items": [
+      {
+        "item_id": "full_history_16-01",
+        "sample_id": "conv-47_A06-CF"
+      }
+    ]
+  },
+  {
+    "batch": "full_history_17",
+    "condition": "full_history",
+    "file": "results/pilot-claude/batches/full_history_17.txt",
+    "answers": "results/pilot-claude/answers/full_history_17.jsonl",
+    "items": [
+      {
+        "item_id": "full_history_17-01",
+        "sample_id": "conv-48_A07-CF"
+      }
+    ]
+  },
+  {
+    "batch": "full_history_18",
+    "condition": "full_history",
+    "file": "results/pilot-claude/batches/full_history_18.txt",
+    "answers": "results/pilot-claude/answers/full_history_18.jsonl",
+    "items": [
+      {
+        "item_id": "full_history_18-01",
+        "sample_id": "conv-49_A09-CF"
+      }
+    ]
+  },
+  {
+    "batch": "full_history_19",
+    "condition": "full_history",
+    "file": "results/pilot-claude/batches/full_history_19.txt",
+    "answers": "results/pilot-claude/answers/full_history_19.jsonl",
+    "items": [
+      {
+        "item_id": "full_history_19-01",
+        "sample_id": "conv-50_A10-CF"
+      }
+    ]
+  },
+  {
+    "batch": "full_history_20",
+    "condition": "full_history",
+    "file": "results/pilot-claude/batches/full_history_20.txt",
+    "answers": "results/pilot-claude/answers/full_history_20.jsonl",
+    "items": [
+      {
+        "item_id": "full_history_20-01",
+        "sample_id": "conv-48_q11"
+      }
+    ]
+  },
+  {
+    "batch": "full_history_21",
+    "condition": "full_history",
+    "file": "results/pilot-claude/batches/full_history_21.txt",
+    "answers": "results/pilot-claude/answers/full_history_21.jsonl",
+    "items": [
+      {
+        "item_id": "full_history_21-01",
+        "sample_id": "conv-48_q12"
+      }
+    ]
+  },
+  {
+    "batch": "full_history_22",
+    "condition": "full_history",
+    "file": "results/pilot-claude/batches/full_history_22.txt",
+    "answers": "results/pilot-claude/answers/full_history_22.jsonl",
+    "items": [
+      {
+        "item_id": "full_history_22-01",
+        "sample_id": "conv-48_q13"
+      }
+    ]
+  },
+  {
+    "batch": "full_history_23",
+    "condition": "full_history",
+    "file": "results/pilot-claude/batches/full_history_23.txt",
+    "answers": "results/pilot-claude/answers/full_history_23.jsonl",
+    "items": [
+      {
+        "item_id": "full_history_23-01",
+        "sample_id": "conv-48_q14"
+      }
+    ]
+  },
+  {
+    "batch": "evidence_only_01",
+    "condition": "evidence_only",
+    "file": "results/pilot-claude/batches/evidence_only_01.txt",
+    "answers": "results/pilot-claude/answers/evidence_only_01.jsonl",
+    "items": [
+      {
+        "item_id": "evidence_only_01-01",
+        "sample_id": "conv-48_q16"
+      },
+      {
+        "item_id": "evidence_only_01-02",
+        "sample_id": "conv-48_A07-NM"
+      },
+      {
+        "item_id": "evidence_only_01-03",
+        "sample_id": "conv-48_A07-H"
+      },
+      {
+        "item_id": "evidence_only_01-04",
+        "sample_id": "conv-48_q09"
+      },
+      {
+        "item_id": "evidence_only_01-05",
+        "sample_id": "conv-48_A07-P"
+      }
+    ]
+  },
+  {
+    "batch": "evidence_only_02",
+    "condition": "evidence_only",
+    "file": "results/pilot-claude/batches/evidence_only_02.txt",
+    "answers": "results/pilot-claude/answers/evidence_only_02.jsonl",
+    "items": [
+      {
+        "item_id": "evidence_only_02-01",
+        "sample_id": "conv-26_A01-H"
+      },
+      {
+        "item_id": "evidence_only_02-02",
+        "sample_id": "conv-26_A01-P"
+      },
+      {
+        "item_id": "evidence_only_02-03",
+        "sample_id": "conv-26_A01-NM"
+      }
+    ]
+  },
+  {
+    "batch": "evidence_only_03",
+    "condition": "evidence_only",
+    "file": "results/pilot-claude/batches/evidence_only_03.txt",
+    "answers": "results/pilot-claude/answers/evidence_only_03.jsonl",
+    "items": [
+      {
+        "item_id": "evidence_only_03-01",
+        "sample_id": "conv-30_A02-P"
+      },
+      {
+        "item_id": "evidence_only_03-02",
+        "sample_id": "conv-30_A02-NM"
+      },
+      {
+        "item_id": "evidence_only_03-03",
+        "sample_id": "conv-30_A02-H"
+      }
+    ]
+  },
+  {
+    "batch": "evidence_only_04",
+    "condition": "evidence_only",
+    "file": "results/pilot-claude/batches/evidence_only_04.txt",
+    "answers": "results/pilot-claude/answers/evidence_only_04.jsonl",
+    "items": [
+      {
+        "item_id": "evidence_only_04-01",
+        "sample_id": "conv-41_A03-P"
+      },
+      {
+        "item_id": "evidence_only_04-02",
+        "sample_id": "conv-41_A03-NM"
+      },
+      {
+        "item_id": "evidence_only_04-03",
+        "sample_id": "conv-41_A03-H"
+      }
+    ]
+  },
+  {
+    "batch": "evidence_only_05",
+    "condition": "evidence_only",
+    "file": "results/pilot-claude/batches/evidence_only_05.txt",
+    "answers": "results/pilot-claude/answers/evidence_only_05.jsonl",
+    "items": [
+      {
+        "item_id": "evidence_only_05-01",
+        "sample_id": "conv-43_A04-P"
+      },
+      {
+        "item_id": "evidence_only_05-02",
+        "sample_id": "conv-43_A04-NM"
+      },
+      {
+        "item_id": "evidence_only_05-03",
+        "sample_id": "conv-43_A04-H"
+      }
+    ]
+  },
+  {
+    "batch": "evidence_only_06",
+    "condition": "evidence_only",
+    "file": "results/pilot-claude/batches/evidence_only_06.txt",
+    "answers": "results/pilot-claude/answers/evidence_only_06.jsonl",
+    "items": [
+      {
+        "item_id": "evidence_only_06-01",
+        "sample_id": "conv-44_A05-P"
+      },
+      {
+        "item_id": "evidence_only_06-02",
+        "sample_id": "conv-44_A05-NM"
+      },
+      {
+        "item_id": "evidence_only_06-03",
+        "sample_id": "conv-44_A05-H"
+      }
+    ]
+  },
+  {
+    "batch": "evidence_only_07",
+    "condition": "evidence_only",
+    "file": "results/pilot-claude/batches/evidence_only_07.txt",
+    "answers": "results/pilot-claude/answers/evidence_only_07.jsonl",
+    "items": [
+      {
+        "item_id": "evidence_only_07-01",
+        "sample_id": "conv-47_A06-H"
+      },
+      {
+        "item_id": "evidence_only_07-02",
+        "sample_id": "conv-47_A06-NM"
+      },
+      {
+        "item_id": "evidence_only_07-03",
+        "sample_id": "conv-47_A06-P"
+      }
+    ]
+  },
+  {
+    "batch": "evidence_only_08",
+    "condition": "evidence_only",
+    "file": "results/pilot-claude/batches/evidence_only_08.txt",
+    "answers": "results/pilot-claude/answers/evidence_only_08.jsonl",
+    "items": [
+      {
+        "item_id": "evidence_only_08-01",
+        "sample_id": "conv-48_A08-H"
+      },
+      {
+        "item_id": "evidence_only_08-02",
+        "sample_id": "conv-48_A08-P"
+      },
+      {
+        "item_id": "evidence_only_08-03",
+        "sample_id": "conv-48_A08-NM"
+      }
+    ]
+  },
+  {
+    "batch": "evidence_only_09",
+    "condition": "evidence_only",
+    "file": "results/pilot-claude/batches/evidence_only_09.txt",
+    "answers": "results/pilot-claude/answers/evidence_only_09.jsonl",
+    "items": [
+      {
+        "item_id": "evidence_only_09-01",
+        "sample_id": "conv-49_A09-P"
+      },
+      {
+        "item_id": "evidence_only_09-02",
+        "sample_id": "conv-49_A09-NM"
+      },
+      {
+        "item_id": "evidence_only_09-03",
+        "sample_id": "conv-49_A09-H"
+      }
+    ]
+  },
+  {
+    "batch": "evidence_only_10",
+    "condition": "evidence_only",
+    "file": "results/pilot-claude/batches/evidence_only_10.txt",
+    "answers": "results/pilot-claude/answers/evidence_only_10.jsonl",
+    "items": [
+      {
+        "item_id": "evidence_only_10-01",
+        "sample_id": "conv-50_A10-NM"
+      },
+      {
+        "item_id": "evidence_only_10-02",
+        "sample_id": "conv-50_A10-P"
+      },
+      {
+        "item_id": "evidence_only_10-03",
+        "sample_id": "conv-50_A10-H"
+      }
+    ]
+  },
+  {
+    "batch": "evidence_only_11",
+    "condition": "evidence_only",
+    "file": "results/pilot-claude/batches/evidence_only_11.txt",
+    "answers": "results/pilot-claude/answers/evidence_only_11.jsonl",
+    "items": [
+      {
+        "item_id": "evidence_only_11-01",
+        "sample_id": "conv-48_q10"
+      },
+      {
+        "item_id": "evidence_only_11-02",
+        "sample_id": "conv-48_q03"
+      },
+      {
+        "item_id": "evidence_only_11-03",
+        "sample_id": "conv-48_q04"
+      }
+    ]
+  },
+  {
+    "batch": "evidence_only_12",
+    "condition": "evidence_only",
+    "file": "results/pilot-claude/batches/evidence_only_12.txt",
+    "answers": "results/pilot-claude/answers/evidence_only_12.jsonl",
+    "items": [
+      {
+        "item_id": "evidence_only_12-01",
+        "sample_id": "conv-48_q15"
+      },
+      {
+        "item_id": "evidence_only_12-02",
+        "sample_id": "conv-48_q18"
+      },
+      {
+        "item_id": "evidence_only_12-03",
+        "sample_id": "conv-48_q06"
+      }
+    ]
+  },
+  {
+    "batch": "evidence_only_13",
+    "condition": "evidence_only",
+    "file": "results/pilot-claude/batches/evidence_only_13.txt",
+    "answers": "results/pilot-claude/answers/evidence_only_13.jsonl",
+    "items": [
+      {
+        "item_id": "evidence_only_13-01",
+        "sample_id": "conv-48_q05"
+      },
+      {
+        "item_id": "evidence_only_13-02",
+        "sample_id": "conv-48_q17"
+      }
+    ]
+  },
+  {
+    "batch": "evidence_only_14",
+    "condition": "evidence_only",
+    "file": "results/pilot-claude/batches/evidence_only_14.txt",
+    "answers": "results/pilot-claude/answers/evidence_only_14.jsonl",
+    "items": [
+      {
+        "item_id": "evidence_only_14-01",
+        "sample_id": "conv-48_q07"
+      },
+      {
+        "item_id": "evidence_only_14-02",
+        "sample_id": "conv-48_q19"
+      }
+    ]
+  },
+  {
+    "batch": "evidence_only_15",
+    "condition": "evidence_only",
+    "file": "results/pilot-claude/batches/evidence_only_15.txt",
+    "answers": "results/pilot-claude/answers/evidence_only_15.jsonl",
+    "items": [
+      {
+        "item_id": "evidence_only_15-01",
+        "sample_id": "conv-48_q01"
+      }
+    ]
+  },
+  {
+    "batch": "evidence_only_16",
+    "condition": "evidence_only",
+    "file": "results/pilot-claude/batches/evidence_only_16.txt",
+    "answers": "results/pilot-claude/answers/evidence_only_16.jsonl",
+    "items": [
+      {
+        "item_id": "evidence_only_16-01",
+        "sample_id": "conv-48_q02"
+      }
+    ]
+  },
+  {
+    "batch": "evidence_only_17",
+    "condition": "evidence_only",
+    "file": "results/pilot-claude/batches/evidence_only_17.txt",
+    "answers": "results/pilot-claude/answers/evidence_only_17.jsonl",
+    "items": [
+      {
+        "item_id": "evidence_only_17-01",
+        "sample_id": "conv-48_q08"
+      }
+    ]
+  }
+]

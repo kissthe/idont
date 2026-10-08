@@ -1,0 +1,3 @@
+{"item_id": "full_history_03-01", "label": "present_cause_sufficient", "cue_id": "none", "evidence_turn_ids": [], "current_emotion": "joy"}
+{"item_id": "full_history_03-02", "label": "history_supported", "cue_id": "cue_gina_tattoo_arm", "evidence_turn_ids": ["D5:13", "D5:15"], "current_emotion": "joy"}
+{"item_id": "full_history_03-03", "label": "insufficient_evidence", "cue_id": "none", "evidence_turn_ids": [], "current_emotion": "joy"}

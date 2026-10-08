@@ -1,0 +1,3 @@
+{"item_id": "evidence_only_12-01", "label": "insufficient_evidence", "cue_id": "none", "evidence_turn_ids": [], "current_emotion": "none_observed"}
+{"item_id": "evidence_only_12-02", "label": "present_cause_sufficient", "cue_id": "none", "evidence_turn_ids": [], "current_emotion": "anger"}
+{"item_id": "evidence_only_12-03", "label": "history_supported", "cue_id": "cue_deborah_paintings_art_exhibition", "evidence_turn_ids": ["D12:3", "D12:5"], "current_emotion": "comfort"}

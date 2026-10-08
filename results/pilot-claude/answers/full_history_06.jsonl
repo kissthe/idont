@@ -1,0 +1,3 @@
+{"item_id": "full_history_06-01", "label": "present_cause_sufficient", "cue_id": "none", "evidence_turn_ids": [], "current_emotion": "joy"}
+{"item_id": "full_history_06-02", "label": "insufficient_evidence", "cue_id": "none", "evidence_turn_ids": [], "current_emotion": "joy"}
+{"item_id": "full_history_06-03", "label": "history_supported", "cue_id": "cue_audrey_tattoos_four_dogs", "evidence_turn_ids": ["D3:26", "D3:28", "D3:30"], "current_emotion": "joy"}

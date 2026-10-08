@@ -1,0 +1,3 @@
+{"item_id": "full_history_11-01", "label": "present_cause_sufficient", "cue_id": "none", "evidence_turn_ids": [], "current_emotion": "joy"}
+{"item_id": "full_history_11-02", "label": "insufficient_evidence", "cue_id": "none", "evidence_turn_ids": [], "current_emotion": "joy"}
+{"item_id": "full_history_11-03", "label": "history_supported", "cue_id": "cue_calvin_octopus_guitar", "evidence_turn_ids": ["D16:14", "D16:16"], "current_emotion": "joy"}

@@ -1,0 +1,21 @@
+{"item_id": "full_history_01-01", "label": "present_cause_sufficient", "cue_id": "none", "evidence_turn_ids": [], "current_emotion": "anxiety"}
+{"item_id": "full_history_01-02", "label": "history_supported", "cue_id": "cue_deborah_dried_bouquet_shelf", "evidence_turn_ids": ["D4:28"], "current_emotion": "comfort"}
+{"item_id": "full_history_01-03", "label": "present_cause_sufficient", "cue_id": "none", "evidence_turn_ids": [], "current_emotion": "anxiety"}
+{"item_id": "full_history_01-04", "label": "history_supported", "cue_id": "cue_jolene_pendant_small_symbol", "evidence_turn_ids": ["D1:8", "D1:10"], "current_emotion": "comfort"}
+{"item_id": "full_history_01-05", "label": "insufficient_evidence", "cue_id": "none", "evidence_turn_ids": [], "current_emotion": "none_observed"}
+{"item_id": "full_history_01-06", "label": "history_supported", "cue_id": "cue_deborah_small_amulet", "evidence_turn_ids": ["D4:36", "D4:38"], "current_emotion": "comfort"}
+{"item_id": "full_history_01-07", "label": "insufficient_evidence", "cue_id": "none", "evidence_turn_ids": [], "current_emotion": "none_observed"}
+{"item_id": "full_history_01-08", "label": "insufficient_evidence", "cue_id": "none", "evidence_turn_ids": [], "current_emotion": "none_observed"}
+{"item_id": "full_history_01-09", "label": "present_cause_sufficient", "cue_id": "none", "evidence_turn_ids": [], "current_emotion": "anger"}
+{"item_id": "full_history_01-10", "label": "history_supported", "cue_id": "cue_jolene_water_purifier_unit", "evidence_turn_ids": ["D4:5", "D4:7"], "current_emotion": "joy"}
+{"item_id": "full_history_01-11", "label": "present_cause_sufficient", "cue_id": "none", "evidence_turn_ids": [], "current_emotion": "anxiety"}
+{"item_id": "full_history_01-12", "label": "history_supported", "cue_id": "cue_deborah_paintings_art_exhibition", "evidence_turn_ids": ["D12:3", "D12:5"], "current_emotion": "comfort"}
+{"item_id": "full_history_01-13", "label": "history_supported", "cue_id": "cue_deborah_spot_water", "evidence_turn_ids": ["D4:34"], "current_emotion": "comfort"}
+{"item_id": "full_history_01-14", "label": "present_cause_sufficient", "cue_id": "none", "evidence_turn_ids": [], "current_emotion": "anxiety"}
+{"item_id": "full_history_01-15", "label": "history_supported", "cue_id": "cue_deborah_bench_window", "evidence_turn_ids": ["D1:7", "D2:13", "D2:15"], "current_emotion": "comfort"}
+{"item_id": "full_history_01-16", "label": "present_cause_sufficient", "cue_id": "none", "evidence_turn_ids": [], "current_emotion": "joy"}
+{"item_id": "full_history_01-17", "label": "present_cause_sufficient", "cue_id": "none", "evidence_turn_ids": [], "current_emotion": "anger"}
+{"item_id": "full_history_01-18", "label": "history_supported", "cue_id": "cue_deborah_handwritten_note_quote", "evidence_turn_ids": ["D23:22"], "current_emotion": "sadness"}
+{"item_id": "full_history_01-19", "label": "history_supported", "cue_id": "cue_deborah_bench_near_park", "evidence_turn_ids": ["D19:17", "D19:19", "D19:21"], "current_emotion": "nostalgia"}
+{"item_id": "full_history_01-20", "label": "present_cause_sufficient", "cue_id": "none", "evidence_turn_ids": [], "current_emotion": "anger"}
+{"item_id": "full_history_01-21", "label": "history_supported", "cue_id": "cue_deborah_roses_and_dahlias", "evidence_turn_ids": ["D6:2", "D6:4"], "current_emotion": "comfort"}

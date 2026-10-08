@@ -1,0 +1,5 @@
+{"item_id": "evidence_only_01-01", "label": "insufficient_evidence", "cue_id": "none", "evidence_turn_ids": [], "current_emotion": "none_observed"}
+{"item_id": "evidence_only_01-02", "label": "history_supported", "cue_id": "cue_colleague_s_pendant", "evidence_turn_ids": ["D1:8"], "current_emotion": "sadness"}
+{"item_id": "evidence_only_01-03", "label": "history_supported", "cue_id": "cue_jolene_paris_pendant", "evidence_turn_ids": ["D1:6", "D1:8"], "current_emotion": "sadness"}
+{"item_id": "evidence_only_01-04", "label": "history_supported", "cue_id": "cue_jolene_pendant_small_symbol", "evidence_turn_ids": ["D1:8", "D1:10"], "current_emotion": "comfort"}
+{"item_id": "evidence_only_01-05", "label": "present_cause_sufficient", "cue_id": "none", "evidence_turn_ids": [], "current_emotion": "sadness"}
