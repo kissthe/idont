@@ -1,0 +1,3 @@
+{"item_id": "evidence_only_09-01", "label": "present_cause_sufficient", "cue_id": "none", "evidence_turn_ids": [], "current_emotion": "comfort"}
+{"item_id": "evidence_only_09-02", "label": "insufficient_evidence", "cue_id": "none", "evidence_turn_ids": [], "current_emotion": "comfort"}
+{"item_id": "evidence_only_09-03", "label": "history_supported", "cue_id": "cue_evan_little_plant_desk", "evidence_turn_ids": ["D5:17"], "current_emotion": "comfort"}

@@ -1,0 +1,996 @@
+{
+  "conv-48_q01": {
+    "conv_id": "conv-48",
+    "source": "locomo",
+    "family_id": "conv-48_deborah_e01",
+    "sample_type": "H",
+    "i_subtype": null,
+    "history_filter": {
+      "until_session": null,
+      "exclude_sessions": []
+    },
+    "option_roles": {
+      "cue_moving_boxes": "present_salient",
+      "cue_deborah_roses_and_dahlias": "history_unrelated",
+      "cue_deborah_bench_window": "anchor",
+      "none": "none"
+    },
+    "supporting_turn_ids": [],
+    "context_turns": [
+      {
+        "speaker": "Jolene",
+        "text": "Hey Deb! How did dropping off those boxes go?"
+      }
+    ],
+    "x_date": "23 September, 2023",
+    "confidence": 2,
+    "note_zh": "送箱子这件事本身不会让人在长椅上坐一个多小时、心里发暖；只有历史里“坐在那儿能和母亲保持联结”才能解释。",
+    "explanation": null,
+    "edit_log": {
+      "generator": "claude (in-session, stand-in for the LLM generation steps 1 and 2)",
+      "spec": "data/questions/specs/conv-48.spec.json",
+      "spec_key": "H1",
+      "pair_of_key": null,
+      "operations": [
+        "truncate_after:S30",
+        "add_session:S31"
+      ]
+    },
+    "auto_checks": [
+      "与历史原文重合的 5 词片段：on the bench by the | the bench by the window"
+    ]
+  },
+  "conv-48_q02": {
+    "conv_id": "conv-48",
+    "source": "locomo",
+    "family_id": "conv-48_deborah_e02",
+    "sample_type": "H",
+    "i_subtype": null,
+    "history_filter": {
+      "until_session": null,
+      "exclude_sessions": []
+    },
+    "option_roles": {
+      "cue_deborah_handwritten_note_quote": "history_unrelated",
+      "cue_hospital_waiting_room": "present_salient",
+      "cue_deborah_small_amulet": "anchor",
+      "none": "none"
+    },
+    "supporting_turn_ids": [],
+    "context_turns": [
+      {
+        "speaker": "Jolene",
+        "text": "Did you get the scan results yet?"
+      }
+    ],
+    "x_date": "23 September, 2023",
+    "confidence": 2,
+    "note_zh": "当下场景只会让人焦虑，握住一个小护身符就突然安心，需要历史（S04“握着它就能感到母亲的爱”）来解释。",
+    "explanation": null,
+    "edit_log": {
+      "generator": "claude (in-session, stand-in for the LLM generation steps 1 and 2)",
+      "spec": "data/questions/specs/conv-48.spec.json",
+      "spec_key": "H2",
+      "pair_of_key": null,
+      "operations": [
+        "truncate_after:S30",
+        "add_session:S31"
+      ]
+    },
+    "auto_checks": []
+  },
+  "conv-48_q03": {
+    "conv_id": "conv-48",
+    "source": "locomo",
+    "family_id": "conv-48_deborah_e05",
+    "sample_type": "H",
+    "i_subtype": null,
+    "history_filter": {
+      "until_session": null,
+      "exclude_sessions": []
+    },
+    "option_roles": {
+      "cue_deborah_bench_near_park": "history_unrelated",
+      "cue_deborah_dried_bouquet_shelf": "anchor",
+      "cue_contractor_s_phone": "present_salient",
+      "none": "none"
+    },
+    "supporting_turn_ids": [],
+    "context_turns": [
+      {
+        "speaker": "Jolene",
+        "text": "Ugh, how did the call with the contractor go?"
+      }
+    ],
+    "x_date": "23 September, 2023",
+    "confidence": 2,
+    "note_zh": "被承包商放鸽子时看一眼干花就重新有了希望，反应方向与当下场景相反；历史里这束花是她低谷时朋友送的。",
+    "explanation": null,
+    "edit_log": {
+      "generator": "claude (in-session, stand-in for the LLM generation steps 1 and 2)",
+      "spec": "data/questions/specs/conv-48.spec.json",
+      "spec_key": "H3",
+      "pair_of_key": null,
+      "operations": [
+        "truncate_after:S30",
+        "add_session:S31"
+      ]
+    },
+    "auto_checks": []
+  },
+  "conv-48_q04": {
+    "conv_id": "conv-48",
+    "source": "locomo",
+    "family_id": "conv-48_deborah_e06",
+    "sample_type": "H",
+    "i_subtype": null,
+    "history_filter": {
+      "until_session": null,
+      "exclude_sessions": []
+    },
+    "option_roles": {
+      "cue_being_late_workshop": "present_salient",
+      "cue_deborah_dried_bouquet_shelf": "history_unrelated",
+      "cue_deborah_spot_water": "anchor",
+      "none": "none"
+    },
+    "supporting_turn_ids": [],
+    "context_turns": [
+      {
+        "speaker": "Jolene",
+        "text": "Did you make it to the workshop on time?"
+      }
+    ],
+    "x_date": "23 September, 2023",
+    "confidence": 1,
+    "note_zh": "边界题：水边让人放松是常态，靠“明知迟到还停下、完全不在乎”的强度撑起 H。confidence 填 1，交给裁决。",
+    "explanation": null,
+    "edit_log": {
+      "generator": "claude (in-session, stand-in for the LLM generation steps 1 and 2)",
+      "spec": "data/questions/specs/conv-48.spec.json",
+      "spec_key": "H4",
+      "pair_of_key": null,
+      "operations": [
+        "truncate_after:S30",
+        "add_session:S31"
+      ]
+    },
+    "auto_checks": []
+  },
+  "conv-48_q05": {
+    "conv_id": "conv-48",
+    "source": "locomo",
+    "family_id": "conv-48_deborah_e07",
+    "sample_type": "H",
+    "i_subtype": null,
+    "history_filter": {
+      "until_session": null,
+      "exclude_sessions": []
+    },
+    "option_roles": {
+      "cue_deborah_small_amulet": "history_unrelated",
+      "cue_man_who_cut": "present_salient",
+      "cue_deborah_roses_and_dahlias": "anchor",
+      "none": "none"
+    },
+    "supporting_turn_ids": [],
+    "context_turns": [
+      {
+        "speaker": "Jolene",
+        "text": "You sound tired, rough day?"
+      }
+    ],
+    "x_date": "23 September, 2023",
+    "confidence": 2,
+    "note_zh": "正在生气时看到月季和大丽花，怒气一下子消了；历史里失去朋友后，是这两种花给了她平静。",
+    "explanation": null,
+    "edit_log": {
+      "generator": "claude (in-session, stand-in for the LLM generation steps 1 and 2)",
+      "spec": "data/questions/specs/conv-48.spec.json",
+      "spec_key": "H5",
+      "pair_of_key": null,
+      "operations": [
+        "truncate_after:S30",
+        "add_session:S31"
+      ]
+    },
+    "auto_checks": []
+  },
+  "conv-48_q06": {
+    "conv_id": "conv-48",
+    "source": "locomo",
+    "family_id": "conv-48_deborah_e11",
+    "sample_type": "H",
+    "i_subtype": null,
+    "history_filter": {
+      "until_session": null,
+      "exclude_sessions": []
+    },
+    "option_roles": {
+      "cue_coworkers_taking_selfies": "present_salient",
+      "cue_deborah_paintings_art_exhibition": "anchor",
+      "cue_deborah_handwritten_note_quote": "history_unrelated",
+      "none": "none"
+    },
+    "supporting_turn_ids": [],
+    "context_turns": [
+      {
+        "speaker": "Jolene",
+        "text": "How was the team outing?"
+      }
+    ],
+    "x_date": "23 September, 2023",
+    "confidence": 2,
+    "note_zh": "热闹的团建里独自眼眶发热又觉得踏实，与场景不协调；历史里去画展“就像和母亲一起在看”。",
+    "explanation": null,
+    "edit_log": {
+      "generator": "claude (in-session, stand-in for the LLM generation steps 1 and 2)",
+      "spec": "data/questions/specs/conv-48.spec.json",
+      "spec_key": "H6",
+      "pair_of_key": null,
+      "operations": [
+        "truncate_after:S30",
+        "add_session:S31"
+      ]
+    },
+    "auto_checks": []
+  },
+  "conv-48_q07": {
+    "conv_id": "conv-48",
+    "source": "locomo",
+    "family_id": "conv-48_deborah_e12",
+    "sample_type": "H",
+    "i_subtype": null,
+    "history_filter": {
+      "until_session": null,
+      "exclude_sessions": []
+    },
+    "option_roles": {
+      "cue_deborah_bench_window": "history_unrelated",
+      "cue_yoga_group_leaving": "present_salient",
+      "cue_deborah_bench_near_park": "anchor",
+      "none": "none"
+    },
+    "supporting_turn_ids": [],
+    "context_turns": [
+      {
+        "speaker": "Jolene",
+        "text": "How did the outdoor yoga session go?"
+      }
+    ],
+    "x_date": "23 September, 2023",
+    "confidence": 2,
+    "note_zh": "干扰项特意放了另一张长椅（窗边长椅），考模型能否区分两个都有意义的相似线索。",
+    "explanation": null,
+    "edit_log": {
+      "generator": "claude (in-session, stand-in for the LLM generation steps 1 and 2)",
+      "spec": "data/questions/specs/conv-48.spec.json",
+      "spec_key": "H7",
+      "pair_of_key": null,
+      "operations": [
+        "truncate_after:S30",
+        "add_session:S31"
+      ]
+    },
+    "auto_checks": []
+  },
+  "conv-48_q08": {
+    "conv_id": "conv-48",
+    "source": "locomo",
+    "family_id": "conv-48_deborah_e16",
+    "sample_type": "H",
+    "i_subtype": null,
+    "history_filter": {
+      "until_session": null,
+      "exclude_sessions": []
+    },
+    "option_roles": {
+      "cue_passport": "present_salient",
+      "cue_deborah_handwritten_note_quote": "anchor",
+      "cue_deborah_roses_and_dahlias": "history_unrelated",
+      "none": "none"
+    },
+    "supporting_turn_ids": [],
+    "context_turns": [
+      {
+        "speaker": "Jolene",
+        "text": "Did you find your passport?"
+      }
+    ],
+    "x_date": "23 September, 2023",
+    "confidence": 2,
+    "note_zh": "一张写着励志语录的纸条让人喉咙发紧、坐在地上，当下解释不了；历史里纸条是一位再也见不到的朋友写的。",
+    "explanation": null,
+    "edit_log": {
+      "generator": "claude (in-session, stand-in for the LLM generation steps 1 and 2)",
+      "spec": "data/questions/specs/conv-48.spec.json",
+      "spec_key": "H8",
+      "pair_of_key": null,
+      "operations": [
+        "truncate_after:S30",
+        "add_session:S31"
+      ]
+    },
+    "auto_checks": [
+      "与历史原文重合的 5 词片段：'let go of what no | go of what no longer | no longer serves you ' | of what no longer serves | says 'let go of what | what no longer serves you"
+    ]
+  },
+  "conv-48_q09": {
+    "conv_id": "conv-48",
+    "source": "locomo",
+    "family_id": "conv-48_jolene_e02",
+    "sample_type": "H",
+    "i_subtype": null,
+    "history_filter": {
+      "until_session": null,
+      "exclude_sessions": []
+    },
+    "option_roles": {
+      "cue_jolene_water_purifier_unit": "history_unrelated",
+      "cue_presentation_slides": "present_salient",
+      "cue_jolene_pendant_small_symbol": "anchor",
+      "none": "none"
+    },
+    "supporting_turn_ids": [],
+    "context_turns": [
+      {
+        "speaker": "Deborah",
+        "text": "Big day today! How are you feeling about the final project review?"
+      }
+    ],
+    "x_date": "23 September, 2023",
+    "confidence": 2,
+    "note_zh": "握住吊坠就从慌乱变成充满勇气；历史里吊坠上的符号代表自由，提醒她“别被任何东西拖住”。",
+    "explanation": null,
+    "edit_log": {
+      "generator": "claude (in-session, stand-in for the LLM generation steps 1 and 2)",
+      "spec": "data/questions/specs/conv-48.spec.json",
+      "spec_key": "H9",
+      "pair_of_key": null,
+      "operations": [
+        "truncate_after:S30",
+        "add_session:S31"
+      ]
+    },
+    "auto_checks": []
+  },
+  "conv-48_q10": {
+    "conv_id": "conv-48",
+    "source": "locomo",
+    "family_id": "conv-48_jolene_e07",
+    "sample_type": "H",
+    "i_subtype": null,
+    "history_filter": {
+      "until_session": null,
+      "exclude_sessions": []
+    },
+    "option_roles": {
+      "cue_hardware_store_errands": "present_salient",
+      "cue_jolene_pendant_small_symbol": "history_unrelated",
+      "cue_jolene_water_purifier_unit": "anchor",
+      "none": "none"
+    },
+    "supporting_turn_ids": [],
+    "context_turns": [
+      {
+        "speaker": "Deborah",
+        "text": "What did you get up to this weekend?"
+      }
+    ],
+    "x_date": "23 September, 2023",
+    "confidence": 1,
+    "note_zh": "边界题：对着货架上的净水器涌起自豪感和使命感，只有历史（她给乡村社区造过净水器）能解释；但成就感类的锚点偏弱，confidence 填 1。",
+    "explanation": null,
+    "edit_log": {
+      "generator": "claude (in-session, stand-in for the LLM generation steps 1 and 2)",
+      "spec": "data/questions/specs/conv-48.spec.json",
+      "spec_key": "H10",
+      "pair_of_key": null,
+      "operations": [
+        "truncate_after:S30",
+        "add_session:S31"
+      ]
+    },
+    "auto_checks": []
+  },
+  "conv-48_q11": {
+    "conv_id": "conv-48",
+    "source": "locomo",
+    "family_id": "conv-48_deborah_e02",
+    "sample_type": "I_no_history",
+    "i_subtype": "no_history_link",
+    "history_filter": {
+      "until_session": null,
+      "exclude_sessions": [
+        "session_1",
+        "session_4"
+      ]
+    },
+    "option_roles": {
+      "cue_deborah_handwritten_note_quote": "history_unrelated",
+      "cue_hospital_waiting_room": "present_salient",
+      "cue_deborah_small_amulet": "anchor",
+      "none": "none"
+    },
+    "supporting_turn_ids": [],
+    "context_turns": [
+      {
+        "speaker": "Jolene",
+        "text": "Did you get the scan results yet?"
+      }
+    ],
+    "x_date": "23 September, 2023",
+    "confidence": 2,
+    "note_zh": "与 H2 的 X 完全相同，历史里删掉护身符的证据所在的 S01、S04 → 有反应但找不到历史关联。",
+    "explanation": null,
+    "edit_log": {
+      "generator": "claude (in-session, stand-in for the LLM generation steps 1 and 2)",
+      "spec": "data/questions/specs/conv-48.spec.json",
+      "spec_key": "I1",
+      "pair_of_key": "H2",
+      "operations": [
+        "truncate_after:S30",
+        "remove_sessions:S01,S04; renumber",
+        "add_session:S29"
+      ]
+    },
+    "auto_checks": []
+  },
+  "conv-48_q12": {
+    "conv_id": "conv-48",
+    "source": "locomo",
+    "family_id": "conv-48_deborah_e07",
+    "sample_type": "I_no_history",
+    "i_subtype": "no_history_link",
+    "history_filter": {
+      "until_session": null,
+      "exclude_sessions": [
+        "session_6"
+      ]
+    },
+    "option_roles": {
+      "cue_deborah_small_amulet": "history_unrelated",
+      "cue_man_who_cut": "present_salient",
+      "cue_deborah_roses_and_dahlias": "anchor",
+      "none": "none"
+    },
+    "supporting_turn_ids": [],
+    "context_turns": [
+      {
+        "speaker": "Jolene",
+        "text": "You sound tired, rough day?"
+      }
+    ],
+    "x_date": "23 September, 2023",
+    "confidence": 2,
+    "note_zh": "与 H5 相同，删掉 S06。",
+    "explanation": null,
+    "edit_log": {
+      "generator": "claude (in-session, stand-in for the LLM generation steps 1 and 2)",
+      "spec": "data/questions/specs/conv-48.spec.json",
+      "spec_key": "I2",
+      "pair_of_key": "H5",
+      "operations": [
+        "truncate_after:S30",
+        "remove_sessions:S06; renumber",
+        "add_session:S30"
+      ]
+    },
+    "auto_checks": []
+  },
+  "conv-48_q13": {
+    "conv_id": "conv-48",
+    "source": "locomo",
+    "family_id": "conv-48_deborah_e16",
+    "sample_type": "I_no_history",
+    "i_subtype": "no_history_link",
+    "history_filter": {
+      "until_session": null,
+      "exclude_sessions": [
+        "session_23"
+      ]
+    },
+    "option_roles": {
+      "cue_passport": "present_salient",
+      "cue_deborah_handwritten_note_quote": "anchor",
+      "cue_deborah_roses_and_dahlias": "history_unrelated",
+      "none": "none"
+    },
+    "supporting_turn_ids": [],
+    "context_turns": [
+      {
+        "speaker": "Jolene",
+        "text": "Did you find your passport?"
+      }
+    ],
+    "x_date": "23 September, 2023",
+    "confidence": 2,
+    "note_zh": "与 H8 相同，删掉 S23。",
+    "explanation": null,
+    "edit_log": {
+      "generator": "claude (in-session, stand-in for the LLM generation steps 1 and 2)",
+      "spec": "data/questions/specs/conv-48.spec.json",
+      "spec_key": "I3",
+      "pair_of_key": "H8",
+      "operations": [
+        "truncate_after:S30",
+        "remove_sessions:S23; renumber",
+        "add_session:S30"
+      ]
+    },
+    "auto_checks": []
+  },
+  "conv-48_q14": {
+    "conv_id": "conv-48",
+    "source": "locomo",
+    "family_id": "conv-48_jolene_e02",
+    "sample_type": "I_no_history",
+    "i_subtype": "no_history_link",
+    "history_filter": {
+      "until_session": null,
+      "exclude_sessions": [
+        "session_1"
+      ]
+    },
+    "option_roles": {
+      "cue_jolene_water_purifier_unit": "history_unrelated",
+      "cue_presentation_slides": "present_salient",
+      "cue_jolene_pendant_small_symbol": "anchor",
+      "none": "none"
+    },
+    "supporting_turn_ids": [],
+    "context_turns": [
+      {
+        "speaker": "Deborah",
+        "text": "Big day today! How are you feeling about the final project review?"
+      }
+    ],
+    "x_date": "23 September, 2023",
+    "confidence": 2,
+    "note_zh": "与 H9 相同，删掉 S01。剩余历史里 S04 仍出现 pendant 一词（Deborah 说朋友 Anna 的吊坠），残留检查会标出来，由人确认与 Jolene 无关。",
+    "explanation": null,
+    "edit_log": {
+      "generator": "claude (in-session, stand-in for the LLM generation steps 1 and 2)",
+      "spec": "data/questions/specs/conv-48.spec.json",
+      "spec_key": "I4",
+      "pair_of_key": "H9",
+      "operations": [
+        "truncate_after:S30",
+        "remove_sessions:S01; renumber",
+        "add_session:S30"
+      ]
+    },
+    "auto_checks": [
+      "反事实残留（需人工确认与本题无关）：S03_T40(Deborah)"
+    ]
+  },
+  "conv-48_q15": {
+    "conv_id": "conv-48",
+    "source": "locomo",
+    "family_id": "conv-48_deborah_e11",
+    "sample_type": "I_no_reaction",
+    "i_subtype": "no_reaction",
+    "history_filter": {
+      "until_session": null,
+      "exclude_sessions": []
+    },
+    "option_roles": {
+      "cue_postcards_gift_shop": "present_salient",
+      "cue_deborah_dried_bouquet_shelf": "history_unrelated",
+      "cue_deborah_paintings_art_exhibition": "anchor",
+      "none": "none"
+    },
+    "supporting_turn_ids": [],
+    "context_turns": [
+      {
+        "speaker": "Jolene",
+        "text": "What did you get up to today?"
+      }
+    ],
+    "x_date": "23 September, 2023",
+    "confidence": 2,
+    "note_zh": "线索（画展）出现了，但没有任何情绪或行为反应。",
+    "explanation": null,
+    "edit_log": {
+      "generator": "claude (in-session, stand-in for the LLM generation steps 1 and 2)",
+      "spec": "data/questions/specs/conv-48.spec.json",
+      "spec_key": "N1",
+      "pair_of_key": null,
+      "operations": [
+        "truncate_after:S30",
+        "add_session:S31"
+      ]
+    },
+    "auto_checks": []
+  },
+  "conv-48_q16": {
+    "conv_id": "conv-48",
+    "source": "locomo",
+    "family_id": "conv-48_jolene_e02",
+    "sample_type": "I_no_reaction",
+    "i_subtype": "no_reaction",
+    "history_filter": {
+      "until_session": null,
+      "exclude_sessions": []
+    },
+    "option_roles": {
+      "cue_jolene_pendant_small_symbol": "anchor",
+      "cue_jolene_water_purifier_unit": "history_unrelated",
+      "cue_swimming_pool_locker": "present_salient",
+      "none": "none"
+    },
+    "supporting_turn_ids": [],
+    "context_turns": [
+      {
+        "speaker": "Deborah",
+        "text": "How was swim practice?"
+      }
+    ],
+    "x_date": "23 September, 2023",
+    "confidence": 2,
+    "note_zh": "吊坠出现了，只是被摘下放进储物柜，没有反应。",
+    "explanation": null,
+    "edit_log": {
+      "generator": "claude (in-session, stand-in for the LLM generation steps 1 and 2)",
+      "spec": "data/questions/specs/conv-48.spec.json",
+      "spec_key": "N2",
+      "pair_of_key": null,
+      "operations": [
+        "truncate_after:S30",
+        "add_session:S31"
+      ]
+    },
+    "auto_checks": []
+  },
+  "conv-48_q17": {
+    "conv_id": "conv-48",
+    "source": "locomo",
+    "family_id": "conv-48_deborah_e07",
+    "sample_type": "I_no_reaction",
+    "i_subtype": "no_reaction",
+    "history_filter": {
+      "until_session": null,
+      "exclude_sessions": []
+    },
+    "option_roles": {
+      "cue_deborah_bench_near_park": "history_unrelated",
+      "cue_farewell_card": "present_salient",
+      "cue_deborah_roses_and_dahlias": "anchor",
+      "none": "none"
+    },
+    "supporting_turn_ids": [],
+    "context_turns": [
+      {
+        "speaker": "Jolene",
+        "text": "Did you get something for Mia's farewell?"
+      }
+    ],
+    "x_date": "23 September, 2023",
+    "confidence": 2,
+    "note_zh": "月季和大丽花出现了，只是被买来当送别礼物，没有反应。",
+    "explanation": null,
+    "edit_log": {
+      "generator": "claude (in-session, stand-in for the LLM generation steps 1 and 2)",
+      "spec": "data/questions/specs/conv-48.spec.json",
+      "spec_key": "N3",
+      "pair_of_key": null,
+      "operations": [
+        "truncate_after:S30",
+        "add_session:S31"
+      ]
+    },
+    "auto_checks": []
+  },
+  "conv-48_q18": {
+    "conv_id": "conv-48",
+    "source": "locomo",
+    "family_id": "conv-48_deborah_e11",
+    "sample_type": "P_same_cue",
+    "i_subtype": null,
+    "history_filter": {
+      "until_session": null,
+      "exclude_sessions": []
+    },
+    "option_roles": {
+      "cue_deborah_paintings_art_exhibition": "anchor",
+      "cue_phone_thief": "present_salient",
+      "cue_deborah_bench_window": "history_unrelated",
+      "none": "none"
+    },
+    "supporting_turn_ids": [],
+    "context_turns": [
+      {
+        "speaker": "Jolene",
+        "text": "How was the exhibition?"
+      }
+    ],
+    "x_date": "23 September, 2023",
+    "confidence": 2,
+    "note_zh": "线索（画展）在场，但愤怒完全由手机被偷解释；判成 H 就是误归因。",
+    "explanation": null,
+    "edit_log": {
+      "generator": "claude (in-session, stand-in for the LLM generation steps 1 and 2)",
+      "spec": "data/questions/specs/conv-48.spec.json",
+      "spec_key": "P1",
+      "pair_of_key": null,
+      "operations": [
+        "truncate_after:S30",
+        "add_session:S31"
+      ]
+    },
+    "auto_checks": []
+  },
+  "conv-48_q19": {
+    "conv_id": "conv-48",
+    "source": "locomo",
+    "family_id": "conv-48_deborah_e12",
+    "sample_type": "P_same_cue",
+    "i_subtype": null,
+    "history_filter": {
+      "until_session": null,
+      "exclude_sessions": []
+    },
+    "option_roles": {
+      "cue_wet_paint_sign": "present_salient",
+      "cue_deborah_small_amulet": "history_unrelated",
+      "cue_deborah_bench_near_park": "anchor",
+      "none": "none"
+    },
+    "supporting_turn_ids": [],
+    "context_turns": [
+      {
+        "speaker": "Jolene",
+        "text": "How was the park?"
+      }
+    ],
+    "x_date": "23 September, 2023",
+    "confidence": 2,
+    "note_zh": "有意义的长椅在场，但恼火来自油漆弄脏裤子。",
+    "explanation": null,
+    "edit_log": {
+      "generator": "claude (in-session, stand-in for the LLM generation steps 1 and 2)",
+      "spec": "data/questions/specs/conv-48.spec.json",
+      "spec_key": "P2",
+      "pair_of_key": null,
+      "operations": [
+        "truncate_after:S30",
+        "add_session:S31"
+      ]
+    },
+    "auto_checks": []
+  },
+  "conv-48_q20": {
+    "conv_id": "conv-48",
+    "source": "locomo",
+    "family_id": "conv-48_jolene_e13",
+    "sample_type": "P_same_cue",
+    "i_subtype": null,
+    "history_filter": {
+      "until_session": null,
+      "exclude_sessions": []
+    },
+    "option_roles": {
+      "cue_jolene_snake_missing_its": "anchor",
+      "cue_air_vents": "present_salient",
+      "cue_jolene_pendant_small_symbol": "history_unrelated",
+      "none": "none"
+    },
+    "supporting_turn_ids": [],
+    "context_turns": [
+      {
+        "speaker": "Deborah",
+        "text": "You okay? Your message sounded panicked."
+      }
+    ],
+    "x_date": "23 September, 2023",
+    "confidence": 2,
+    "note_zh": "历史里有过一次蛇逃跑，但宠物蛇不见了让人慌张是常态，当下原因已足够。",
+    "explanation": null,
+    "edit_log": {
+      "generator": "claude (in-session, stand-in for the LLM generation steps 1 and 2)",
+      "spec": "data/questions/specs/conv-48.spec.json",
+      "spec_key": "P3",
+      "pair_of_key": null,
+      "operations": [
+        "truncate_after:S30",
+        "add_session:S31"
+      ]
+    },
+    "auto_checks": []
+  },
+  "conv-48_q21": {
+    "conv_id": "conv-48",
+    "source": "locomo",
+    "family_id": "conv-48_jolene_e14",
+    "sample_type": "P_same_cue",
+    "i_subtype": null,
+    "history_filter": {
+      "until_session": null,
+      "exclude_sessions": []
+    },
+    "option_roles": {
+      "cue_submission_deadline_tonight": "present_salient",
+      "cue_jolene_frozen_laptop": "anchor",
+      "cue_jolene_water_purifier_unit": "history_unrelated",
+      "none": "none"
+    },
+    "supporting_turn_ids": [],
+    "context_turns": [
+      {
+        "speaker": "Deborah",
+        "text": "You sound stressed. What happened?"
+      }
+    ],
+    "x_date": "23 September, 2023",
+    "confidence": 2,
+    "note_zh": "历史里丢过文件，但截止当晚电脑死机让人焦虑是常态。",
+    "explanation": null,
+    "edit_log": {
+      "generator": "claude (in-session, stand-in for the LLM generation steps 1 and 2)",
+      "spec": "data/questions/specs/conv-48.spec.json",
+      "spec_key": "P4",
+      "pair_of_key": null,
+      "operations": [
+        "truncate_after:S30",
+        "add_session:S31"
+      ]
+    },
+    "auto_checks": []
+  },
+  "conv-48_q22": {
+    "conv_id": "conv-48",
+    "source": "locomo",
+    "family_id": "conv-48_deborah_unrelated",
+    "sample_type": "P_unrelated",
+    "i_subtype": null,
+    "history_filter": {
+      "until_session": null,
+      "exclude_sessions": []
+    },
+    "option_roles": {
+      "cue_neighbor_s_barking": "present_salient",
+      "cue_deborah_roses_and_dahlias": "history_unrelated",
+      "cue_deborah_bench_window": "history_unrelated",
+      "none": "none"
+    },
+    "supporting_turn_ids": [],
+    "context_turns": [
+      {
+        "speaker": "Jolene",
+        "text": "You look exhausted!"
+      }
+    ],
+    "x_date": "23 September, 2023",
+    "confidence": 2,
+    "note_zh": "陷阱：历史里 Deborah 说过“不喜欢狗”（S15），但凌晨狗叫两小时让人恼火是常态。",
+    "explanation": null,
+    "edit_log": {
+      "generator": "claude (in-session, stand-in for the LLM generation steps 1 and 2)",
+      "spec": "data/questions/specs/conv-48.spec.json",
+      "spec_key": "P5",
+      "pair_of_key": null,
+      "operations": [
+        "truncate_after:S30",
+        "add_session:S31"
+      ]
+    },
+    "auto_checks": []
+  },
+  "conv-48_q23": {
+    "conv_id": "conv-48",
+    "source": "locomo",
+    "family_id": "conv-48_deborah_unrelated",
+    "sample_type": "P_unrelated",
+    "i_subtype": null,
+    "history_filter": {
+      "until_session": null,
+      "exclude_sessions": []
+    },
+    "option_roles": {
+      "cue_deborah_spot_water": "history_unrelated",
+      "cue_student_s_fall": "present_salient",
+      "cue_deborah_small_amulet": "history_unrelated",
+      "none": "none"
+    },
+    "supporting_turn_ids": [],
+    "context_turns": [
+      {
+        "speaker": "Jolene",
+        "text": "How was class today?"
+      }
+    ],
+    "x_date": "23 September, 2023",
+    "confidence": 2,
+    "note_zh": "学员受伤后焦虑，当下原因充分。",
+    "explanation": null,
+    "edit_log": {
+      "generator": "claude (in-session, stand-in for the LLM generation steps 1 and 2)",
+      "spec": "data/questions/specs/conv-48.spec.json",
+      "spec_key": "P6",
+      "pair_of_key": null,
+      "operations": [
+        "truncate_after:S30",
+        "add_session:S31"
+      ]
+    },
+    "auto_checks": []
+  },
+  "conv-48_q24": {
+    "conv_id": "conv-48",
+    "source": "locomo",
+    "family_id": "conv-48_jolene_unrelated",
+    "sample_type": "P_unrelated",
+    "i_subtype": null,
+    "history_filter": {
+      "until_session": null,
+      "exclude_sessions": []
+    },
+    "option_roles": {
+      "cue_jolene_water_purifier_unit": "history_unrelated",
+      "cue_jolene_pendant_small_symbol": "history_unrelated",
+      "cue_moved_up_deadline": "present_salient",
+      "none": "none"
+    },
+    "supporting_turn_ids": [],
+    "context_turns": [
+      {
+        "speaker": "Deborah",
+        "text": "What's up?"
+      }
+    ],
+    "x_date": "23 September, 2023",
+    "confidence": 2,
+    "note_zh": "截止日期提前一周导致焦虑，当下原因充分。",
+    "explanation": null,
+    "edit_log": {
+      "generator": "claude (in-session, stand-in for the LLM generation steps 1 and 2)",
+      "spec": "data/questions/specs/conv-48.spec.json",
+      "spec_key": "P7",
+      "pair_of_key": null,
+      "operations": [
+        "truncate_after:S30",
+        "add_session:S31"
+      ]
+    },
+    "auto_checks": []
+  },
+  "conv-48_q25": {
+    "conv_id": "conv-48",
+    "source": "locomo",
+    "family_id": "conv-48_jolene_unrelated",
+    "sample_type": "P_unrelated",
+    "i_subtype": null,
+    "history_filter": {
+      "until_session": null,
+      "exclude_sessions": []
+    },
+    "option_roles": {
+      "cue_jolene_water_purifier_unit": "history_unrelated",
+      "cue_competition_announcement": "present_salient",
+      "cue_jolene_pendant_small_symbol": "history_unrelated",
+      "none": "none"
+    },
+    "supporting_turn_ids": [],
+    "context_turns": [
+      {
+        "speaker": "Deborah",
+        "text": "Any news?"
+      }
+    ],
+    "x_date": "23 September, 2023",
+    "confidence": 2,
+    "note_zh": "得奖后兴奋，当下原因充分；干扰项里放了同属工程成就的净水器。",
+    "explanation": null,
+    "edit_log": {
+      "generator": "claude (in-session, stand-in for the LLM generation steps 1 and 2)",
+      "spec": "data/questions/specs/conv-48.spec.json",
+      "spec_key": "P8",
+      "pair_of_key": null,
+      "operations": [
+        "truncate_after:S30",
+        "add_session:S31"
+      ]
+    },
+    "auto_checks": []
+  }
+}

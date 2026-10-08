@@ -1,0 +1,3 @@
+{"item_id": "full_history_09-01", "label": "history_supported", "cue_id": "cue_woman_window_house", "evidence_turn_ids": ["D1:7", "D2:13", "D2:15", "D2:17"], "current_emotion": "sadness"}
+{"item_id": "full_history_09-02", "label": "present_cause_sufficient", "cue_id": "none", "evidence_turn_ids": [], "current_emotion": "sadness"}
+{"item_id": "full_history_09-03", "label": "present_cause_sufficient", "cue_id": "none", "evidence_turn_ids": [], "current_emotion": "sadness"}

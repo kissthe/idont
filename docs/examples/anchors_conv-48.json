@@ -1,0 +1,40 @@
+{
+  "schema_version": "0.1",
+  "conv_id": "conv-48",
+  "source": "locomo",
+  "extraction": {
+    "model": "example-handwritten",
+    "prompt_version": "anchor_extract_v1",
+    "date": "2026-10-07"
+  },
+  "events": [
+    {
+      "event_id": "conv-48_deborah_e01",
+      "user_id": "Deborah",
+      "cue": "the bench by the window in her late mother's old house",
+      "fact": {
+        "text": "Deborah's mother, who has passed away, used to sit on the bench by the window of her old house every morning.",
+        "turn_ids": ["S01_T07", "S02_T13"]
+      },
+      "meaning": {
+        "text": "Deborah goes back to sit there; it keeps her connected to her mother and gives her peace (reaffirmed in S29).",
+        "turn_ids": ["S01_T07", "S02_T13", "S29_T05"],
+        "emotion": "comfort"
+      }
+    },
+    {
+      "event_id": "conv-48_deborah_e02",
+      "user_id": "Deborah",
+      "cue": "art shows",
+      "fact": {
+        "text": "Deborah's late mother loved art and believed it could connect people emotionally.",
+        "turn_ids": ["S02_T13", "S12_T03"]
+      },
+      "meaning": {
+        "text": "Going to an art show feels like experiencing it together with her mother again; it is hard but comforting.",
+        "turn_ids": ["S12_T01", "S12_T03"],
+        "emotion": "comfort"
+      }
+    }
+  ]
+}

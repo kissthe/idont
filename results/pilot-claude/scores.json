@@ -1,0 +1,301 @@
+{
+  "x_only": {
+    "n": 63,
+    "parse_fail": 0,
+    "accuracy": 0.6825396825396826,
+    "macro_f1": 0.5714285714285715,
+    "per_class": {
+      "history_supported": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 20
+      },
+      "present_cause_sufficient": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 18
+      },
+      "insufficient_evidence": {
+        "precision": 0.5555555555555556,
+        "recall": 1.0,
+        "f1": 0.7142857142857143,
+        "support": 25
+      }
+    },
+    "confusion": {
+      "H": {
+        "H": 0,
+        "P": 0,
+        "I": 20,
+        "fail": 0
+      },
+      "P": {
+        "H": 0,
+        "P": 18,
+        "I": 0,
+        "fail": 0
+      },
+      "I": {
+        "H": 0,
+        "P": 0,
+        "I": 25,
+        "fail": 0
+      }
+    },
+    "T2_cue_acc": 0.0,
+    "T3_recall": 0.0,
+    "T3_precision_strict": 0.0,
+    "T3_precision_lenient": 0.0,
+    "T3_f1_strict": 0.0,
+    "T3_session_hit": 0.0,
+    "joint": 0.0,
+    "misattribution": 0.0,
+    "misattribution_by_type": {
+      "I_near_miss": 0.0,
+      "I_no_history": 0.0,
+      "I_no_reaction": 0.0,
+      "P_same_cue": 0.0,
+      "P_unrelated": 0.0
+    },
+    "acc_by_type": {
+      "H": 0.0,
+      "I_near_miss": 1.0,
+      "I_no_history": 1.0,
+      "I_no_reaction": 1.0,
+      "P_same_cue": 1.0,
+      "P_unrelated": 1.0
+    },
+    "emotion_acc": 0.9833333333333333,
+    "macro_f1_ci95": [
+      0.5282051282051282,
+      0.6073059360730594
+    ],
+    "misattribution_ci95": [
+      0.0,
+      0.0
+    ],
+    "pair_consistency": 0.0,
+    "pairs": 12,
+    "by_source": {
+      "conv48": 0.5277777777777778,
+      "golden_triples": 0.5942028985507246
+    }
+  },
+  "full_history": {
+    "n": 63,
+    "parse_fail": 0,
+    "accuracy": 0.873015873015873,
+    "macro_f1": 0.8763407226075525,
+    "per_class": {
+      "history_supported": {
+        "precision": 0.76,
+        "recall": 0.95,
+        "f1": 0.8444444444444444,
+        "support": 20
+      },
+      "present_cause_sufficient": {
+        "precision": 0.9,
+        "recall": 1.0,
+        "f1": 0.9473684210526316,
+        "support": 18
+      },
+      "insufficient_evidence": {
+        "precision": 1.0,
+        "recall": 0.72,
+        "f1": 0.8372093023255813,
+        "support": 25
+      }
+    },
+    "confusion": {
+      "H": {
+        "H": 19,
+        "P": 1,
+        "I": 0,
+        "fail": 0
+      },
+      "P": {
+        "H": 0,
+        "P": 18,
+        "I": 0,
+        "fail": 0
+      },
+      "I": {
+        "H": 6,
+        "P": 1,
+        "I": 18,
+        "fail": 0
+      }
+    },
+    "T2_cue_acc": 0.95,
+    "T3_recall": 0.8216666666666667,
+    "T3_precision_strict": 0.8,
+    "T3_precision_lenient": 0.875,
+    "T3_f1_strict": 0.7725,
+    "T3_session_hit": 0.95,
+    "joint": 0.9,
+    "misattribution": 0.13953488372093023,
+    "misattribution_by_type": {
+      "I_near_miss": 0.5,
+      "I_no_history": 0.08333333333333333,
+      "I_no_reaction": 0.0,
+      "P_same_cue": 0.0,
+      "P_unrelated": 0.0
+    },
+    "acc_by_type": {
+      "H": 0.95,
+      "I_near_miss": 0.5,
+      "I_no_history": 0.8333333333333334,
+      "I_no_reaction": 1.0,
+      "P_same_cue": 1.0,
+      "P_unrelated": 1.0
+    },
+    "emotion_acc": 1.0,
+    "macro_f1_ci95": [
+      0.7942080378250592,
+      0.9444444444444443
+    ],
+    "misattribution_ci95": [
+      0.045454545454545456,
+      0.25
+    ],
+    "pair_consistency": 0.8333333333333334,
+    "pairs": 12,
+    "by_source": {
+      "conv48": 0.9584859584859585,
+      "golden_triples": 0.8196969696969697
+    }
+  },
+  "evidence_only": {
+    "n": 45,
+    "parse_fail": 0,
+    "accuracy": 0.9555555555555556,
+    "macro_f1": 0.9563492063492064,
+    "per_class": {
+      "history_supported": {
+        "precision": 0.9090909090909091,
+        "recall": 1.0,
+        "f1": 0.9523809523809523,
+        "support": 20
+      },
+      "present_cause_sufficient": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 12
+      },
+      "insufficient_evidence": {
+        "precision": 1.0,
+        "recall": 0.8461538461538461,
+        "f1": 0.9166666666666666,
+        "support": 13
+      }
+    },
+    "confusion": {
+      "H": {
+        "H": 20,
+        "P": 0,
+        "I": 0,
+        "fail": 0
+      },
+      "P": {
+        "H": 0,
+        "P": 12,
+        "I": 0,
+        "fail": 0
+      },
+      "I": {
+        "H": 2,
+        "P": 0,
+        "I": 11,
+        "fail": 0
+      }
+    },
+    "T2_cue_acc": 1.0,
+    "T3_recall": 0.8722222222222221,
+    "T3_precision_strict": 0.8783333333333333,
+    "T3_precision_lenient": 0.9533333333333334,
+    "T3_f1_strict": 0.8393406593406594,
+    "T3_session_hit": 1.0,
+    "joint": 0.9,
+    "misattribution": 0.08,
+    "misattribution_by_type": {
+      "I_near_miss": 0.2,
+      "I_no_reaction": 0.0,
+      "P_same_cue": 0.0
+    },
+    "acc_by_type": {
+      "H": 1.0,
+      "I_near_miss": 0.8,
+      "I_no_reaction": 1.0,
+      "P_same_cue": 1.0
+    },
+    "emotion_acc": 0.9761904761904762,
+    "macro_f1_ci95": [
+      0.8768197088465844,
+      1.0
+    ],
+    "misattribution_ci95": [
+      0.0,
+      0.20833333333333334
+    ],
+    "pair_consistency": null,
+    "pairs": 0,
+    "by_source": {
+      "conv48": 1.0,
+      "golden_triples": 0.9326599326599326
+    }
+  },
+  "x_only_solved_H": [],
+  "errors_full_history": [
+    {
+      "sample_id": "conv-26_A01-NM",
+      "type": "I_near_miss",
+      "gold": "I",
+      "pred": "H"
+    },
+    {
+      "sample_id": "conv-41_A03-NM",
+      "type": "I_near_miss",
+      "gold": "I",
+      "pred": "H"
+    },
+    {
+      "sample_id": "conv-48_A07-NM",
+      "type": "I_near_miss",
+      "gold": "I",
+      "pred": "H"
+    },
+    {
+      "sample_id": "conv-48_A08-NM",
+      "type": "I_near_miss",
+      "gold": "I",
+      "pred": "H"
+    },
+    {
+      "sample_id": "conv-48_A08-H",
+      "type": "H",
+      "gold": "H",
+      "pred": "P"
+    },
+    {
+      "sample_id": "conv-49_A09-NM",
+      "type": "I_near_miss",
+      "gold": "I",
+      "pred": "H"
+    },
+    {
+      "sample_id": "conv-26_A01-CF",
+      "type": "I_no_history",
+      "gold": "I",
+      "pred": "P"
+    },
+    {
+      "sample_id": "conv-48_q12",
+      "type": "I_no_history",
+      "gold": "I",
+      "pred": "H"
+    }
+  ]
+}

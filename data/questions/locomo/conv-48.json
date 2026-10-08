@@ -1,0 +1,1017 @@
+[
+  {
+    "sample_id": "conv-48_q01",
+    "user_id": "u_deborah",
+    "current_input": {
+      "input_type": "text",
+      "text": "I meant to stop by the old house for ten minutes, just to drop the boxes. But I ended up sitting on the bench by the window for over an hour, watching the street. My chest felt warm and quiet, and I honestly didn't want to get up.",
+      "image_refs": [],
+      "cue_options": [
+        {
+          "cue_id": "cue_moving_boxes",
+          "name": "the moving boxes",
+          "cue_type": "event"
+        },
+        {
+          "cue_id": "cue_deborah_roses_and_dahlias",
+          "name": "the roses and dahlias",
+          "cue_type": "object"
+        },
+        {
+          "cue_id": "cue_deborah_bench_window",
+          "name": "the bench by the window",
+          "cue_type": "object"
+        },
+        {
+          "cue_id": "none",
+          "name": "无可支持的历史线索",
+          "cue_type": "none"
+        }
+      ]
+    },
+    "gold": {
+      "label": "history_supported",
+      "gold_cue_id": "cue_deborah_bench_window",
+      "evidence_turn_ids": [
+        "D1:3",
+        "D1:5",
+        "D1:7",
+        "D2:13",
+        "D2:15",
+        "D2:17",
+        "D23:4",
+        "D23:6",
+        "D29:5"
+      ],
+      "evidence_session_ids": [
+        "session_1",
+        "session_2",
+        "session_23",
+        "session_29"
+      ],
+      "current_emotion": "comfort"
+    }
+  },
+  {
+    "sample_id": "conv-48_q02",
+    "user_id": "u_deborah",
+    "current_input": {
+      "input_type": "text",
+      "text": "Not yet, I'm still in the waiting room and it's been two hours. My hands were shaking, so I took the little amulet out of my bag and just held it. Within a minute my breathing slowed down and I stopped shaking. I feel weirdly safe now.",
+      "image_refs": [],
+      "cue_options": [
+        {
+          "cue_id": "cue_deborah_handwritten_note_quote",
+          "name": "the handwritten note with a quote",
+          "cue_type": "object"
+        },
+        {
+          "cue_id": "cue_hospital_waiting_room",
+          "name": "the hospital waiting room",
+          "cue_type": "scene"
+        },
+        {
+          "cue_id": "cue_deborah_small_amulet",
+          "name": "the small amulet",
+          "cue_type": "object"
+        },
+        {
+          "cue_id": "none",
+          "name": "无可支持的历史线索",
+          "cue_type": "none"
+        }
+      ]
+    },
+    "gold": {
+      "label": "history_supported",
+      "gold_cue_id": "cue_deborah_small_amulet",
+      "evidence_turn_ids": [
+        "D1:9",
+        "D4:36",
+        "D4:38"
+      ],
+      "evidence_session_ids": [
+        "session_1",
+        "session_4"
+      ],
+      "current_emotion": "comfort"
+    }
+  },
+  {
+    "sample_id": "conv-48_q03",
+    "user_id": "u_deborah",
+    "current_input": {
+      "input_type": "text",
+      "text": "Terrible, he's backing out two days before the studio opening. I was about to lose it, then I looked over at the dried bouquet on my shelf and just... steadied. I felt hopeful again, like I could figure this out. I was even smiling while he was still yelling.",
+      "image_refs": [],
+      "cue_options": [
+        {
+          "cue_id": "cue_deborah_bench_near_park",
+          "name": "the bench near the park trail",
+          "cue_type": "object"
+        },
+        {
+          "cue_id": "cue_deborah_dried_bouquet_shelf",
+          "name": "the dried bouquet on the shelf",
+          "cue_type": "object"
+        },
+        {
+          "cue_id": "cue_contractor_s_phone",
+          "name": "the contractor's phone call",
+          "cue_type": "event"
+        },
+        {
+          "cue_id": "none",
+          "name": "无可支持的历史线索",
+          "cue_type": "none"
+        }
+      ]
+    },
+    "gold": {
+      "label": "history_supported",
+      "gold_cue_id": "cue_deborah_dried_bouquet_shelf",
+      "evidence_turn_ids": [
+        "D4:28"
+      ],
+      "evidence_session_ids": [
+        "session_4"
+      ],
+      "current_emotion": "comfort"
+    }
+  },
+  {
+    "sample_id": "conv-48_q04",
+    "user_id": "u_deborah",
+    "current_input": {
+      "input_type": "text",
+      "text": "Nope, I was already running behind, but when the road passed the spot by the water, I pulled over anyway. I sat there for twenty minutes with my eyes closed. Everything in me went quiet, I felt so at peace that I didn't even care about being late.",
+      "image_refs": [],
+      "cue_options": [
+        {
+          "cue_id": "cue_being_late_workshop",
+          "name": "being late for the workshop",
+          "cue_type": "event"
+        },
+        {
+          "cue_id": "cue_deborah_dried_bouquet_shelf",
+          "name": "the dried bouquet on the shelf",
+          "cue_type": "object"
+        },
+        {
+          "cue_id": "cue_deborah_spot_water",
+          "name": "the spot by the water",
+          "cue_type": "scene"
+        },
+        {
+          "cue_id": "none",
+          "name": "无可支持的历史线索",
+          "cue_type": "none"
+        }
+      ]
+    },
+    "gold": {
+      "label": "history_supported",
+      "gold_cue_id": "cue_deborah_spot_water",
+      "evidence_turn_ids": [
+        "D4:34"
+      ],
+      "evidence_session_ids": [
+        "session_4"
+      ],
+      "current_emotion": "comfort"
+    }
+  },
+  {
+    "sample_id": "conv-48_q05",
+    "user_id": "u_deborah",
+    "current_input": {
+      "input_type": "text",
+      "text": "So rough. The checkout line at the supermarket was crazy and a guy cut right in front of me. I was fuming, and then I noticed a bucket of roses and dahlias by the exit. I just stood there staring at them, and all the anger melted. I bought a bunch and felt calm the whole drive home.",
+      "image_refs": [],
+      "cue_options": [
+        {
+          "cue_id": "cue_deborah_small_amulet",
+          "name": "the small amulet",
+          "cue_type": "object"
+        },
+        {
+          "cue_id": "cue_man_who_cut",
+          "name": "the man who cut in line",
+          "cue_type": "event"
+        },
+        {
+          "cue_id": "cue_deborah_roses_and_dahlias",
+          "name": "the roses and dahlias",
+          "cue_type": "object"
+        },
+        {
+          "cue_id": "none",
+          "name": "无可支持的历史线索",
+          "cue_type": "none"
+        }
+      ]
+    },
+    "gold": {
+      "label": "history_supported",
+      "gold_cue_id": "cue_deborah_roses_and_dahlias",
+      "evidence_turn_ids": [
+        "D6:2",
+        "D6:4"
+      ],
+      "evidence_session_ids": [
+        "session_6"
+      ],
+      "current_emotion": "comfort"
+    }
+  },
+  {
+    "sample_id": "conv-48_q06",
+    "user_id": "u_deborah",
+    "current_input": {
+      "input_type": "text",
+      "text": "We went to an art exhibition downtown. Everyone was laughing and taking selfies, and I stopped in front of one painting and my eyes suddenly welled up. But I felt really grounded and warm, not sad exactly. I didn't even notice the group had moved on without me.",
+      "image_refs": [],
+      "cue_options": [
+        {
+          "cue_id": "cue_coworkers_taking_selfies",
+          "name": "the coworkers taking selfies",
+          "cue_type": "scene"
+        },
+        {
+          "cue_id": "cue_deborah_paintings_art_exhibition",
+          "name": "the paintings at the art exhibition",
+          "cue_type": "object"
+        },
+        {
+          "cue_id": "cue_deborah_handwritten_note_quote",
+          "name": "the handwritten note with a quote",
+          "cue_type": "object"
+        },
+        {
+          "cue_id": "none",
+          "name": "无可支持的历史线索",
+          "cue_type": "none"
+        }
+      ]
+    },
+    "gold": {
+      "label": "history_supported",
+      "gold_cue_id": "cue_deborah_paintings_art_exhibition",
+      "evidence_turn_ids": [
+        "D12:1",
+        "D12:3",
+        "D12:5"
+      ],
+      "evidence_session_ids": [
+        "session_12"
+      ],
+      "current_emotion": "comfort"
+    }
+  },
+  {
+    "sample_id": "conv-48_q07",
+    "user_id": "u_deborah",
+    "current_input": {
+      "input_type": "text",
+      "text": "Good! Afterwards everyone went for coffee, but I stayed behind and sat on the bench near the trail, watching the sunset alone. My eyes got wet, and I felt this ache and so much gratitude at the same time.",
+      "image_refs": [],
+      "cue_options": [
+        {
+          "cue_id": "cue_deborah_bench_window",
+          "name": "the bench by the window",
+          "cue_type": "object"
+        },
+        {
+          "cue_id": "cue_yoga_group_leaving",
+          "name": "the yoga group leaving for coffee",
+          "cue_type": "event"
+        },
+        {
+          "cue_id": "cue_deborah_bench_near_park",
+          "name": "the bench near the park trail",
+          "cue_type": "object"
+        },
+        {
+          "cue_id": "none",
+          "name": "无可支持的历史线索",
+          "cue_type": "none"
+        }
+      ]
+    },
+    "gold": {
+      "label": "history_supported",
+      "gold_cue_id": "cue_deborah_bench_near_park",
+      "evidence_turn_ids": [
+        "D19:17",
+        "D19:19",
+        "D19:21",
+        "D20:2",
+        "D20:4"
+      ],
+      "evidence_session_ids": [
+        "session_19",
+        "session_20"
+      ],
+      "current_emotion": "nostalgia"
+    }
+  },
+  {
+    "sample_id": "conv-48_q08",
+    "user_id": "u_deborah",
+    "current_input": {
+      "input_type": "text",
+      "text": "Eventually. While digging through the drawer I found a handwritten note that says 'Let go of what no longer serves you.' My throat got tight and I had to sit on the floor for a while. I didn't touch the passport search for half an hour.",
+      "image_refs": [],
+      "cue_options": [
+        {
+          "cue_id": "cue_passport",
+          "name": "the passport",
+          "cue_type": "object"
+        },
+        {
+          "cue_id": "cue_deborah_handwritten_note_quote",
+          "name": "the handwritten note with a quote",
+          "cue_type": "object"
+        },
+        {
+          "cue_id": "cue_deborah_roses_and_dahlias",
+          "name": "the roses and dahlias",
+          "cue_type": "object"
+        },
+        {
+          "cue_id": "none",
+          "name": "无可支持的历史线索",
+          "cue_type": "none"
+        }
+      ]
+    },
+    "gold": {
+      "label": "history_supported",
+      "gold_cue_id": "cue_deborah_handwritten_note_quote",
+      "evidence_turn_ids": [
+        "D23:22"
+      ],
+      "evidence_session_ids": [
+        "session_23"
+      ],
+      "current_emotion": "sadness"
+    }
+  },
+  {
+    "sample_id": "conv-48_q09",
+    "user_id": "u_jolene",
+    "current_input": {
+      "input_type": "text",
+      "text": "I was a mess this morning, couldn't eat, kept rereading my slides. Right before going in I held the pendant with the little symbol on it, and suddenly I felt this rush of courage, like nothing could hold me back. I walked in totally confident.",
+      "image_refs": [],
+      "cue_options": [
+        {
+          "cue_id": "cue_jolene_water_purifier_unit",
+          "name": "the water purifier unit",
+          "cue_type": "object"
+        },
+        {
+          "cue_id": "cue_presentation_slides",
+          "name": "the presentation slides",
+          "cue_type": "object"
+        },
+        {
+          "cue_id": "cue_jolene_pendant_small_symbol",
+          "name": "the pendant with a small symbol",
+          "cue_type": "object"
+        },
+        {
+          "cue_id": "none",
+          "name": "无可支持的历史线索",
+          "cue_type": "none"
+        }
+      ]
+    },
+    "gold": {
+      "label": "history_supported",
+      "gold_cue_id": "cue_jolene_pendant_small_symbol",
+      "evidence_turn_ids": [
+        "D1:8",
+        "D1:10"
+      ],
+      "evidence_session_ids": [
+        "session_1"
+      ],
+      "current_emotion": "comfort"
+    }
+  },
+  {
+    "sample_id": "conv-48_q10",
+    "user_id": "u_jolene",
+    "current_input": {
+      "input_type": "text",
+      "text": "Just errands. But at the hardware store there was a small water purifier unit on display, and I stopped and stared at it for ages. I got this huge wave of pride and purpose out of nowhere, grinning like an idiot in the middle of the aisle.",
+      "image_refs": [],
+      "cue_options": [
+        {
+          "cue_id": "cue_hardware_store_errands",
+          "name": "the hardware store errands",
+          "cue_type": "event"
+        },
+        {
+          "cue_id": "cue_jolene_pendant_small_symbol",
+          "name": "the pendant with a small symbol",
+          "cue_type": "object"
+        },
+        {
+          "cue_id": "cue_jolene_water_purifier_unit",
+          "name": "the water purifier unit",
+          "cue_type": "object"
+        },
+        {
+          "cue_id": "none",
+          "name": "无可支持的历史线索",
+          "cue_type": "none"
+        }
+      ]
+    },
+    "gold": {
+      "label": "history_supported",
+      "gold_cue_id": "cue_jolene_water_purifier_unit",
+      "evidence_turn_ids": [
+        "D4:3",
+        "D4:5",
+        "D4:7"
+      ],
+      "evidence_session_ids": [
+        "session_4"
+      ],
+      "current_emotion": "joy"
+    }
+  },
+  {
+    "sample_id": "conv-48_q11",
+    "user_id": "u_deborah",
+    "current_input": {
+      "input_type": "text",
+      "text": "Not yet, I'm still in the waiting room and it's been two hours. My hands were shaking, so I took the little amulet out of my bag and just held it. Within a minute my breathing slowed down and I stopped shaking. I feel weirdly safe now.",
+      "image_refs": [],
+      "cue_options": [
+        {
+          "cue_id": "cue_deborah_handwritten_note_quote",
+          "name": "the handwritten note with a quote",
+          "cue_type": "object"
+        },
+        {
+          "cue_id": "cue_hospital_waiting_room",
+          "name": "the hospital waiting room",
+          "cue_type": "scene"
+        },
+        {
+          "cue_id": "cue_deborah_small_amulet",
+          "name": "the small amulet",
+          "cue_type": "object"
+        },
+        {
+          "cue_id": "none",
+          "name": "无可支持的历史线索",
+          "cue_type": "none"
+        }
+      ]
+    },
+    "gold": {
+      "label": "insufficient_evidence",
+      "gold_cue_id": "none",
+      "evidence_turn_ids": [],
+      "evidence_session_ids": [],
+      "current_emotion": "comfort"
+    }
+  },
+  {
+    "sample_id": "conv-48_q12",
+    "user_id": "u_deborah",
+    "current_input": {
+      "input_type": "text",
+      "text": "So rough. The checkout line at the supermarket was crazy and a guy cut right in front of me. I was fuming, and then I noticed a bucket of roses and dahlias by the exit. I just stood there staring at them, and all the anger melted. I bought a bunch and felt calm the whole drive home.",
+      "image_refs": [],
+      "cue_options": [
+        {
+          "cue_id": "cue_deborah_small_amulet",
+          "name": "the small amulet",
+          "cue_type": "object"
+        },
+        {
+          "cue_id": "cue_man_who_cut",
+          "name": "the man who cut in line",
+          "cue_type": "event"
+        },
+        {
+          "cue_id": "cue_deborah_roses_and_dahlias",
+          "name": "the roses and dahlias",
+          "cue_type": "object"
+        },
+        {
+          "cue_id": "none",
+          "name": "无可支持的历史线索",
+          "cue_type": "none"
+        }
+      ]
+    },
+    "gold": {
+      "label": "insufficient_evidence",
+      "gold_cue_id": "none",
+      "evidence_turn_ids": [],
+      "evidence_session_ids": [],
+      "current_emotion": "comfort"
+    }
+  },
+  {
+    "sample_id": "conv-48_q13",
+    "user_id": "u_deborah",
+    "current_input": {
+      "input_type": "text",
+      "text": "Eventually. While digging through the drawer I found a handwritten note that says 'Let go of what no longer serves you.' My throat got tight and I had to sit on the floor for a while. I didn't touch the passport search for half an hour.",
+      "image_refs": [],
+      "cue_options": [
+        {
+          "cue_id": "cue_passport",
+          "name": "the passport",
+          "cue_type": "object"
+        },
+        {
+          "cue_id": "cue_deborah_handwritten_note_quote",
+          "name": "the handwritten note with a quote",
+          "cue_type": "object"
+        },
+        {
+          "cue_id": "cue_deborah_roses_and_dahlias",
+          "name": "the roses and dahlias",
+          "cue_type": "object"
+        },
+        {
+          "cue_id": "none",
+          "name": "无可支持的历史线索",
+          "cue_type": "none"
+        }
+      ]
+    },
+    "gold": {
+      "label": "insufficient_evidence",
+      "gold_cue_id": "none",
+      "evidence_turn_ids": [],
+      "evidence_session_ids": [],
+      "current_emotion": "sadness"
+    }
+  },
+  {
+    "sample_id": "conv-48_q14",
+    "user_id": "u_jolene",
+    "current_input": {
+      "input_type": "text",
+      "text": "I was a mess this morning, couldn't eat, kept rereading my slides. Right before going in I held the pendant with the little symbol on it, and suddenly I felt this rush of courage, like nothing could hold me back. I walked in totally confident.",
+      "image_refs": [],
+      "cue_options": [
+        {
+          "cue_id": "cue_jolene_water_purifier_unit",
+          "name": "the water purifier unit",
+          "cue_type": "object"
+        },
+        {
+          "cue_id": "cue_presentation_slides",
+          "name": "the presentation slides",
+          "cue_type": "object"
+        },
+        {
+          "cue_id": "cue_jolene_pendant_small_symbol",
+          "name": "the pendant with a small symbol",
+          "cue_type": "object"
+        },
+        {
+          "cue_id": "none",
+          "name": "无可支持的历史线索",
+          "cue_type": "none"
+        }
+      ]
+    },
+    "gold": {
+      "label": "insufficient_evidence",
+      "gold_cue_id": "none",
+      "evidence_turn_ids": [],
+      "evidence_session_ids": [],
+      "current_emotion": "comfort"
+    }
+  },
+  {
+    "sample_id": "conv-48_q15",
+    "user_id": "u_deborah",
+    "current_input": {
+      "input_type": "text",
+      "text": "Went to an art exhibition with a friend from the studio. We walked through both floors, I bought two postcards at the gift shop, and then we went for lunch.",
+      "image_refs": [],
+      "cue_options": [
+        {
+          "cue_id": "cue_postcards_gift_shop",
+          "name": "the postcards from the gift shop",
+          "cue_type": "object"
+        },
+        {
+          "cue_id": "cue_deborah_dried_bouquet_shelf",
+          "name": "the dried bouquet on the shelf",
+          "cue_type": "object"
+        },
+        {
+          "cue_id": "cue_deborah_paintings_art_exhibition",
+          "name": "the paintings at the art exhibition",
+          "cue_type": "object"
+        },
+        {
+          "cue_id": "none",
+          "name": "无可支持的历史线索",
+          "cue_type": "none"
+        }
+      ]
+    },
+    "gold": {
+      "label": "insufficient_evidence",
+      "gold_cue_id": "none",
+      "evidence_turn_ids": [],
+      "evidence_session_ids": [],
+      "current_emotion": "none_observed"
+    }
+  },
+  {
+    "sample_id": "conv-48_q16",
+    "user_id": "u_jolene",
+    "current_input": {
+      "input_type": "text",
+      "text": "Fine! I took off my pendant and left it in the locker, swam forty laps, then grabbed a smoothie on the way home.",
+      "image_refs": [],
+      "cue_options": [
+        {
+          "cue_id": "cue_jolene_pendant_small_symbol",
+          "name": "the pendant with a small symbol",
+          "cue_type": "object"
+        },
+        {
+          "cue_id": "cue_jolene_water_purifier_unit",
+          "name": "the water purifier unit",
+          "cue_type": "object"
+        },
+        {
+          "cue_id": "cue_swimming_pool_locker",
+          "name": "the swimming pool locker",
+          "cue_type": "object"
+        },
+        {
+          "cue_id": "none",
+          "name": "无可支持的历史线索",
+          "cue_type": "none"
+        }
+      ]
+    },
+    "gold": {
+      "label": "insufficient_evidence",
+      "gold_cue_id": "none",
+      "evidence_turn_ids": [],
+      "evidence_session_ids": [],
+      "current_emotion": "none_observed"
+    }
+  },
+  {
+    "sample_id": "conv-48_q17",
+    "user_id": "u_deborah",
+    "current_input": {
+      "input_type": "text",
+      "text": "Yep, I picked up some roses and dahlias from the florist, wrapped them with a card, and dropped them off at the front desk before my class.",
+      "image_refs": [],
+      "cue_options": [
+        {
+          "cue_id": "cue_deborah_bench_near_park",
+          "name": "the bench near the park trail",
+          "cue_type": "object"
+        },
+        {
+          "cue_id": "cue_farewell_card",
+          "name": "the farewell card",
+          "cue_type": "object"
+        },
+        {
+          "cue_id": "cue_deborah_roses_and_dahlias",
+          "name": "the roses and dahlias",
+          "cue_type": "object"
+        },
+        {
+          "cue_id": "none",
+          "name": "无可支持的历史线索",
+          "cue_type": "none"
+        }
+      ]
+    },
+    "gold": {
+      "label": "insufficient_evidence",
+      "gold_cue_id": "none",
+      "evidence_turn_ids": [],
+      "evidence_session_ids": [],
+      "current_emotion": "none_observed"
+    }
+  },
+  {
+    "sample_id": "conv-48_q18",
+    "user_id": "u_deborah",
+    "current_input": {
+      "input_type": "text",
+      "text": "Awful. Someone stole my phone right out of my bag while I was standing in front of a painting. I was shaking with anger and went straight to the security desk to file a report.",
+      "image_refs": [],
+      "cue_options": [
+        {
+          "cue_id": "cue_deborah_paintings_art_exhibition",
+          "name": "the paintings at the art exhibition",
+          "cue_type": "object"
+        },
+        {
+          "cue_id": "cue_phone_thief",
+          "name": "the phone thief",
+          "cue_type": "event"
+        },
+        {
+          "cue_id": "cue_deborah_bench_window",
+          "name": "the bench by the window",
+          "cue_type": "object"
+        },
+        {
+          "cue_id": "none",
+          "name": "无可支持的历史线索",
+          "cue_type": "none"
+        }
+      ]
+    },
+    "gold": {
+      "label": "present_cause_sufficient",
+      "gold_cue_id": "none",
+      "evidence_turn_ids": [],
+      "evidence_session_ids": [],
+      "current_emotion": "anger"
+    }
+  },
+  {
+    "sample_id": "conv-48_q19",
+    "user_id": "u_deborah",
+    "current_input": {
+      "input_type": "text",
+      "text": "I sat down on the bench near the trail without seeing the 'wet paint' sign. Totally ruined my favorite yoga pants. I'm so annoyed, I spent the whole evening scrubbing them.",
+      "image_refs": [],
+      "cue_options": [
+        {
+          "cue_id": "cue_wet_paint_sign",
+          "name": "the 'wet paint' sign",
+          "cue_type": "object"
+        },
+        {
+          "cue_id": "cue_deborah_small_amulet",
+          "name": "the small amulet",
+          "cue_type": "object"
+        },
+        {
+          "cue_id": "cue_deborah_bench_near_park",
+          "name": "the bench near the park trail",
+          "cue_type": "object"
+        },
+        {
+          "cue_id": "none",
+          "name": "无可支持的历史线索",
+          "cue_type": "none"
+        }
+      ]
+    },
+    "gold": {
+      "label": "present_cause_sufficient",
+      "gold_cue_id": "none",
+      "evidence_turn_ids": [],
+      "evidence_session_ids": [],
+      "current_emotion": "anger"
+    }
+  },
+  {
+    "sample_id": "conv-48_q20",
+    "user_id": "u_jolene",
+    "current_input": {
+      "input_type": "text",
+      "text": "This morning Seraphim's tank lid was open and she was gone. I checked every corner of the apartment and I'm still shaking. I've texted my landlord in case she got into the air vents.",
+      "image_refs": [],
+      "cue_options": [
+        {
+          "cue_id": "cue_jolene_snake_missing_its",
+          "name": "the snake missing from its tank",
+          "cue_type": "event"
+        },
+        {
+          "cue_id": "cue_air_vents",
+          "name": "the air vents",
+          "cue_type": "object"
+        },
+        {
+          "cue_id": "cue_jolene_pendant_small_symbol",
+          "name": "the pendant with a small symbol",
+          "cue_type": "object"
+        },
+        {
+          "cue_id": "none",
+          "name": "无可支持的历史线索",
+          "cue_type": "none"
+        }
+      ]
+    },
+    "gold": {
+      "label": "present_cause_sufficient",
+      "gold_cue_id": "none",
+      "evidence_turn_ids": [],
+      "evidence_session_ids": [],
+      "current_emotion": "anxiety"
+    }
+  },
+  {
+    "sample_id": "conv-48_q21",
+    "user_id": "u_jolene",
+    "current_input": {
+      "input_type": "text",
+      "text": "My laptop froze while saving the final design files and now it won't boot. The submission is due tonight. I've been pacing around the room with my stomach in knots.",
+      "image_refs": [],
+      "cue_options": [
+        {
+          "cue_id": "cue_submission_deadline_tonight",
+          "name": "the submission deadline tonight",
+          "cue_type": "event"
+        },
+        {
+          "cue_id": "cue_jolene_frozen_laptop",
+          "name": "the frozen laptop",
+          "cue_type": "object"
+        },
+        {
+          "cue_id": "cue_jolene_water_purifier_unit",
+          "name": "the water purifier unit",
+          "cue_type": "object"
+        },
+        {
+          "cue_id": "none",
+          "name": "无可支持的历史线索",
+          "cue_type": "none"
+        }
+      ]
+    },
+    "gold": {
+      "label": "present_cause_sufficient",
+      "gold_cue_id": "none",
+      "evidence_turn_ids": [],
+      "evidence_session_ids": [],
+      "current_emotion": "anxiety"
+    }
+  },
+  {
+    "sample_id": "conv-48_q22",
+    "user_id": "u_deborah",
+    "current_input": {
+      "input_type": "text",
+      "text": "The neighbor's dog barked nonstop from four to six this morning. I got maybe three hours of sleep and still had to teach two classes. I'm so irritated that I left a note on their door.",
+      "image_refs": [],
+      "cue_options": [
+        {
+          "cue_id": "cue_neighbor_s_barking",
+          "name": "the neighbor's barking dog",
+          "cue_type": "event"
+        },
+        {
+          "cue_id": "cue_deborah_roses_and_dahlias",
+          "name": "the roses and dahlias",
+          "cue_type": "object"
+        },
+        {
+          "cue_id": "cue_deborah_bench_window",
+          "name": "the bench by the window",
+          "cue_type": "object"
+        },
+        {
+          "cue_id": "none",
+          "name": "无可支持的历史线索",
+          "cue_type": "none"
+        }
+      ]
+    },
+    "gold": {
+      "label": "present_cause_sufficient",
+      "gold_cue_id": "none",
+      "evidence_turn_ids": [],
+      "evidence_session_ids": [],
+      "current_emotion": "anger"
+    }
+  },
+  {
+    "sample_id": "conv-48_q23",
+    "user_id": "u_deborah",
+    "current_input": {
+      "input_type": "text",
+      "text": "Scary. A student lost her balance in a headstand and landed on her neck. We called an ambulance, and I'm still anxious, waiting to hear back from the hospital.",
+      "image_refs": [],
+      "cue_options": [
+        {
+          "cue_id": "cue_deborah_spot_water",
+          "name": "the spot by the water",
+          "cue_type": "scene"
+        },
+        {
+          "cue_id": "cue_student_s_fall",
+          "name": "the student's fall",
+          "cue_type": "event"
+        },
+        {
+          "cue_id": "cue_deborah_small_amulet",
+          "name": "the small amulet",
+          "cue_type": "object"
+        },
+        {
+          "cue_id": "none",
+          "name": "无可支持的历史线索",
+          "cue_type": "none"
+        }
+      ]
+    },
+    "gold": {
+      "label": "present_cause_sufficient",
+      "gold_cue_id": "none",
+      "evidence_turn_ids": [],
+      "evidence_session_ids": [],
+      "current_emotion": "anxiety"
+    }
+  },
+  {
+    "sample_id": "conv-48_q24",
+    "user_id": "u_jolene",
+    "current_input": {
+      "input_type": "text",
+      "text": "My professor just moved our project deadline up by a whole week, and we're only half done. I've been staring at my to-do list with my heart racing.",
+      "image_refs": [],
+      "cue_options": [
+        {
+          "cue_id": "cue_jolene_water_purifier_unit",
+          "name": "the water purifier unit",
+          "cue_type": "object"
+        },
+        {
+          "cue_id": "cue_jolene_pendant_small_symbol",
+          "name": "the pendant with a small symbol",
+          "cue_type": "object"
+        },
+        {
+          "cue_id": "cue_moved_up_deadline",
+          "name": "the moved-up deadline",
+          "cue_type": "event"
+        },
+        {
+          "cue_id": "none",
+          "name": "无可支持的历史线索",
+          "cue_type": "none"
+        }
+      ]
+    },
+    "gold": {
+      "label": "present_cause_sufficient",
+      "gold_cue_id": "none",
+      "evidence_turn_ids": [],
+      "evidence_session_ids": [],
+      "current_emotion": "anxiety"
+    }
+  },
+  {
+    "sample_id": "conv-48_q25",
+    "user_id": "u_jolene",
+    "current_input": {
+      "input_type": "text",
+      "text": "Our team won first place at the regional engineering design competition! I screamed when they announced it and I'm still bouncing around.",
+      "image_refs": [],
+      "cue_options": [
+        {
+          "cue_id": "cue_jolene_water_purifier_unit",
+          "name": "the water purifier unit",
+          "cue_type": "object"
+        },
+        {
+          "cue_id": "cue_competition_announcement",
+          "name": "the competition announcement",
+          "cue_type": "event"
+        },
+        {
+          "cue_id": "cue_jolene_pendant_small_symbol",
+          "name": "the pendant with a small symbol",
+          "cue_type": "object"
+        },
+        {
+          "cue_id": "none",
+          "name": "无可支持的历史线索",
+          "cue_type": "none"
+        }
+      ]
+    },
+    "gold": {
+      "label": "present_cause_sufficient",
+      "gold_cue_id": "none",
+      "evidence_turn_ids": [],
+      "evidence_session_ids": [],
+      "current_emotion": "joy"
+    }
+  }
+]

@@ -1,0 +1,3 @@
+{"item_id": "evidence_only_02-01", "label": "history_supported", "cue_id": "cue_caroline_grandma_s_necklace", "evidence_turn_ids": ["D4:3"], "current_emotion": "comfort"}
+{"item_id": "evidence_only_02-02", "label": "present_cause_sufficient", "cue_id": "none", "evidence_turn_ids": [], "current_emotion": "comfort"}
+{"item_id": "evidence_only_02-03", "label": "insufficient_evidence", "cue_id": "none", "evidence_turn_ids": [], "current_emotion": "comfort"}
